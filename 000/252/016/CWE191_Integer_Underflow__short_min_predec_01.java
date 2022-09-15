@@ -32,13 +32,13 @@ public class CWE191_Integer_Underflow__short_min_predec_01 extends AbstractTestC
 
         IO.writeLine("result: " + result);
 
-    }
+    } 
 
     public void good() throws Throwable
     {
         goodG2B();
         goodB2G();
-    }
+    } 
 
     /* goodG2B() - use goodsource and badsink */
     private void goodG2B() throws Throwable
@@ -53,7 +53,7 @@ public class CWE191_Integer_Underflow__short_min_predec_01 extends AbstractTestC
 
         IO.writeLine("result: " + result);
 
-    }
+    } 
 
     /* goodB2G() - use badsource and goodsink */
     private void goodB2G() throws Throwable
@@ -68,13 +68,13 @@ public class CWE191_Integer_Underflow__short_min_predec_01 extends AbstractTestC
         {
             short result = (short)(--data);
             IO.writeLine("result: " + result);
-        }
+        } 
         else
         {
             IO.writeLine("data value is too small to decrement.");
-        }
+        } 
 
-    }
+    } 
 
     /* Below is the main(). It is only used when building this testcase on
      * its own for testing or for building a binary to use in testing binary
@@ -85,6 +85,6 @@ public class CWE191_Integer_Underflow__short_min_predec_01 extends AbstractTestC
            InstantiationException, IllegalAccessException
     {
         mainFromParent(args);
-    }
-}
+    } 
+} 
 

@@ -29,7 +29,7 @@ public class CWE191_Integer_Underflow__short_min_predec_16 extends AbstractTestC
             /* POTENTIAL FLAW: Use the maximum size of the data type */
             data = Short.MIN_VALUE;
             break;
-        }
+        } 
 
         while (true)
         {
@@ -37,8 +37,8 @@ public class CWE191_Integer_Underflow__short_min_predec_16 extends AbstractTestC
             short result = (short)(--data);
             IO.writeLine("result: " + result);
             break;
-        }
-    }
+        } 
+    } 
 
     /* goodG2B() - use goodsource and badsink */
     private void goodG2B() throws Throwable
@@ -50,7 +50,7 @@ public class CWE191_Integer_Underflow__short_min_predec_16 extends AbstractTestC
             /* FIX: Use a hardcoded number that won't cause underflow, overflow, divide by zero, or loss-of-precision issues */
             data = 2;
             break;
-        }
+        } 
 
         while (true)
         {
@@ -58,9 +58,9 @@ public class CWE191_Integer_Underflow__short_min_predec_16 extends AbstractTestC
             short result = (short)(--data);
             IO.writeLine("result: " + result);
             break;
-        }
+        } 
 
-    }
+    } 
 
     /* goodB2G() - use badsource and goodsink */
     private void goodB2G() throws Throwable
@@ -72,7 +72,7 @@ public class CWE191_Integer_Underflow__short_min_predec_16 extends AbstractTestC
             /* POTENTIAL FLAW: Use the maximum size of the data type */
             data = Short.MIN_VALUE;
             break;
-        }
+        } 
 
         while (true)
         {
@@ -81,20 +81,20 @@ public class CWE191_Integer_Underflow__short_min_predec_16 extends AbstractTestC
             {
                 short result = (short)(--data);
                 IO.writeLine("result: " + result);
-            }
+            } 
             else
             {
                 IO.writeLine("data value is too small to decrement.");
-            }
+            } 
             break;
-        }
-    }
+        } 
+    } 
 
     public void good() throws Throwable
     {
         goodG2B();
         goodB2G();
-    }
+    } 
 
     /* Below is the main(). It is only used when building this testcase on
      * its own for testing or for building a binary to use in testing binary
@@ -105,5 +105,5 @@ public class CWE191_Integer_Underflow__short_min_predec_16 extends AbstractTestC
            InstantiationException, IllegalAccessException
     {
         mainFromParent(args);
-    }
-}
+    } 
+} 

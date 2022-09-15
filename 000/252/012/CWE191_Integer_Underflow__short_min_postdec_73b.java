@@ -31,7 +31,7 @@ public class CWE191_Integer_Underflow__short_min_postdec_73b
 
         IO.writeLine("result: " + result);
 
-    }
+    } 
 
     /* goodG2B() - use GoodSource and BadSink */
     public void goodG2BSink(LinkedList<Short> dataLinkedList ) throws Throwable
@@ -44,7 +44,7 @@ public class CWE191_Integer_Underflow__short_min_postdec_73b
 
         IO.writeLine("result: " + result);
 
-    }
+    } 
 
     /* goodB2G() - use BadSource and GoodSink */
     public void goodB2GSink(LinkedList<Short> dataLinkedList ) throws Throwable
@@ -57,11 +57,11 @@ public class CWE191_Integer_Underflow__short_min_postdec_73b
             data--;
             short result = (short)(data);
             IO.writeLine("result: " + result);
-        }
+        } 
         else
         {
             IO.writeLine("data value is too small to decrement.");
-        }
+        } 
 
-    }
-}
+    } 
+} 

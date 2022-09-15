@@ -33,7 +33,7 @@ public class CWE191_Integer_Underflow__short_min_predec_22a extends AbstractTest
 
         badPublicStatic = true;
         (new CWE191_Integer_Underflow__short_min_predec_22b()).badSink(data );
-    }
+    } 
 
     /* The public static variables below are used to drive control flow in the sink functions.
      * The public static variable mimics a global variable in the C/C++ language family. */
@@ -46,7 +46,7 @@ public class CWE191_Integer_Underflow__short_min_predec_22a extends AbstractTest
         goodB2G1();
         goodB2G2();
         goodG2B();
-    }
+    } 
 
     /* goodB2G1() - use badsource and goodsink by setting the static variable to false instead of true */
     private void goodB2G1() throws Throwable
@@ -58,7 +58,7 @@ public class CWE191_Integer_Underflow__short_min_predec_22a extends AbstractTest
 
         goodB2G1PublicStatic = false;
         (new CWE191_Integer_Underflow__short_min_predec_22b()).goodB2G1Sink(data );
-    }
+    } 
 
     /* goodB2G2() - use badsource and goodsink by reversing the blocks in the if in the sink function */
     private void goodB2G2() throws Throwable
@@ -70,7 +70,7 @@ public class CWE191_Integer_Underflow__short_min_predec_22a extends AbstractTest
 
         goodB2G2PublicStatic = true;
         (new CWE191_Integer_Underflow__short_min_predec_22b()).goodB2G2Sink(data );
-    }
+    } 
 
     /* goodG2B() - use goodsource and badsink */
     private void goodG2B() throws Throwable
@@ -82,7 +82,7 @@ public class CWE191_Integer_Underflow__short_min_predec_22a extends AbstractTest
 
         goodG2BPublicStatic = true;
         (new CWE191_Integer_Underflow__short_min_predec_22b()).goodG2BSink(data );
-    }
+    } 
 
     /* Below is the main(). It is only used when building this testcase on
      * its own for testing or for building a binary to use in testing binary
@@ -93,5 +93,5 @@ public class CWE191_Integer_Underflow__short_min_predec_22a extends AbstractTest
            InstantiationException, IllegalAccessException
     {
         mainFromParent(args);
-    }
-}
+    } 
+} 

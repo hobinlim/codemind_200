@@ -28,13 +28,13 @@ public class CWE191_Integer_Underflow__short_min_predec_71a extends AbstractTest
         data = Short.MIN_VALUE;
 
         (new CWE191_Integer_Underflow__short_min_predec_71b()).badSink((Object)data  );
-    }
+    } 
 
     public void good() throws Throwable
     {
         goodG2B();
         goodB2G();
-    }
+    } 
 
     /* goodG2B() - use goodsource and badsink */
     private void goodG2B() throws Throwable
@@ -45,7 +45,7 @@ public class CWE191_Integer_Underflow__short_min_predec_71a extends AbstractTest
         data = 2;
 
         (new CWE191_Integer_Underflow__short_min_predec_71b()).goodG2BSink((Object)data  );
-    }
+    } 
 
     /* goodB2G() - use badsource and goodsink */
     private void goodB2G() throws Throwable
@@ -56,7 +56,7 @@ public class CWE191_Integer_Underflow__short_min_predec_71a extends AbstractTest
         data = Short.MIN_VALUE;
 
         (new CWE191_Integer_Underflow__short_min_predec_71b()).goodB2GSink((Object)data  );
-    }
+    } 
 
     /* Below is the main(). It is only used when building this testcase on
      * its own for testing or for building a binary to use in testing binary
@@ -67,5 +67,5 @@ public class CWE191_Integer_Underflow__short_min_predec_71a extends AbstractTest
            InstantiationException, IllegalAccessException
     {
         mainFromParent(args);
-    }
-}
+    } 
+} 

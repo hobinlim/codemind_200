@@ -23,17 +23,17 @@ public class CWE191_Integer_Underflow__short_min_postdec_52b
     public void badSink(short data ) throws Throwable
     {
         (new CWE191_Integer_Underflow__short_min_postdec_52c()).badSink(data );
-    }
+    } 
 
     /* goodG2B() - use goodsource and badsink */
     public void goodG2BSink(short data ) throws Throwable
     {
         (new CWE191_Integer_Underflow__short_min_postdec_52c()).goodG2BSink(data );
-    }
+    } 
 
     /* goodB2G() - use badsource and goodsink */
     public void goodB2GSink(short data ) throws Throwable
     {
         (new CWE191_Integer_Underflow__short_min_postdec_52c()).goodB2GSink(data );
-    }
-}
+    } 
+} 

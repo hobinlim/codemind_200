@@ -33,13 +33,13 @@ public class CWE191_Integer_Underflow__short_min_postdec_74a extends AbstractTes
         dataHashMap.put(1, data);
         dataHashMap.put(2, data);
         (new CWE191_Integer_Underflow__short_min_postdec_74b()).badSink(dataHashMap  );
-    }
+    } 
 
     public void good() throws Throwable
     {
         goodG2B();
         goodB2G();
-    }
+    } 
 
     /* goodG2B() - use GoodSource and BadSink */
     private void goodG2B() throws Throwable
@@ -54,7 +54,7 @@ public class CWE191_Integer_Underflow__short_min_postdec_74a extends AbstractTes
         dataHashMap.put(1, data);
         dataHashMap.put(2, data);
         (new CWE191_Integer_Underflow__short_min_postdec_74b()).goodG2BSink(dataHashMap  );
-    }
+    } 
 
     /* goodB2G() - use BadSource and GoodSink */
     private void goodB2G() throws Throwable
@@ -69,7 +69,7 @@ public class CWE191_Integer_Underflow__short_min_postdec_74a extends AbstractTes
         dataHashMap.put(1, data);
         dataHashMap.put(2, data);
         (new CWE191_Integer_Underflow__short_min_postdec_74b()).goodB2GSink(dataHashMap  );
-    }
+    } 
 
     /* Below is the main(). It is only used when building this testcase on
      * its own for testing or for building a binary to use in testing binary
@@ -80,5 +80,5 @@ public class CWE191_Integer_Underflow__short_min_postdec_74a extends AbstractTes
            InstantiationException, IllegalAccessException
     {
         mainFromParent(args);
-    }
-}
+    } 
+} 

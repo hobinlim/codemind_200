@@ -27,21 +27,21 @@ public class CWE191_Integer_Underflow__short_min_predec_12 extends AbstractTestC
         {
             /* POTENTIAL FLAW: Use the maximum size of the data type */
             data = Short.MIN_VALUE;
-        }
+        } 
         else
         {
 
             /* FIX: Use a hardcoded number that won't cause underflow, overflow, divide by zero, or loss-of-precision issues */
             data = 2;
 
-        }
+        } 
 
         if(IO.staticReturnsTrueOrFalse())
         {
             /* POTENTIAL FLAW: if data == Short.MIN_VALUE, this will overflow */
             short result = (short)(--data);
             IO.writeLine("result: " + result);
-        }
+        } 
         else
         {
 
@@ -50,14 +50,14 @@ public class CWE191_Integer_Underflow__short_min_predec_12 extends AbstractTestC
             {
                 short result = (short)(--data);
                 IO.writeLine("result: " + result);
-            }
+            } 
             else
             {
                 IO.writeLine("data value is too small to decrement.");
-            }
+            } 
 
-        }
-    }
+        } 
+    } 
 
     /* goodG2B() - use goodsource and badsink by changing the first "if" so that
      * both branches use the GoodSource */
@@ -68,21 +68,21 @@ public class CWE191_Integer_Underflow__short_min_predec_12 extends AbstractTestC
         {
             /* FIX: Use a hardcoded number that won't cause underflow, overflow, divide by zero, or loss-of-precision issues */
             data = 2;
-        }
+        } 
         else
         {
 
             /* FIX: Use a hardcoded number that won't cause underflow, overflow, divide by zero, or loss-of-precision issues */
             data = 2;
 
-        }
+        } 
 
         if(IO.staticReturnsTrueOrFalse())
         {
             /* POTENTIAL FLAW: if data == Short.MIN_VALUE, this will overflow */
             short result = (short)(--data);
             IO.writeLine("result: " + result);
-        }
+        } 
         else
         {
 
@@ -91,8 +91,8 @@ public class CWE191_Integer_Underflow__short_min_predec_12 extends AbstractTestC
 
             IO.writeLine("result: " + result);
 
-        }
-    }
+        } 
+    } 
 
     /* goodB2G() - use badsource and goodsink by changing the second "if" so that
      * both branches use the GoodSink */
@@ -103,14 +103,14 @@ public class CWE191_Integer_Underflow__short_min_predec_12 extends AbstractTestC
         {
             /* POTENTIAL FLAW: Use the maximum size of the data type */
             data = Short.MIN_VALUE;
-        }
+        } 
         else
         {
 
             /* POTENTIAL FLAW: Use the maximum size of the data type */
             data = Short.MIN_VALUE;
 
-        }
+        } 
 
         if(IO.staticReturnsTrueOrFalse())
         {
@@ -119,12 +119,12 @@ public class CWE191_Integer_Underflow__short_min_predec_12 extends AbstractTestC
             {
                 short result = (short)(--data);
                 IO.writeLine("result: " + result);
-            }
+            } 
             else
             {
                 IO.writeLine("data value is too small to decrement.");
-            }
-        }
+            } 
+        } 
         else
         {
 
@@ -133,20 +133,20 @@ public class CWE191_Integer_Underflow__short_min_predec_12 extends AbstractTestC
             {
                 short result = (short)(--data);
                 IO.writeLine("result: " + result);
-            }
+            } 
             else
             {
                 IO.writeLine("data value is too small to decrement.");
-            }
+            } 
 
-        }
-    }
+        } 
+    } 
 
     public void good() throws Throwable
     {
         goodG2B();
         goodB2G();
-    }
+    } 
 
     /* Below is the main(). It is only used when building this testcase on
      * its own for testing or for building a binary to use in testing binary
@@ -157,5 +157,5 @@ public class CWE191_Integer_Underflow__short_min_predec_12 extends AbstractTestC
            InstantiationException, IllegalAccessException
     {
         mainFromParent(args);
-    }
-}
+    } 
+} 
