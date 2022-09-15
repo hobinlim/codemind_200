@@ -31,5 +31,5 @@ public class CWE470_Unsafe_Reflection__connect_tcp_81_bad extends CWE470_Unsafe_
 
         IO.writeLine(tempClassObject.toString()); /* Use tempClassObject in some way */
 
-    }
-}
+    } 
+} 

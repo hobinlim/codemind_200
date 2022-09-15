@@ -45,54 +45,54 @@ public class CWE400_Resource_Exhaustion__URLConnection_write_22b
                 try
                 {
                     writerBuffered.write("Hello");
-                }
+                } 
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error with stream writing", exceptIO);
-                }
-            }
+                } 
+            } 
             /* Close stream reading objects */
             try
             {
                 if (writerBuffered != null)
                 {
                     writerBuffered.close();
-                }
-            }
+                } 
+            } 
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error closing BufferedWriter", exceptIO);
-            }
+            } 
             try
             {
                 if (writerOutputStream != null)
                 {
                     writerOutputStream.close();
-                }
-            }
+                } 
+            } 
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error closing OutputStreamWriter", exceptIO);
-            }
+            } 
             try
             {
                 if (streamFileOutput != null)
                 {
                     streamFileOutput.close();
-                }
-            }
+                } 
+            } 
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error closing FileOutputStream", exceptIO);
-            }
-        }
+            } 
+        } 
         else
         {
             /* INCIDENTAL: CWE 561 Dead Code, the code below will never run
              * but ensure count is inititialized before the Sink to avoid compiler errors */
             count = 0;
-        }
-    }
+        } 
+    } 
 
     /* goodB2G1() - use badsource and goodsink by setting the static variable to false instead of true */
     public void goodB2G1Sink(int count ) throws Throwable
@@ -102,7 +102,7 @@ public class CWE400_Resource_Exhaustion__URLConnection_write_22b
             /* INCIDENTAL: CWE 561 Dead Code, the code below will never run
              * but ensure count is inititialized before the Sink to avoid compiler errors */
             count = 0;
-        }
+        } 
         else
         {
 
@@ -119,50 +119,50 @@ public class CWE400_Resource_Exhaustion__URLConnection_write_22b
                     try
                     {
                         writerBuffered.write("Hello");
-                    }
+                    } 
                     catch (IOException exceptIO)
                     {
                         IO.logger.log(Level.WARNING, "Error with stream writing", exceptIO);
-                    }
-                }
+                    } 
+                } 
                 /* Close stream reading objects */
                 try
                 {
                     if (writerBuffered != null)
                     {
                         writerBuffered.close();
-                    }
-                }
+                    } 
+                } 
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error closing BufferedWriter", exceptIO);
-                }
+                } 
                 try
                 {
                     if (writerOutputStream != null)
                     {
                         writerOutputStream.close();
-                    }
-                }
+                    } 
+                } 
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error closing OutputStreamWriter", exceptIO);
-                }
+                } 
                 try
                 {
                     if (streamFileOutput != null)
                     {
                         streamFileOutput.close();
-                    }
-                }
+                    } 
+                } 
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error closing FileOutputStream", exceptIO);
-                }
-            }
+                } 
+            } 
 
-        }
-    }
+        } 
+    } 
 
     /* goodB2G2() - use badsource and goodsink by reversing the blocks in the if in the sink function */
     public void goodB2G2Sink(int count ) throws Throwable
@@ -182,55 +182,55 @@ public class CWE400_Resource_Exhaustion__URLConnection_write_22b
                     try
                     {
                         writerBuffered.write("Hello");
-                    }
+                    } 
                     catch (IOException exceptIO)
                     {
                         IO.logger.log(Level.WARNING, "Error with stream writing", exceptIO);
-                    }
-                }
+                    } 
+                } 
                 /* Close stream reading objects */
                 try
                 {
                     if (writerBuffered != null)
                     {
                         writerBuffered.close();
-                    }
-                }
+                    } 
+                } 
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error closing BufferedWriter", exceptIO);
-                }
+                } 
                 try
                 {
                     if (writerOutputStream != null)
                     {
                         writerOutputStream.close();
-                    }
-                }
+                    } 
+                } 
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error closing OutputStreamWriter", exceptIO);
-                }
+                } 
                 try
                 {
                     if (streamFileOutput != null)
                     {
                         streamFileOutput.close();
-                    }
-                }
+                    } 
+                } 
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error closing FileOutputStream", exceptIO);
-                }
-            }
-        }
+                } 
+            } 
+        } 
         else
         {
             /* INCIDENTAL: CWE 561 Dead Code, the code below will never run
              * but ensure count is inititialized before the Sink to avoid compiler errors */
             count = 0;
-        }
-    }
+        } 
+    } 
 
     /* goodG2B() - use goodsource and badsink */
     public void goodG2BSink(int count ) throws Throwable
@@ -248,52 +248,52 @@ public class CWE400_Resource_Exhaustion__URLConnection_write_22b
                 try
                 {
                     writerBuffered.write("Hello");
-                }
+                } 
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error with stream writing", exceptIO);
-                }
-            }
+                } 
+            } 
             /* Close stream reading objects */
             try
             {
                 if (writerBuffered != null)
                 {
                     writerBuffered.close();
-                }
-            }
+                } 
+            } 
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error closing BufferedWriter", exceptIO);
-            }
+            } 
             try
             {
                 if (writerOutputStream != null)
                 {
                     writerOutputStream.close();
-                }
-            }
+                } 
+            } 
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error closing OutputStreamWriter", exceptIO);
-            }
+            } 
             try
             {
                 if (streamFileOutput != null)
                 {
                     streamFileOutput.close();
-                }
-            }
+                } 
+            } 
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error closing FileOutputStream", exceptIO);
-            }
-        }
+            } 
+        } 
         else
         {
             /* INCIDENTAL: CWE 561 Dead Code, the code below will never run
              * but ensure count is inititialized before the Sink to avoid compiler errors */
             count = 0;
-        }
-    }
-}
+        } 
+    } 
+} 

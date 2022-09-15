@@ -46,7 +46,7 @@ public class CWE470_Unsafe_Reflection__URLConnection_21 extends AbstractTestCase
 
         IO.writeLine(tempClassObject.toString()); /* Use tempClassObject in some way */
 
-    }
+    } 
 
     private String bad_source() throws Throwable
     {
@@ -68,11 +68,11 @@ public class CWE470_Unsafe_Reflection__URLConnection_21 extends AbstractTestCase
                     /* This will be reading the first "line" of the response body,
                      * which could be very long if there are no newlines in the HTML */
                     data = readerBuffered.readLine();
-                }
+                } 
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error with stream reading", exceptIO);
-                }
+                } 
                 finally
                 {
                     /* clean up stream reading objects */
@@ -81,36 +81,36 @@ public class CWE470_Unsafe_Reflection__URLConnection_21 extends AbstractTestCase
                         if (readerBuffered != null)
                         {
                             readerBuffered.close();
-                        }
-                    }
+                        } 
+                    } 
                     catch (IOException exceptIO)
                     {
                         IO.logger.log(Level.WARNING, "Error closing BufferedReader", exceptIO);
-                    }
+                    } 
 
                     try
                     {
                         if (readerInputStream != null)
                         {
                             readerInputStream.close();
-                        }
-                    }
+                        } 
+                    } 
                     catch (IOException exceptIO)
                     {
                         IO.logger.log(Level.WARNING, "Error closing InputStreamReader", exceptIO);
-                    }
-                }
-            }
-        }
+                    } 
+                } 
+            } 
+        } 
         else
         {
             /* INCIDENTAL: CWE 561 Dead Code, the code below will never run
              * but ensure data is inititialized before the Sink to avoid compiler errors */
             data = null;
-        }
+        } 
 
         return data;
-    }
+    } 
 
     /* The variables below are used to drive control flow in the source functions. */
     private boolean goodG2B1_private = false;
@@ -120,7 +120,7 @@ public class CWE470_Unsafe_Reflection__URLConnection_21 extends AbstractTestCase
     {
         goodG2B1();
         goodG2B2();
-    }
+    } 
 
     /* goodG2B1() - use goodsource and badsink by setting the variable to false instead of true */
     private void goodG2B1() throws Throwable
@@ -136,7 +136,7 @@ public class CWE470_Unsafe_Reflection__URLConnection_21 extends AbstractTestCase
 
         IO.writeLine(tempClassObject.toString()); /* Use tempClassObject in some way */
 
-    }
+    } 
 
     private String goodG2B1_source() throws Throwable
     {
@@ -147,17 +147,17 @@ public class CWE470_Unsafe_Reflection__URLConnection_21 extends AbstractTestCase
             /* INCIDENTAL: CWE 561 Dead Code, the code below will never run
              * but ensure data is inititialized before the Sink to avoid compiler errors */
             data = null;
-        }
+        } 
         else
         {
 
             /* FIX: Use a hardcoded class name */
             data = "Testing.test";
 
-        }
+        } 
 
         return data;
-    }
+    } 
 
     /* goodG2B2() - use goodsource and badsink by reversing the blocks in the if in the sink function */
     private void goodG2B2() throws Throwable
@@ -173,7 +173,7 @@ public class CWE470_Unsafe_Reflection__URLConnection_21 extends AbstractTestCase
 
         IO.writeLine(tempClassObject.toString()); /* Use tempClassObject in some way */
 
-    }
+    } 
 
     private String goodG2B2_source() throws Throwable
     {
@@ -183,16 +183,16 @@ public class CWE470_Unsafe_Reflection__URLConnection_21 extends AbstractTestCase
         {
             /* FIX: Use a hardcoded class name */
             data = "Testing.test";
-        }
+        } 
         else
         {
             /* INCIDENTAL: CWE 561 Dead Code, the code below will never run
              * but ensure data is inititialized before the Sink to avoid compiler errors */
             data = null;
-        }
+        } 
 
         return data;
-    }
+    } 
 
     /* Below is the main(). It is only used when building this testcase on
      * its own for testing or for building a binary to use in testing binary
@@ -203,6 +203,6 @@ public class CWE470_Unsafe_Reflection__URLConnection_21 extends AbstractTestCase
            InstantiationException, IllegalAccessException
     {
         mainFromParent(args);
-    }
+    } 
 
-}
+} 

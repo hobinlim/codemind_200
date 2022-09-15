@@ -38,7 +38,7 @@ public class CWE404_Improper_Resource_Shutdown__db_Connection_01 extends Abstrac
             if (resultSet.first())
             {
                 IO.writeString(resultSet.toString());
-            }
+            } 
 
             /* FLAW: DB objects are not closed properly. They should be in a finally block. */
             try
@@ -46,43 +46,43 @@ public class CWE404_Improper_Resource_Shutdown__db_Connection_01 extends Abstrac
                 if (resultSet != null)
                 {
                     resultSet.close();
-                }
-            }
+                } 
+            } 
             catch (SQLException exceptSql)
             {
                 IO.logger.log(Level.WARNING, "Error closing ResultSet", exceptSql);
-            }
+            } 
             
             try
             {
                 if (preparedStatement != null)
                 {
                     preparedStatement.close();
-                }
-            }
+                } 
+            } 
             catch (SQLException exceptSql)
             {
                 IO.logger.log(Level.WARNING, "Error closing PreparedStatement", exceptSql);
-            }
+            } 
                 
             try
             {
                 if (dBConnection != null)
                 {
                     dBConnection.close();
-                }
-            }
+                } 
+            } 
             catch (SQLException exceptSql)
             {
                 IO.logger.log(Level.WARNING, "Error closing Connection", exceptSql);
-            }
+            } 
 
-        }
+        } 
         catch (SQLException exceptSql)
         {
             IO.logger.log(Level.WARNING, "SQL Error", exceptSql);
-        }
-    }
+        } 
+    } 
 
     private void good1()
     {
@@ -103,12 +103,12 @@ public class CWE404_Improper_Resource_Shutdown__db_Connection_01 extends Abstrac
             if (resultSet.first())
             {
                 IO.writeString(resultSet.toString());
-            }
-        }
+            } 
+        } 
         catch (SQLException exceptSql)
         {
             IO.logger.log(Level.WARNING, "SQL Error", exceptSql);
-        }
+        } 
         
         /* FIX: Close DB objects in a finally block */
         finally
@@ -118,43 +118,43 @@ public class CWE404_Improper_Resource_Shutdown__db_Connection_01 extends Abstrac
                 if (resultSet != null)
                 {
                     resultSet.close();
-                }
-            }
+                } 
+            } 
             catch (SQLException exceptSql)
             {
                 IO.logger.log(Level.WARNING, "Error closing ResultSet", exceptSql);
-            }
+            } 
 
             try
             {
                 if (preparedStatement != null)
                 {
                     preparedStatement.close();
-                }
-            }
+                } 
+            } 
             catch (SQLException exceptSql)
             {
                 IO.logger.log(Level.WARNING, "Error closing PreparedStatement", exceptSql);
-            }
+            } 
 
             try
             {
                 if (dBConnection != null)
                 {
                     dBConnection.close();
-                }
-            }
+                } 
+            } 
             catch (SQLException exceptSql)
             {
                 IO.logger.log(Level.WARNING, "Error closing Connection", exceptSql);
-            }
-        }
-    }
+            } 
+        } 
+    } 
     
     public void good()  
     {
         good1();
-    }
+    } 
     
     /* Below is the main(). It is only used when building this testcase on 
      * its own for testing or for building a binary to use in testing binary 
@@ -165,5 +165,5 @@ public class CWE404_Improper_Resource_Shutdown__db_Connection_01 extends Abstrac
             InstantiationException, IllegalAccessException 
     {
         mainFromParent(args);
-    }
-}
+    } 
+} 

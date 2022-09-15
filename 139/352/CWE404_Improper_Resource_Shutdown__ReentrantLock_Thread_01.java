@@ -24,12 +24,12 @@ public class CWE404_Improper_Resource_Shutdown__ReentrantLock_Thread_01 extends 
         
         /* FLAW: lock should be unlocked in a finally block */
         BAD_REENTRANT_LOCK.unlock();       
-    }
+    } 
     
     public void bad() throws Throwable 
     {
         helperBad();
-    }
+    } 
 
     static private int intGood1Number = 3;
     static private final ReentrantLock GOOD1_REENTRANT_LOCK = new ReentrantLock();
@@ -43,23 +43,23 @@ public class CWE404_Improper_Resource_Shutdown__ReentrantLock_Thread_01 extends 
             intGood1Number++;
             
             IO.writeLine(intGood1Number);
-        }
+        } 
         finally
         {
             /* FIX: Unlock the lock within a finally block */
             GOOD1_REENTRANT_LOCK.unlock();
-        }
-    }
+        } 
+    } 
     
     public void good1() throws Throwable 
     {
         helperGood1();
-    }
+    } 
 
     public void good() throws Throwable 
     {
         good1();
-    }
+    } 
 
     /* Below is the main(). It is only used when building this testcase on 
      * its own for testing or for building a binary to use in testing binary 
@@ -70,5 +70,5 @@ public class CWE404_Improper_Resource_Shutdown__ReentrantLock_Thread_01 extends 
             throws ClassNotFoundException, InstantiationException, IllegalAccessException 
     {
         mainFromParent(args);
-    }
-}
+    } 
+} 

@@ -33,9 +33,9 @@ public class CWE400_Resource_Exhaustion__URLConnection_for_loop_73b
         for (i = 0; i < count; i++)
         {
             IO.writeLine("Hello");
-        }
+        } 
 
-    }
+    } 
 
     /* goodG2B() - use GoodSource and BadSink */
     public void goodG2BSink(LinkedList<Integer> countLinkedList ) throws Throwable
@@ -48,9 +48,9 @@ public class CWE400_Resource_Exhaustion__URLConnection_for_loop_73b
         for (i = 0; i < count; i++)
         {
             IO.writeLine("Hello");
-        }
+        } 
 
-    }
+    } 
 
     /* goodB2G() - use BadSource and GoodSink */
     public void goodB2GSink(LinkedList<Integer> countLinkedList ) throws Throwable
@@ -65,8 +65,8 @@ public class CWE400_Resource_Exhaustion__URLConnection_for_loop_73b
             for (i = 0; i < count; i++)
             {
                 IO.writeLine("Hello");
-            }
-        }
+            } 
+        } 
 
-    }
-}
+    } 
+} 

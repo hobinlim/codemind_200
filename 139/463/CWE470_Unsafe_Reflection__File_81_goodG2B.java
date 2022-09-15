@@ -31,5 +31,5 @@ public class CWE470_Unsafe_Reflection__File_81_goodG2B extends CWE470_Unsafe_Ref
 
         IO.writeLine(tempClassObject.toString()); /* Use tempClassObject in some way */
 
-    }
-}
+    } 
+} 

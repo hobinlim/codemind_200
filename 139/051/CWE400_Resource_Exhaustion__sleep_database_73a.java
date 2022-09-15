@@ -56,17 +56,17 @@ public class CWE400_Resource_Exhaustion__sleep_database_73a extends AbstractTest
                     try
                     {
                         count = Integer.parseInt(stringNumber.trim());
-                    }
+                    } 
                     catch (NumberFormatException exceptNumberFormat)
                     {
                         IO.logger.log(Level.WARNING, "Number format exception parsing count from string", exceptNumberFormat);
-                    }
-                }
-            }
+                    } 
+                } 
+            } 
             catch (SQLException exceptSql)
             {
                 IO.logger.log(Level.WARNING, "Error with SQL statement", exceptSql);
-            }
+            } 
             finally
             {
                 /* Close database objects */
@@ -75,51 +75,51 @@ public class CWE400_Resource_Exhaustion__sleep_database_73a extends AbstractTest
                     if (resultSet != null)
                     {
                         resultSet.close();
-                    }
-                }
+                    } 
+                } 
                 catch (SQLException exceptSql)
                 {
                     IO.logger.log(Level.WARNING, "Error closing ResultSet", exceptSql);
-                }
+                } 
 
                 try
                 {
                     if (preparedStatement != null)
                     {
                         preparedStatement.close();
-                    }
-                }
+                    } 
+                } 
                 catch (SQLException exceptSql)
                 {
                     IO.logger.log(Level.WARNING, "Error closing PreparedStatement", exceptSql);
-                }
+                } 
 
                 try
                 {
                     if (connection != null)
                     {
                         connection.close();
-                    }
-                }
+                    } 
+                } 
                 catch (SQLException exceptSql)
                 {
                     IO.logger.log(Level.WARNING, "Error closing Connection", exceptSql);
-                }
-            }
-        }
+                } 
+            } 
+        } 
 
         LinkedList<Integer> countLinkedList = new LinkedList<Integer>();
         countLinkedList.add(0, count);
         countLinkedList.add(1, count);
         countLinkedList.add(2, count);
         (new CWE400_Resource_Exhaustion__sleep_database_73b()).badSink(countLinkedList  );
-    }
+    } 
 
     public void good() throws Throwable
     {
         goodG2B();
         goodB2G();
-    }
+    } 
 
     /* goodG2B() - use GoodSource and BadSink */
     private void goodG2B() throws Throwable
@@ -134,7 +134,7 @@ public class CWE400_Resource_Exhaustion__sleep_database_73a extends AbstractTest
         countLinkedList.add(1, count);
         countLinkedList.add(2, count);
         (new CWE400_Resource_Exhaustion__sleep_database_73b()).goodG2BSink(countLinkedList  );
-    }
+    } 
 
     /* goodB2G() - use BadSource and GoodSink */
     private void goodB2G() throws Throwable
@@ -165,17 +165,17 @@ public class CWE400_Resource_Exhaustion__sleep_database_73a extends AbstractTest
                     try
                     {
                         count = Integer.parseInt(stringNumber.trim());
-                    }
+                    } 
                     catch (NumberFormatException exceptNumberFormat)
                     {
                         IO.logger.log(Level.WARNING, "Number format exception parsing count from string", exceptNumberFormat);
-                    }
-                }
-            }
+                    } 
+                } 
+            } 
             catch (SQLException exceptSql)
             {
                 IO.logger.log(Level.WARNING, "Error with SQL statement", exceptSql);
-            }
+            } 
             finally
             {
                 /* Close database objects */
@@ -184,45 +184,45 @@ public class CWE400_Resource_Exhaustion__sleep_database_73a extends AbstractTest
                     if (resultSet != null)
                     {
                         resultSet.close();
-                    }
-                }
+                    } 
+                } 
                 catch (SQLException exceptSql)
                 {
                     IO.logger.log(Level.WARNING, "Error closing ResultSet", exceptSql);
-                }
+                } 
 
                 try
                 {
                     if (preparedStatement != null)
                     {
                         preparedStatement.close();
-                    }
-                }
+                    } 
+                } 
                 catch (SQLException exceptSql)
                 {
                     IO.logger.log(Level.WARNING, "Error closing PreparedStatement", exceptSql);
-                }
+                } 
 
                 try
                 {
                     if (connection != null)
                     {
                         connection.close();
-                    }
-                }
+                    } 
+                } 
                 catch (SQLException exceptSql)
                 {
                     IO.logger.log(Level.WARNING, "Error closing Connection", exceptSql);
-                }
-            }
-        }
+                } 
+            } 
+        } 
 
         LinkedList<Integer> countLinkedList = new LinkedList<Integer>();
         countLinkedList.add(0, count);
         countLinkedList.add(1, count);
         countLinkedList.add(2, count);
         (new CWE400_Resource_Exhaustion__sleep_database_73b()).goodB2GSink(countLinkedList  );
-    }
+    } 
 
     /* Below is the main(). It is only used when building this testcase on
      * its own for testing or for building a binary to use in testing binary
@@ -233,6 +233,6 @@ public class CWE400_Resource_Exhaustion__sleep_database_73a extends AbstractTest
            InstantiationException, IllegalAccessException
     {
         mainFromParent(args);
-    }
+    } 
 
-}
+} 

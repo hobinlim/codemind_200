@@ -56,17 +56,17 @@ public class CWE400_Resource_Exhaustion__URLConnection_for_loop_15 extends Abstr
                         try
                         {
                             count = Integer.parseInt(stringNumber.trim());
-                        }
+                        } 
                         catch (NumberFormatException exceptNumberFormat)
                         {
                             IO.logger.log(Level.WARNING, "Number format exception parsing count from string", exceptNumberFormat);
-                        }
-                    }
-                }
+                        } 
+                    } 
+                } 
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error with stream reading", exceptIO);
-                }
+                } 
                 finally
                 {
                     /* clean up stream reading objects */
@@ -75,33 +75,33 @@ public class CWE400_Resource_Exhaustion__URLConnection_for_loop_15 extends Abstr
                         if (readerBuffered != null)
                         {
                             readerBuffered.close();
-                        }
-                    }
+                        } 
+                    } 
                     catch (IOException exceptIO)
                     {
                         IO.logger.log(Level.WARNING, "Error closing BufferedReader", exceptIO);
-                    }
+                    } 
 
                     try
                     {
                         if (readerInputStream != null)
                         {
                             readerInputStream.close();
-                        }
-                    }
+                        } 
+                    } 
                     catch (IOException exceptIO)
                     {
                         IO.logger.log(Level.WARNING, "Error closing InputStreamReader", exceptIO);
-                    }
-                }
-            }
+                    } 
+                } 
+            } 
             break;
         default:
             /* INCIDENTAL: CWE 561 Dead Code, the code below will never run
              * but ensure count is inititialized before the Sink to avoid compiler errors */
             count = 0;
             break;
-        }
+        } 
 
         switch (7)
         {
@@ -111,14 +111,14 @@ public class CWE400_Resource_Exhaustion__URLConnection_for_loop_15 extends Abstr
             for (i = 0; i < count; i++)
             {
                 IO.writeLine("Hello");
-            }
+            } 
             break;
         default:
             /* INCIDENTAL: CWE 561 Dead Code, the code below will never run */
             IO.writeLine("Benign, fixed string");
             break;
-        }
-    }
+        } 
+    } 
 
     /* goodG2B1() - use goodsource and badsink by changing the first switch to switch(5) */
     private void goodG2B1() throws Throwable
@@ -136,7 +136,7 @@ public class CWE400_Resource_Exhaustion__URLConnection_for_loop_15 extends Abstr
             /* FIX: Use a hardcoded number that won't cause underflow, overflow, divide by zero, or loss-of-precision issues */
             count = 2;
             break;
-        }
+        } 
 
         switch (7)
         {
@@ -146,14 +146,14 @@ public class CWE400_Resource_Exhaustion__URLConnection_for_loop_15 extends Abstr
             for (i = 0; i < count; i++)
             {
                 IO.writeLine("Hello");
-            }
+            } 
             break;
         default:
             /* INCIDENTAL: CWE 561 Dead Code, the code below will never run */
             IO.writeLine("Benign, fixed string");
             break;
-        }
-    }
+        } 
+    } 
 
     /* goodG2B2() - use goodsource and badsink by reversing the blocks in the first switch  */
     private void goodG2B2() throws Throwable
@@ -171,7 +171,7 @@ public class CWE400_Resource_Exhaustion__URLConnection_for_loop_15 extends Abstr
              * but ensure count is inititialized before the Sink to avoid compiler errors */
             count = 0;
             break;
-        }
+        } 
 
         switch (7)
         {
@@ -181,14 +181,14 @@ public class CWE400_Resource_Exhaustion__URLConnection_for_loop_15 extends Abstr
             for (i = 0; i < count; i++)
             {
                 IO.writeLine("Hello");
-            }
+            } 
             break;
         default:
             /* INCIDENTAL: CWE 561 Dead Code, the code below will never run */
             IO.writeLine("Benign, fixed string");
             break;
-        }
-    }
+        } 
+    } 
 
     /* goodB2G1() - use badsource and goodsink by changing the second switch to switch(8) */
     private void goodB2G1() throws Throwable
@@ -217,17 +217,17 @@ public class CWE400_Resource_Exhaustion__URLConnection_for_loop_15 extends Abstr
                         try
                         {
                             count = Integer.parseInt(stringNumber.trim());
-                        }
+                        } 
                         catch (NumberFormatException exceptNumberFormat)
                         {
                             IO.logger.log(Level.WARNING, "Number format exception parsing count from string", exceptNumberFormat);
-                        }
-                    }
-                }
+                        } 
+                    } 
+                } 
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error with stream reading", exceptIO);
-                }
+                } 
                 finally
                 {
                     /* clean up stream reading objects */
@@ -236,33 +236,33 @@ public class CWE400_Resource_Exhaustion__URLConnection_for_loop_15 extends Abstr
                         if (readerBuffered != null)
                         {
                             readerBuffered.close();
-                        }
-                    }
+                        } 
+                    } 
                     catch (IOException exceptIO)
                     {
                         IO.logger.log(Level.WARNING, "Error closing BufferedReader", exceptIO);
-                    }
+                    } 
 
                     try
                     {
                         if (readerInputStream != null)
                         {
                             readerInputStream.close();
-                        }
-                    }
+                        } 
+                    } 
                     catch (IOException exceptIO)
                     {
                         IO.logger.log(Level.WARNING, "Error closing InputStreamReader", exceptIO);
-                    }
-                }
-            }
+                    } 
+                } 
+            } 
             break;
         default:
             /* INCIDENTAL: CWE 561 Dead Code, the code below will never run
              * but ensure count is inititialized before the Sink to avoid compiler errors */
             count = 0;
             break;
-        }
+        } 
 
         switch (8)
         {
@@ -278,11 +278,11 @@ public class CWE400_Resource_Exhaustion__URLConnection_for_loop_15 extends Abstr
                 for (i = 0; i < count; i++)
                 {
                     IO.writeLine("Hello");
-                }
-            }
+                } 
+            } 
             break;
-        }
-    }
+        } 
+    } 
 
     /* goodB2G2() - use badsource and goodsink by reversing the blocks in the second switch  */
     private void goodB2G2() throws Throwable
@@ -311,17 +311,17 @@ public class CWE400_Resource_Exhaustion__URLConnection_for_loop_15 extends Abstr
                         try
                         {
                             count = Integer.parseInt(stringNumber.trim());
-                        }
+                        } 
                         catch (NumberFormatException exceptNumberFormat)
                         {
                             IO.logger.log(Level.WARNING, "Number format exception parsing count from string", exceptNumberFormat);
-                        }
-                    }
-                }
+                        } 
+                    } 
+                } 
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error with stream reading", exceptIO);
-                }
+                } 
                 finally
                 {
                     /* clean up stream reading objects */
@@ -330,33 +330,33 @@ public class CWE400_Resource_Exhaustion__URLConnection_for_loop_15 extends Abstr
                         if (readerBuffered != null)
                         {
                             readerBuffered.close();
-                        }
-                    }
+                        } 
+                    } 
                     catch (IOException exceptIO)
                     {
                         IO.logger.log(Level.WARNING, "Error closing BufferedReader", exceptIO);
-                    }
+                    } 
 
                     try
                     {
                         if (readerInputStream != null)
                         {
                             readerInputStream.close();
-                        }
-                    }
+                        } 
+                    } 
                     catch (IOException exceptIO)
                     {
                         IO.logger.log(Level.WARNING, "Error closing InputStreamReader", exceptIO);
-                    }
-                }
-            }
+                    } 
+                } 
+            } 
             break;
         default:
             /* INCIDENTAL: CWE 561 Dead Code, the code below will never run
              * but ensure count is inititialized before the Sink to avoid compiler errors */
             count = 0;
             break;
-        }
+        } 
 
         switch (7)
         {
@@ -368,15 +368,15 @@ public class CWE400_Resource_Exhaustion__URLConnection_for_loop_15 extends Abstr
                 for (i = 0; i < count; i++)
                 {
                     IO.writeLine("Hello");
-                }
-            }
+                } 
+            } 
             break;
         default:
             /* INCIDENTAL: CWE 561 Dead Code, the code below will never run */
             IO.writeLine("Benign, fixed string");
             break;
-        }
-    }
+        } 
+    } 
 
     public void good() throws Throwable
     {
@@ -384,7 +384,7 @@ public class CWE400_Resource_Exhaustion__URLConnection_for_loop_15 extends Abstr
         goodG2B2();
         goodB2G1();
         goodB2G2();
-    }
+    } 
 
     /* Below is the main(). It is only used when building this testcase on
      * its own for testing or for building a binary to use in testing binary
@@ -395,5 +395,5 @@ public class CWE400_Resource_Exhaustion__URLConnection_for_loop_15 extends Abstr
            InstantiationException, IllegalAccessException
     {
         mainFromParent(args);
-    }
-}
+    } 
+} 

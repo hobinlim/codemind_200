@@ -35,15 +35,15 @@ public class CWE400_Resource_Exhaustion__sleep_Property_61b
             try
             {
                 count = Integer.parseInt(stringNumber.trim());
-            }
+            } 
             catch(NumberFormatException exceptNumberFormat)
             {
                 IO.logger.log(Level.WARNING, "Number format exception parsing count from string", exceptNumberFormat);
-            }
-        }
+            } 
+        } 
 
         return count;
-    }
+    } 
 
     /* goodG2B() - use goodsource and badsink */
     public int goodG2BSource() throws Throwable
@@ -54,7 +54,7 @@ public class CWE400_Resource_Exhaustion__sleep_Property_61b
         count = 2;
 
         return count;
-    }
+    } 
 
     /* goodB2G() - use badsource and goodsink */
     public int goodB2GSource() throws Throwable
@@ -70,13 +70,13 @@ public class CWE400_Resource_Exhaustion__sleep_Property_61b
             try
             {
                 count = Integer.parseInt(stringNumber.trim());
-            }
+            } 
             catch(NumberFormatException exceptNumberFormat)
             {
                 IO.logger.log(Level.WARNING, "Number format exception parsing count from string", exceptNumberFormat);
-            }
-        }
+            } 
+        } 
 
         return count;
-    }
-}
+    } 
+} 

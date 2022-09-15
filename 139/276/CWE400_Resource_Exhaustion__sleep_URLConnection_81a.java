@@ -55,17 +55,17 @@ public class CWE400_Resource_Exhaustion__sleep_URLConnection_81a extends Abstrac
                     try
                     {
                         count = Integer.parseInt(stringNumber.trim());
-                    }
+                    } 
                     catch (NumberFormatException exceptNumberFormat)
                     {
                         IO.logger.log(Level.WARNING, "Number format exception parsing count from string", exceptNumberFormat);
-                    }
-                }
-            }
+                    } 
+                } 
+            } 
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error with stream reading", exceptIO);
-            }
+            } 
             finally
             {
                 /* clean up stream reading objects */
@@ -74,36 +74,36 @@ public class CWE400_Resource_Exhaustion__sleep_URLConnection_81a extends Abstrac
                     if (readerBuffered != null)
                     {
                         readerBuffered.close();
-                    }
-                }
+                    } 
+                } 
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error closing BufferedReader", exceptIO);
-                }
+                } 
 
                 try
                 {
                     if (readerInputStream != null)
                     {
                         readerInputStream.close();
-                    }
-                }
+                    } 
+                } 
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error closing InputStreamReader", exceptIO);
-                }
-            }
-        }
+                } 
+            } 
+        } 
 
         CWE400_Resource_Exhaustion__sleep_URLConnection_81_base baseObject = new CWE400_Resource_Exhaustion__sleep_URLConnection_81_bad();
         baseObject.action(count );
-    }
+    } 
 
     public void good() throws Throwable
     {
         goodG2B();
         goodB2G();
-    }
+    } 
 
     /* goodG2B() - use GoodSource and BadSink */
     private void goodG2B() throws Throwable
@@ -115,7 +115,7 @@ public class CWE400_Resource_Exhaustion__sleep_URLConnection_81a extends Abstrac
 
         CWE400_Resource_Exhaustion__sleep_URLConnection_81_base baseObject = new CWE400_Resource_Exhaustion__sleep_URLConnection_81_goodG2B();
         baseObject.action(count );
-    }
+    } 
 
     /* goodB2G() - use BadSource and GoodSink */
     private void goodB2G() throws Throwable
@@ -145,17 +145,17 @@ public class CWE400_Resource_Exhaustion__sleep_URLConnection_81a extends Abstrac
                     try
                     {
                         count = Integer.parseInt(stringNumber.trim());
-                    }
+                    } 
                     catch (NumberFormatException exceptNumberFormat)
                     {
                         IO.logger.log(Level.WARNING, "Number format exception parsing count from string", exceptNumberFormat);
-                    }
-                }
-            }
+                    } 
+                } 
+            } 
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error with stream reading", exceptIO);
-            }
+            } 
             finally
             {
                 /* clean up stream reading objects */
@@ -164,30 +164,30 @@ public class CWE400_Resource_Exhaustion__sleep_URLConnection_81a extends Abstrac
                     if (readerBuffered != null)
                     {
                         readerBuffered.close();
-                    }
-                }
+                    } 
+                } 
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error closing BufferedReader", exceptIO);
-                }
+                } 
 
                 try
                 {
                     if (readerInputStream != null)
                     {
                         readerInputStream.close();
-                    }
-                }
+                    } 
+                } 
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error closing InputStreamReader", exceptIO);
-                }
-            }
-        }
+                } 
+            } 
+        } 
 
         CWE400_Resource_Exhaustion__sleep_URLConnection_81_base baseObject = new CWE400_Resource_Exhaustion__sleep_URLConnection_81_goodB2G();
         baseObject.action(count );
-    }
+    } 
 
     /* Below is the main(). It is only used when building this testcase on
      * its own for testing or for building a binary to use in testing binary
@@ -198,5 +198,5 @@ public class CWE400_Resource_Exhaustion__sleep_URLConnection_81a extends Abstrac
            InstantiationException, IllegalAccessException
     {
         mainFromParent(args);
-    }
-}
+    } 
+} 

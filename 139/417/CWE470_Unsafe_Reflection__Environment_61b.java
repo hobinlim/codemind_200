@@ -31,7 +31,7 @@ public class CWE470_Unsafe_Reflection__Environment_61b
         data = System.getenv("ADD");
 
         return data;
-    }
+    } 
 
     /* goodG2B() - use goodsource and badsink */
     public String goodG2BSource() throws Throwable
@@ -42,5 +42,5 @@ public class CWE470_Unsafe_Reflection__Environment_61b
         data = "Testing.test";
 
         return data;
-    }
-}
+    } 
+} 

@@ -32,7 +32,7 @@ public class CWE191_Integer_Underflow__short_min_predec_21 extends AbstractTestC
 
         badPrivate = true;
         badSink(data );
-    } 
+    }
 
     private void badSink(short data ) throws Throwable
     {
@@ -41,8 +41,8 @@ public class CWE191_Integer_Underflow__short_min_predec_21 extends AbstractTestC
             /* POTENTIAL FLAW: if data == Short.MIN_VALUE, this will overflow */
             short result = (short)(--data);
             IO.writeLine("result: " + result);
-        } 
-    } 
+        }
+    }
 
     /* The variables below are used to drive control flow in the sink functions. */
     private boolean goodB2G1Private = false;
@@ -54,7 +54,7 @@ public class CWE191_Integer_Underflow__short_min_predec_21 extends AbstractTestC
         goodB2G1();
         goodB2G2();
         goodG2B();
-    } 
+    }
 
     /* goodB2G1() - use BadSource and GoodSink by setting the variable to false instead of true */
     private void goodB2G1() throws Throwable
@@ -66,7 +66,7 @@ public class CWE191_Integer_Underflow__short_min_predec_21 extends AbstractTestC
 
         goodB2G1Private = false;
         goodB2G1Sink(data );
-    } 
+    }
 
     private void goodB2G1Sink(short data ) throws Throwable
     {
@@ -74,7 +74,7 @@ public class CWE191_Integer_Underflow__short_min_predec_21 extends AbstractTestC
         {
             /* INCIDENTAL: CWE 561 Dead Code, the code below will never run */
             IO.writeLine("Benign, fixed string");
-        } 
+        }
         else
         {
 
@@ -83,14 +83,14 @@ public class CWE191_Integer_Underflow__short_min_predec_21 extends AbstractTestC
             {
                 short result = (short)(--data);
                 IO.writeLine("result: " + result);
-            } 
+            }
             else
             {
                 IO.writeLine("data value is too small to decrement.");
-            } 
+            }
 
-        } 
-    } 
+        }
+    }
 
     /* goodB2G2() - use BadSource and GoodSink by reversing the blocks in the if in the sink function */
     private void goodB2G2() throws Throwable
@@ -102,7 +102,7 @@ public class CWE191_Integer_Underflow__short_min_predec_21 extends AbstractTestC
 
         goodB2G2Private = true;
         goodB2G2Sink(data );
-    } 
+    }
 
     private void goodB2G2Sink(short data ) throws Throwable
     {
@@ -113,13 +113,13 @@ public class CWE191_Integer_Underflow__short_min_predec_21 extends AbstractTestC
             {
                 short result = (short)(--data);
                 IO.writeLine("result: " + result);
-            } 
+            }
             else
             {
                 IO.writeLine("data value is too small to decrement.");
-            } 
-        } 
-    } 
+            }
+        }
+    }
 
     /* goodG2B() - use GoodSource and BadSink */
     private void goodG2B() throws Throwable
@@ -131,7 +131,7 @@ public class CWE191_Integer_Underflow__short_min_predec_21 extends AbstractTestC
 
         goodG2BPrivate = true;
         goodG2BSink(data );
-    } 
+    }
 
     private void goodG2BSink(short data ) throws Throwable
     {
@@ -140,8 +140,8 @@ public class CWE191_Integer_Underflow__short_min_predec_21 extends AbstractTestC
             /* POTENTIAL FLAW: if data == Short.MIN_VALUE, this will overflow */
             short result = (short)(--data);
             IO.writeLine("result: " + result);
-        } 
-    } 
+        }
+    }
 
     /* Below is the main(). It is only used when building this testcase on
      * its own for testing or for building a binary to use in testing binary
@@ -152,5 +152,5 @@ public class CWE191_Integer_Underflow__short_min_predec_21 extends AbstractTestC
            InstantiationException, IllegalAccessException
     {
         mainFromParent(args);
-    } 
-} 
+    }
+}

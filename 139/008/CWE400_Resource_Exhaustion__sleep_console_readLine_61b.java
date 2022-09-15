@@ -49,17 +49,17 @@ public class CWE400_Resource_Exhaustion__sleep_console_readLine_61b
                     try
                     {
                         count = Integer.parseInt(stringNumber.trim());
-                    }
+                    } 
                     catch(NumberFormatException exceptNumberFormat)
                     {
                         IO.logger.log(Level.WARNING, "Number format exception parsing count from string", exceptNumberFormat);
-                    }
-                }
-            }
+                    } 
+                } 
+            } 
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error with stream reading", exceptIO);
-            }
+            } 
             finally
             {
                 try
@@ -67,30 +67,30 @@ public class CWE400_Resource_Exhaustion__sleep_console_readLine_61b
                     if (readerBuffered != null)
                     {
                         readerBuffered.close();
-                    }
-                }
+                    } 
+                } 
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error closing BufferedReader", exceptIO);
-                }
+                } 
 
                 try
                 {
                     if (readerInputStream != null)
                     {
                         readerInputStream.close();
-                    }
-                }
+                    } 
+                } 
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error closing InputStreamReader", exceptIO);
-                }
-            }
-        }
+                } 
+            } 
+        } 
         /* NOTE: Tools may report a flaw here because readerBuffered and readerInputStream are not closed.  Unfortunately, closing those will close System.in, which will cause any future attempts to read from the console to fail and throw an exception */
 
         return count;
-    }
+    } 
 
     /* goodG2B() - use goodsource and badsink */
     public int goodG2BSource() throws Throwable
@@ -101,7 +101,7 @@ public class CWE400_Resource_Exhaustion__sleep_console_readLine_61b
         count = 2;
 
         return count;
-    }
+    } 
 
     /* goodB2G() - use badsource and goodsink */
     public int goodB2GSource() throws Throwable
@@ -127,17 +127,17 @@ public class CWE400_Resource_Exhaustion__sleep_console_readLine_61b
                     try
                     {
                         count = Integer.parseInt(stringNumber.trim());
-                    }
+                    } 
                     catch(NumberFormatException exceptNumberFormat)
                     {
                         IO.logger.log(Level.WARNING, "Number format exception parsing count from string", exceptNumberFormat);
-                    }
-                }
-            }
+                    } 
+                } 
+            } 
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error with stream reading", exceptIO);
-            }
+            } 
             finally
             {
                 try
@@ -145,28 +145,28 @@ public class CWE400_Resource_Exhaustion__sleep_console_readLine_61b
                     if (readerBuffered != null)
                     {
                         readerBuffered.close();
-                    }
-                }
+                    } 
+                } 
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error closing BufferedReader", exceptIO);
-                }
+                } 
 
                 try
                 {
                     if (readerInputStream != null)
                     {
                         readerInputStream.close();
-                    }
-                }
+                    } 
+                } 
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error closing InputStreamReader", exceptIO);
-                }
-            }
-        }
+                } 
+            } 
+        } 
         /* NOTE: Tools may report a flaw here because readerBuffered and readerInputStream are not closed.  Unfortunately, closing those will close System.in, which will cause any future attempts to read from the console to fail and throw an exception */
 
         return count;
-    }
-}
+    } 
+} 

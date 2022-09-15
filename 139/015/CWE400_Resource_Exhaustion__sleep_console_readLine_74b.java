@@ -28,7 +28,7 @@ public class CWE400_Resource_Exhaustion__sleep_console_readLine_74b
         /* POTENTIAL FLAW: Use count as the input to Thread.sleep() */
         Thread.sleep(count);
 
-    }
+    } 
 
     /* goodG2B() - use GoodSource and BadSink */
     public void goodG2BSink(HashMap<Integer,Integer> countHashMap ) throws Throwable
@@ -38,7 +38,7 @@ public class CWE400_Resource_Exhaustion__sleep_console_readLine_74b
         /* POTENTIAL FLAW: Use count as the input to Thread.sleep() */
         Thread.sleep(count);
 
-    }
+    } 
 
     /* goodB2G() - use BadSource and GoodSink */
     public void goodB2GSink(HashMap<Integer,Integer> countHashMap ) throws Throwable
@@ -49,7 +49,7 @@ public class CWE400_Resource_Exhaustion__sleep_console_readLine_74b
         if (count > 0 && count <= 2000)
         {
             Thread.sleep(count);
-        }
+        } 
 
-    }
-}
+    } 
+} 

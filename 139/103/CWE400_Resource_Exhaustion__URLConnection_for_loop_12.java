@@ -54,17 +54,17 @@ public class CWE400_Resource_Exhaustion__URLConnection_for_loop_12 extends Abstr
                         try
                         {
                             count = Integer.parseInt(stringNumber.trim());
-                        }
+                        } 
                         catch (NumberFormatException exceptNumberFormat)
                         {
                             IO.logger.log(Level.WARNING, "Number format exception parsing count from string", exceptNumberFormat);
-                        }
-                    }
-                }
+                        } 
+                    } 
+                } 
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error with stream reading", exceptIO);
-                }
+                } 
                 finally
                 {
                     /* clean up stream reading objects */
@@ -73,34 +73,34 @@ public class CWE400_Resource_Exhaustion__URLConnection_for_loop_12 extends Abstr
                         if (readerBuffered != null)
                         {
                             readerBuffered.close();
-                        }
-                    }
+                        } 
+                    } 
                     catch (IOException exceptIO)
                     {
                         IO.logger.log(Level.WARNING, "Error closing BufferedReader", exceptIO);
-                    }
+                    } 
 
                     try
                     {
                         if (readerInputStream != null)
                         {
                             readerInputStream.close();
-                        }
-                    }
+                        } 
+                    } 
                     catch (IOException exceptIO)
                     {
                         IO.logger.log(Level.WARNING, "Error closing InputStreamReader", exceptIO);
-                    }
-                }
-            }
-        }
+                    } 
+                } 
+            } 
+        } 
         else
         {
 
             /* FIX: Use a hardcoded number that won't cause underflow, overflow, divide by zero, or loss-of-precision issues */
             count = 2;
 
-        }
+        } 
 
         if(IO.staticReturnsTrueOrFalse())
         {
@@ -109,8 +109,8 @@ public class CWE400_Resource_Exhaustion__URLConnection_for_loop_12 extends Abstr
             for (i = 0; i < count; i++)
             {
                 IO.writeLine("Hello");
-            }
-        }
+            } 
+        } 
         else
         {
 
@@ -122,11 +122,11 @@ public class CWE400_Resource_Exhaustion__URLConnection_for_loop_12 extends Abstr
                 for (i = 0; i < count; i++)
                 {
                     IO.writeLine("Hello");
-                }
-            }
+                } 
+            } 
 
-        }
-    }
+        } 
+    } 
 
     /* goodG2B() - use goodsource and badsink by changing the first "if" so that
      * both branches use the GoodSource */
@@ -137,14 +137,14 @@ public class CWE400_Resource_Exhaustion__URLConnection_for_loop_12 extends Abstr
         {
             /* FIX: Use a hardcoded number that won't cause underflow, overflow, divide by zero, or loss-of-precision issues */
             count = 2;
-        }
+        } 
         else
         {
 
             /* FIX: Use a hardcoded number that won't cause underflow, overflow, divide by zero, or loss-of-precision issues */
             count = 2;
 
-        }
+        } 
 
         if(IO.staticReturnsTrueOrFalse())
         {
@@ -153,8 +153,8 @@ public class CWE400_Resource_Exhaustion__URLConnection_for_loop_12 extends Abstr
             for (i = 0; i < count; i++)
             {
                 IO.writeLine("Hello");
-            }
-        }
+            } 
+        } 
         else
         {
 
@@ -164,10 +164,10 @@ public class CWE400_Resource_Exhaustion__URLConnection_for_loop_12 extends Abstr
             for (i = 0; i < count; i++)
             {
                 IO.writeLine("Hello");
-            }
+            } 
 
-        }
-    }
+        } 
+    } 
 
     /* goodB2G() - use badsource and goodsink by changing the second "if" so that
      * both branches use the GoodSink */
@@ -195,17 +195,17 @@ public class CWE400_Resource_Exhaustion__URLConnection_for_loop_12 extends Abstr
                         try
                         {
                             count = Integer.parseInt(stringNumber.trim());
-                        }
+                        } 
                         catch (NumberFormatException exceptNumberFormat)
                         {
                             IO.logger.log(Level.WARNING, "Number format exception parsing count from string", exceptNumberFormat);
-                        }
-                    }
-                }
+                        } 
+                    } 
+                } 
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error with stream reading", exceptIO);
-                }
+                } 
                 finally
                 {
                     /* clean up stream reading objects */
@@ -214,27 +214,27 @@ public class CWE400_Resource_Exhaustion__URLConnection_for_loop_12 extends Abstr
                         if (readerBuffered != null)
                         {
                             readerBuffered.close();
-                        }
-                    }
+                        } 
+                    } 
                     catch (IOException exceptIO)
                     {
                         IO.logger.log(Level.WARNING, "Error closing BufferedReader", exceptIO);
-                    }
+                    } 
 
                     try
                     {
                         if (readerInputStream != null)
                         {
                             readerInputStream.close();
-                        }
-                    }
+                        } 
+                    } 
                     catch (IOException exceptIO)
                     {
                         IO.logger.log(Level.WARNING, "Error closing InputStreamReader", exceptIO);
-                    }
-                }
-            }
-        }
+                    } 
+                } 
+            } 
+        } 
         else
         {
 
@@ -261,17 +261,17 @@ public class CWE400_Resource_Exhaustion__URLConnection_for_loop_12 extends Abstr
                         try
                         {
                             count = Integer.parseInt(stringNumber.trim());
-                        }
+                        } 
                         catch (NumberFormatException exceptNumberFormat)
                         {
                             IO.logger.log(Level.WARNING, "Number format exception parsing count from string", exceptNumberFormat);
-                        }
-                    }
-                }
+                        } 
+                    } 
+                } 
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error with stream reading", exceptIO);
-                }
+                } 
                 finally
                 {
                     /* clean up stream reading objects */
@@ -280,28 +280,28 @@ public class CWE400_Resource_Exhaustion__URLConnection_for_loop_12 extends Abstr
                         if (readerBuffered != null)
                         {
                             readerBuffered.close();
-                        }
-                    }
+                        } 
+                    } 
                     catch (IOException exceptIO)
                     {
                         IO.logger.log(Level.WARNING, "Error closing BufferedReader", exceptIO);
-                    }
+                    } 
 
                     try
                     {
                         if (readerInputStream != null)
                         {
                             readerInputStream.close();
-                        }
-                    }
+                        } 
+                    } 
                     catch (IOException exceptIO)
                     {
                         IO.logger.log(Level.WARNING, "Error closing InputStreamReader", exceptIO);
-                    }
-                }
-            }
+                    } 
+                } 
+            } 
 
-        }
+        } 
 
         if(IO.staticReturnsTrueOrFalse())
         {
@@ -312,9 +312,9 @@ public class CWE400_Resource_Exhaustion__URLConnection_for_loop_12 extends Abstr
                 for (i = 0; i < count; i++)
                 {
                     IO.writeLine("Hello");
-                }
-            }
-        }
+                } 
+            } 
+        } 
         else
         {
 
@@ -326,17 +326,17 @@ public class CWE400_Resource_Exhaustion__URLConnection_for_loop_12 extends Abstr
                 for (i = 0; i < count; i++)
                 {
                     IO.writeLine("Hello");
-                }
-            }
+                } 
+            } 
 
-        }
-    }
+        } 
+    } 
 
     public void good() throws Throwable
     {
         goodG2B();
         goodB2G();
-    }
+    } 
 
     /* Below is the main(). It is only used when building this testcase on
      * its own for testing or for building a binary to use in testing binary
@@ -347,5 +347,5 @@ public class CWE400_Resource_Exhaustion__URLConnection_for_loop_12 extends Abstr
            InstantiationException, IllegalAccessException
     {
         mainFromParent(args);
-    }
-}
+    } 
+} 

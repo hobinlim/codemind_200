@@ -55,17 +55,17 @@ public class CWE400_Resource_Exhaustion__sleep_database_61b
                     try
                     {
                         count = Integer.parseInt(stringNumber.trim());
-                    }
+                    } 
                     catch (NumberFormatException exceptNumberFormat)
                     {
                         IO.logger.log(Level.WARNING, "Number format exception parsing count from string", exceptNumberFormat);
-                    }
-                }
-            }
+                    } 
+                } 
+            } 
             catch (SQLException exceptSql)
             {
                 IO.logger.log(Level.WARNING, "Error with SQL statement", exceptSql);
-            }
+            } 
             finally
             {
                 /* Close database objects */
@@ -74,41 +74,41 @@ public class CWE400_Resource_Exhaustion__sleep_database_61b
                     if (resultSet != null)
                     {
                         resultSet.close();
-                    }
-                }
+                    } 
+                } 
                 catch (SQLException exceptSql)
                 {
                     IO.logger.log(Level.WARNING, "Error closing ResultSet", exceptSql);
-                }
+                } 
 
                 try
                 {
                     if (preparedStatement != null)
                     {
                         preparedStatement.close();
-                    }
-                }
+                    } 
+                } 
                 catch (SQLException exceptSql)
                 {
                     IO.logger.log(Level.WARNING, "Error closing PreparedStatement", exceptSql);
-                }
+                } 
 
                 try
                 {
                     if (connection != null)
                     {
                         connection.close();
-                    }
-                }
+                    } 
+                } 
                 catch (SQLException exceptSql)
                 {
                     IO.logger.log(Level.WARNING, "Error closing Connection", exceptSql);
-                }
-            }
-        }
+                } 
+            } 
+        } 
 
         return count;
-    }
+    } 
 
     /* goodG2B() - use goodsource and badsink */
     public int goodG2BSource() throws Throwable
@@ -119,7 +119,7 @@ public class CWE400_Resource_Exhaustion__sleep_database_61b
         count = 2;
 
         return count;
-    }
+    } 
 
     /* goodB2G() - use badsource and goodsink */
     public int goodB2GSource() throws Throwable
@@ -150,17 +150,17 @@ public class CWE400_Resource_Exhaustion__sleep_database_61b
                     try
                     {
                         count = Integer.parseInt(stringNumber.trim());
-                    }
+                    } 
                     catch (NumberFormatException exceptNumberFormat)
                     {
                         IO.logger.log(Level.WARNING, "Number format exception parsing count from string", exceptNumberFormat);
-                    }
-                }
-            }
+                    } 
+                } 
+            } 
             catch (SQLException exceptSql)
             {
                 IO.logger.log(Level.WARNING, "Error with SQL statement", exceptSql);
-            }
+            } 
             finally
             {
                 /* Close database objects */
@@ -169,39 +169,39 @@ public class CWE400_Resource_Exhaustion__sleep_database_61b
                     if (resultSet != null)
                     {
                         resultSet.close();
-                    }
-                }
+                    } 
+                } 
                 catch (SQLException exceptSql)
                 {
                     IO.logger.log(Level.WARNING, "Error closing ResultSet", exceptSql);
-                }
+                } 
 
                 try
                 {
                     if (preparedStatement != null)
                     {
                         preparedStatement.close();
-                    }
-                }
+                    } 
+                } 
                 catch (SQLException exceptSql)
                 {
                     IO.logger.log(Level.WARNING, "Error closing PreparedStatement", exceptSql);
-                }
+                } 
 
                 try
                 {
                     if (connection != null)
                     {
                         connection.close();
-                    }
-                }
+                    } 
+                } 
                 catch (SQLException exceptSql)
                 {
                     IO.logger.log(Level.WARNING, "Error closing Connection", exceptSql);
-                }
-            }
-        }
+                } 
+            } 
+        } 
 
         return count;
-    }
-}
+    } 
+} 

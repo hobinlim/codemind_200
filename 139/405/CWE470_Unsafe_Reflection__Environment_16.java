@@ -32,7 +32,7 @@ public class CWE470_Unsafe_Reflection__Environment_16 extends AbstractTestCase
             /* POTENTIAL FLAW: Read data from an environment variable */
             data = System.getenv("ADD");
             break;
-        }
+        } 
 
         /* POTENTIAL FLAW: Instantiate object of class named in data (which may be from external input) */
         Class<?> tempClass = Class.forName(data);
@@ -40,7 +40,7 @@ public class CWE470_Unsafe_Reflection__Environment_16 extends AbstractTestCase
 
         IO.writeLine(tempClassObject.toString()); /* Use tempClassObject in some way */
 
-    }
+    } 
 
     /* goodG2B() - use goodsource and badsink */
     private void goodG2B() throws Throwable
@@ -52,7 +52,7 @@ public class CWE470_Unsafe_Reflection__Environment_16 extends AbstractTestCase
             /* FIX: Use a hardcoded class name */
             data = "Testing.test";
             break;
-        }
+        } 
 
         /* POTENTIAL FLAW: Instantiate object of class named in data (which may be from external input) */
         Class<?> tempClass = Class.forName(data);
@@ -60,12 +60,12 @@ public class CWE470_Unsafe_Reflection__Environment_16 extends AbstractTestCase
 
         IO.writeLine(tempClassObject.toString()); /* Use tempClassObject in some way */
 
-    }
+    } 
 
     public void good() throws Throwable
     {
         goodG2B();
-    }
+    } 
 
     /* Below is the main(). It is only used when building this testcase on
      * its own for testing or for building a binary to use in testing binary
@@ -76,5 +76,5 @@ public class CWE470_Unsafe_Reflection__Environment_16 extends AbstractTestCase
            InstantiationException, IllegalAccessException
     {
         mainFromParent(args);
-    }
-}
+    } 
+} 

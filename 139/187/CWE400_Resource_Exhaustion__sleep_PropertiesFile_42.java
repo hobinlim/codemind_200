@@ -50,17 +50,17 @@ public class CWE400_Resource_Exhaustion__sleep_PropertiesFile_42 extends Abstrac
                     try
                     {
                         count = Integer.parseInt(stringNumber.trim());
-                    }
+                    } 
                     catch(NumberFormatException exceptNumberFormat)
                     {
                         IO.logger.log(Level.WARNING, "Number format exception parsing count from string", exceptNumberFormat);
-                    }
-                }
-            }
+                    } 
+                } 
+            } 
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error with stream reading", exceptIO);
-            }
+            } 
             finally
             {
                 /* Close stream reading object */
@@ -69,17 +69,17 @@ public class CWE400_Resource_Exhaustion__sleep_PropertiesFile_42 extends Abstrac
                     if (streamFileInput != null)
                     {
                         streamFileInput.close();
-                    }
-                }
+                    } 
+                } 
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error closing FileInputStream", exceptIO);
-                }
-            }
-        }
+                } 
+            } 
+        } 
 
         return count;
-    }
+    } 
 
     public void bad() throws Throwable
     {
@@ -88,7 +88,7 @@ public class CWE400_Resource_Exhaustion__sleep_PropertiesFile_42 extends Abstrac
         /* POTENTIAL FLAW: Use count as the input to Thread.sleep() */
         Thread.sleep(count);
 
-    }
+    } 
 
     /* goodG2B() - use goodsource and badsink */
     private int goodG2BSource() throws Throwable
@@ -99,7 +99,7 @@ public class CWE400_Resource_Exhaustion__sleep_PropertiesFile_42 extends Abstrac
         count = 2;
 
         return count;
-    }
+    } 
 
     private void goodG2B() throws Throwable
     {
@@ -108,7 +108,7 @@ public class CWE400_Resource_Exhaustion__sleep_PropertiesFile_42 extends Abstrac
         /* POTENTIAL FLAW: Use count as the input to Thread.sleep() */
         Thread.sleep(count);
 
-    }
+    } 
 
     /* goodB2G() - use badsource and goodsink */
     private int goodB2GSource() throws Throwable
@@ -134,17 +134,17 @@ public class CWE400_Resource_Exhaustion__sleep_PropertiesFile_42 extends Abstrac
                     try
                     {
                         count = Integer.parseInt(stringNumber.trim());
-                    }
+                    } 
                     catch(NumberFormatException exceptNumberFormat)
                     {
                         IO.logger.log(Level.WARNING, "Number format exception parsing count from string", exceptNumberFormat);
-                    }
-                }
-            }
+                    } 
+                } 
+            } 
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error with stream reading", exceptIO);
-            }
+            } 
             finally
             {
                 /* Close stream reading object */
@@ -153,17 +153,17 @@ public class CWE400_Resource_Exhaustion__sleep_PropertiesFile_42 extends Abstrac
                     if (streamFileInput != null)
                     {
                         streamFileInput.close();
-                    }
-                }
+                    } 
+                } 
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error closing FileInputStream", exceptIO);
-                }
-            }
-        }
+                } 
+            } 
+        } 
 
         return count;
-    }
+    } 
 
     private void goodB2G() throws Throwable
     {
@@ -173,15 +173,15 @@ public class CWE400_Resource_Exhaustion__sleep_PropertiesFile_42 extends Abstrac
         if (count > 0 && count <= 2000)
         {
             Thread.sleep(count);
-        }
+        } 
 
-    }
+    } 
 
     public void good() throws Throwable
     {
         goodG2B();
         goodB2G();
-    }
+    } 
 
     /* Below is the main(). It is only used when building this testcase on
      * its own for testing or for building a binary to use in testing binary
@@ -192,5 +192,5 @@ public class CWE400_Resource_Exhaustion__sleep_PropertiesFile_42 extends Abstrac
            InstantiationException, IllegalAccessException
     {
         mainFromParent(args);
-    }
-}
+    } 
+} 

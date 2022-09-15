@@ -59,17 +59,17 @@ public class CWE400_Resource_Exhaustion__sleep_database_04 extends AbstractTestC
                         try
                         {
                             count = Integer.parseInt(stringNumber.trim());
-                        }
+                        } 
                         catch (NumberFormatException exceptNumberFormat)
                         {
                             IO.logger.log(Level.WARNING, "Number format exception parsing count from string", exceptNumberFormat);
-                        }
-                    }
-                }
+                        } 
+                    } 
+                } 
                 catch (SQLException exceptSql)
                 {
                     IO.logger.log(Level.WARNING, "Error with SQL statement", exceptSql);
-                }
+                } 
                 finally
                 {
                     /* Close database objects */
@@ -78,52 +78,52 @@ public class CWE400_Resource_Exhaustion__sleep_database_04 extends AbstractTestC
                         if (resultSet != null)
                         {
                             resultSet.close();
-                        }
-                    }
+                        } 
+                    } 
                     catch (SQLException exceptSql)
                     {
                         IO.logger.log(Level.WARNING, "Error closing ResultSet", exceptSql);
-                    }
+                    } 
 
                     try
                     {
                         if (preparedStatement != null)
                         {
                             preparedStatement.close();
-                        }
-                    }
+                        } 
+                    } 
                     catch (SQLException exceptSql)
                     {
                         IO.logger.log(Level.WARNING, "Error closing PreparedStatement", exceptSql);
-                    }
+                    } 
 
                     try
                     {
                         if (connection != null)
                         {
                             connection.close();
-                        }
-                    }
+                        } 
+                    } 
                     catch (SQLException exceptSql)
                     {
                         IO.logger.log(Level.WARNING, "Error closing Connection", exceptSql);
-                    }
-                }
-            }
-        }
+                    } 
+                } 
+            } 
+        } 
         else
         {
             /* INCIDENTAL: CWE 561 Dead Code, the code below will never run
              * but ensure count is inititialized before the Sink to avoid compiler errors */
             count = 0;
-        }
+        } 
 
         if (PRIVATE_STATIC_FINAL_TRUE)
         {
             /* POTENTIAL FLAW: Use count as the input to Thread.sleep() */
             Thread.sleep(count);
-        }
-    }
+        } 
+    } 
 
     /* goodG2B1() - use goodsource and badsink by changing first PRIVATE_STATIC_FINAL_TRUE to PRIVATE_STATIC_FINAL_FALSE */
     private void goodG2B1() throws Throwable
@@ -134,21 +134,21 @@ public class CWE400_Resource_Exhaustion__sleep_database_04 extends AbstractTestC
             /* INCIDENTAL: CWE 561 Dead Code, the code below will never run
              * but ensure count is inititialized before the Sink to avoid compiler errors */
             count = 0;
-        }
+        } 
         else
         {
 
             /* FIX: Use a hardcoded number that won't cause underflow, overflow, divide by zero, or loss-of-precision issues */
             count = 2;
 
-        }
+        } 
 
         if (PRIVATE_STATIC_FINAL_TRUE)
         {
             /* POTENTIAL FLAW: Use count as the input to Thread.sleep() */
             Thread.sleep(count);
-        }
-    }
+        } 
+    } 
 
     /* goodG2B2() - use goodsource and badsink by reversing statements in first if */
     private void goodG2B2() throws Throwable
@@ -158,20 +158,20 @@ public class CWE400_Resource_Exhaustion__sleep_database_04 extends AbstractTestC
         {
             /* FIX: Use a hardcoded number that won't cause underflow, overflow, divide by zero, or loss-of-precision issues */
             count = 2;
-        }
+        } 
         else
         {
             /* INCIDENTAL: CWE 561 Dead Code, the code below will never run
              * but ensure count is inititialized before the Sink to avoid compiler errors */
             count = 0;
-        }
+        } 
 
         if (PRIVATE_STATIC_FINAL_TRUE)
         {
             /* POTENTIAL FLAW: Use count as the input to Thread.sleep() */
             Thread.sleep(count);
-        }
-    }
+        } 
+    } 
 
     /* goodB2G1() - use badsource and goodsink by changing second PRIVATE_STATIC_FINAL_TRUE to PRIVATE_STATIC_FINAL_FALSE */
     private void goodB2G1() throws Throwable
@@ -199,17 +199,17 @@ public class CWE400_Resource_Exhaustion__sleep_database_04 extends AbstractTestC
                         try
                         {
                             count = Integer.parseInt(stringNumber.trim());
-                        }
+                        } 
                         catch (NumberFormatException exceptNumberFormat)
                         {
                             IO.logger.log(Level.WARNING, "Number format exception parsing count from string", exceptNumberFormat);
-                        }
-                    }
-                }
+                        } 
+                    } 
+                } 
                 catch (SQLException exceptSql)
                 {
                     IO.logger.log(Level.WARNING, "Error with SQL statement", exceptSql);
-                }
+                } 
                 finally
                 {
                     /* Close database objects */
@@ -218,51 +218,51 @@ public class CWE400_Resource_Exhaustion__sleep_database_04 extends AbstractTestC
                         if (resultSet != null)
                         {
                             resultSet.close();
-                        }
-                    }
+                        } 
+                    } 
                     catch (SQLException exceptSql)
                     {
                         IO.logger.log(Level.WARNING, "Error closing ResultSet", exceptSql);
-                    }
+                    } 
 
                     try
                     {
                         if (preparedStatement != null)
                         {
                             preparedStatement.close();
-                        }
-                    }
+                        } 
+                    } 
                     catch (SQLException exceptSql)
                     {
                         IO.logger.log(Level.WARNING, "Error closing PreparedStatement", exceptSql);
-                    }
+                    } 
 
                     try
                     {
                         if (connection != null)
                         {
                             connection.close();
-                        }
-                    }
+                        } 
+                    } 
                     catch (SQLException exceptSql)
                     {
                         IO.logger.log(Level.WARNING, "Error closing Connection", exceptSql);
-                    }
-                }
-            }
-        }
+                    } 
+                } 
+            } 
+        } 
         else
         {
             /* INCIDENTAL: CWE 561 Dead Code, the code below will never run
              * but ensure count is inititialized before the Sink to avoid compiler errors */
             count = 0;
-        }
+        } 
 
         if (PRIVATE_STATIC_FINAL_FALSE)
         {
             /* INCIDENTAL: CWE 561 Dead Code, the code below will never run */
             IO.writeLine("Benign, fixed string");
-        }
+        } 
         else
         {
 
@@ -270,10 +270,10 @@ public class CWE400_Resource_Exhaustion__sleep_database_04 extends AbstractTestC
             if (count > 0 && count <= 2000)
             {
                 Thread.sleep(count);
-            }
+            } 
 
-        }
-    }
+        } 
+    } 
 
     /* goodB2G2() - use badsource and goodsink by reversing statements in second if  */
     private void goodB2G2() throws Throwable
@@ -301,17 +301,17 @@ public class CWE400_Resource_Exhaustion__sleep_database_04 extends AbstractTestC
                         try
                         {
                             count = Integer.parseInt(stringNumber.trim());
-                        }
+                        } 
                         catch (NumberFormatException exceptNumberFormat)
                         {
                             IO.logger.log(Level.WARNING, "Number format exception parsing count from string", exceptNumberFormat);
-                        }
-                    }
-                }
+                        } 
+                    } 
+                } 
                 catch (SQLException exceptSql)
                 {
                     IO.logger.log(Level.WARNING, "Error with SQL statement", exceptSql);
-                }
+                } 
                 finally
                 {
                     /* Close database objects */
@@ -320,45 +320,45 @@ public class CWE400_Resource_Exhaustion__sleep_database_04 extends AbstractTestC
                         if (resultSet != null)
                         {
                             resultSet.close();
-                        }
-                    }
+                        } 
+                    } 
                     catch (SQLException exceptSql)
                     {
                         IO.logger.log(Level.WARNING, "Error closing ResultSet", exceptSql);
-                    }
+                    } 
 
                     try
                     {
                         if (preparedStatement != null)
                         {
                             preparedStatement.close();
-                        }
-                    }
+                        } 
+                    } 
                     catch (SQLException exceptSql)
                     {
                         IO.logger.log(Level.WARNING, "Error closing PreparedStatement", exceptSql);
-                    }
+                    } 
 
                     try
                     {
                         if (connection != null)
                         {
                             connection.close();
-                        }
-                    }
+                        } 
+                    } 
                     catch (SQLException exceptSql)
                     {
                         IO.logger.log(Level.WARNING, "Error closing Connection", exceptSql);
-                    }
-                }
-            }
-        }
+                    } 
+                } 
+            } 
+        } 
         else
         {
             /* INCIDENTAL: CWE 561 Dead Code, the code below will never run
              * but ensure count is inititialized before the Sink to avoid compiler errors */
             count = 0;
-        }
+        } 
 
         if (PRIVATE_STATIC_FINAL_TRUE)
         {
@@ -366,9 +366,9 @@ public class CWE400_Resource_Exhaustion__sleep_database_04 extends AbstractTestC
             if (count > 0 && count <= 2000)
             {
                 Thread.sleep(count);
-            }
-        }
-    }
+            } 
+        } 
+    } 
 
     public void good() throws Throwable
     {
@@ -376,7 +376,7 @@ public class CWE400_Resource_Exhaustion__sleep_database_04 extends AbstractTestC
         goodG2B2();
         goodB2G1();
         goodB2G2();
-    }
+    } 
 
     /* Below is the main(). It is only used when building this testcase on
      * its own for testing or for building a binary to use in testing binary
@@ -387,5 +387,5 @@ public class CWE400_Resource_Exhaustion__sleep_database_04 extends AbstractTestC
            InstantiationException, IllegalAccessException
     {
         mainFromParent(args);
-    }
-}
+    } 
+} 

@@ -48,17 +48,17 @@ public class CWE400_Resource_Exhaustion__sleep_PropertiesFile_11 extends Abstrac
                         try
                         {
                             count = Integer.parseInt(stringNumber.trim());
-                        }
+                        } 
                         catch(NumberFormatException exceptNumberFormat)
                         {
                             IO.logger.log(Level.WARNING, "Number format exception parsing count from string", exceptNumberFormat);
-                        }
-                    }
-                }
+                        } 
+                    } 
+                } 
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error with stream reading", exceptIO);
-                }
+                } 
                 finally
                 {
                     /* Close stream reading object */
@@ -67,28 +67,28 @@ public class CWE400_Resource_Exhaustion__sleep_PropertiesFile_11 extends Abstrac
                         if (streamFileInput != null)
                         {
                             streamFileInput.close();
-                        }
-                    }
+                        } 
+                    } 
                     catch (IOException exceptIO)
                     {
                         IO.logger.log(Level.WARNING, "Error closing FileInputStream", exceptIO);
-                    }
-                }
-            }
-        }
+                    } 
+                } 
+            } 
+        } 
         else
         {
             /* INCIDENTAL: CWE 561 Dead Code, the code below will never run
              * but ensure count is inititialized before the Sink to avoid compiler errors */
             count = 0;
-        }
+        } 
 
         if(IO.staticReturnsTrue())
         {
             /* POTENTIAL FLAW: Use count as the input to Thread.sleep() */
             Thread.sleep(count);
-        }
-    }
+        } 
+    } 
 
     /* goodG2B1() - use goodsource and badsink by changing first IO.staticReturnsTrue() to IO.staticReturnsFalse() */
     private void goodG2B1() throws Throwable
@@ -99,21 +99,21 @@ public class CWE400_Resource_Exhaustion__sleep_PropertiesFile_11 extends Abstrac
             /* INCIDENTAL: CWE 561 Dead Code, the code below will never run
              * but ensure count is inititialized before the Sink to avoid compiler errors */
             count = 0;
-        }
+        } 
         else
         {
 
             /* FIX: Use a hardcoded number that won't cause underflow, overflow, divide by zero, or loss-of-precision issues */
             count = 2;
 
-        }
+        } 
 
         if (IO.staticReturnsTrue())
         {
             /* POTENTIAL FLAW: Use count as the input to Thread.sleep() */
             Thread.sleep(count);
-        }
-    }
+        } 
+    } 
 
     /* goodG2B2() - use goodsource and badsink by reversing statements in first if */
     private void goodG2B2() throws Throwable
@@ -124,20 +124,20 @@ public class CWE400_Resource_Exhaustion__sleep_PropertiesFile_11 extends Abstrac
         {
             /* FIX: Use a hardcoded number that won't cause underflow, overflow, divide by zero, or loss-of-precision issues */
             count = 2;
-        }
+        } 
         else
         {
             /* INCIDENTAL: CWE 561 Dead Code, the code below will never run
              * but ensure count is inititialized before the Sink to avoid compiler errors */
             count = 0;
-        }
+        } 
 
         if (IO.staticReturnsTrue())
         {
             /* POTENTIAL FLAW: Use count as the input to Thread.sleep() */
             Thread.sleep(count);
-        }
-    }
+        } 
+    } 
 
     /* goodB2G1() - use badsource and goodsink by changing second IO.staticReturnsTrue() to IO.staticReturnsFalse() */
     private void goodB2G1() throws Throwable
@@ -161,17 +161,17 @@ public class CWE400_Resource_Exhaustion__sleep_PropertiesFile_11 extends Abstrac
                         try
                         {
                             count = Integer.parseInt(stringNumber.trim());
-                        }
+                        } 
                         catch(NumberFormatException exceptNumberFormat)
                         {
                             IO.logger.log(Level.WARNING, "Number format exception parsing count from string", exceptNumberFormat);
-                        }
-                    }
-                }
+                        } 
+                    } 
+                } 
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error with stream reading", exceptIO);
-                }
+                } 
                 finally
                 {
                     /* Close stream reading object */
@@ -180,27 +180,27 @@ public class CWE400_Resource_Exhaustion__sleep_PropertiesFile_11 extends Abstrac
                         if (streamFileInput != null)
                         {
                             streamFileInput.close();
-                        }
-                    }
+                        } 
+                    } 
                     catch (IOException exceptIO)
                     {
                         IO.logger.log(Level.WARNING, "Error closing FileInputStream", exceptIO);
-                    }
-                }
-            }
-        }
+                    } 
+                } 
+            } 
+        } 
         else
         {
             /* INCIDENTAL: CWE 561 Dead Code, the code below will never run
              * but ensure count is inititialized before the Sink to avoid compiler errors */
             count = 0;
-        }
+        } 
 
         if (IO.staticReturnsFalse())
         {
             /* INCIDENTAL: CWE 561 Dead Code, the code below will never run */
             IO.writeLine("Benign, fixed string");
-        }
+        } 
         else
         {
 
@@ -208,10 +208,10 @@ public class CWE400_Resource_Exhaustion__sleep_PropertiesFile_11 extends Abstrac
             if (count > 0 && count <= 2000)
             {
                 Thread.sleep(count);
-            }
+            } 
 
-        }
-    }
+        } 
+    } 
 
     /* goodB2G2() - use badsource and goodsink by reversing statements in second if  */
     private void goodB2G2() throws Throwable
@@ -235,17 +235,17 @@ public class CWE400_Resource_Exhaustion__sleep_PropertiesFile_11 extends Abstrac
                         try
                         {
                             count = Integer.parseInt(stringNumber.trim());
-                        }
+                        } 
                         catch(NumberFormatException exceptNumberFormat)
                         {
                             IO.logger.log(Level.WARNING, "Number format exception parsing count from string", exceptNumberFormat);
-                        }
-                    }
-                }
+                        } 
+                    } 
+                } 
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error with stream reading", exceptIO);
-                }
+                } 
                 finally
                 {
                     /* Close stream reading object */
@@ -254,21 +254,21 @@ public class CWE400_Resource_Exhaustion__sleep_PropertiesFile_11 extends Abstrac
                         if (streamFileInput != null)
                         {
                             streamFileInput.close();
-                        }
-                    }
+                        } 
+                    } 
                     catch (IOException exceptIO)
                     {
                         IO.logger.log(Level.WARNING, "Error closing FileInputStream", exceptIO);
-                    }
-                }
-            }
-        }
+                    } 
+                } 
+            } 
+        } 
         else
         {
             /* INCIDENTAL: CWE 561 Dead Code, the code below will never run
              * but ensure count is inititialized before the Sink to avoid compiler errors */
             count = 0;
-        }
+        } 
 
         if (IO.staticReturnsTrue())
         {
@@ -276,9 +276,9 @@ public class CWE400_Resource_Exhaustion__sleep_PropertiesFile_11 extends Abstrac
             if (count > 0 && count <= 2000)
             {
                 Thread.sleep(count);
-            }
-        }
-    }
+            } 
+        } 
+    } 
 
     public void good() throws Throwable
     {
@@ -286,7 +286,7 @@ public class CWE400_Resource_Exhaustion__sleep_PropertiesFile_11 extends Abstrac
         goodG2B2();
         goodB2G1();
         goodB2G2();
-    }
+    } 
 
     /* Below is the main(). It is only used when building this testcase on
      * its own for testing or for building a binary to use in testing binary
@@ -297,5 +297,5 @@ public class CWE400_Resource_Exhaustion__sleep_PropertiesFile_11 extends Abstrac
            InstantiationException, IllegalAccessException
     {
         mainFromParent(args);
-    }
-}
+    } 
+} 

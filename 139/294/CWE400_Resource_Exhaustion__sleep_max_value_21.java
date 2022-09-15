@@ -32,7 +32,7 @@ public class CWE400_Resource_Exhaustion__sleep_max_value_21 extends AbstractTest
 
         badPrivate = true;
         badSink(count );
-    }
+    } 
 
     private void badSink(int count ) throws Throwable
     {
@@ -40,8 +40,8 @@ public class CWE400_Resource_Exhaustion__sleep_max_value_21 extends AbstractTest
         {
             /* POTENTIAL FLAW: Use count as the input to Thread.sleep() */
             Thread.sleep(count);
-        }
-    }
+        } 
+    } 
 
     /* The variables below are used to drive control flow in the sink functions. */
     private boolean goodB2G1Private = false;
@@ -53,7 +53,7 @@ public class CWE400_Resource_Exhaustion__sleep_max_value_21 extends AbstractTest
         goodB2G1();
         goodB2G2();
         goodG2B();
-    }
+    } 
 
     /* goodB2G1() - use BadSource and GoodSink by setting the variable to false instead of true */
     private void goodB2G1() throws Throwable
@@ -65,7 +65,7 @@ public class CWE400_Resource_Exhaustion__sleep_max_value_21 extends AbstractTest
 
         goodB2G1Private = false;
         goodB2G1Sink(count );
-    }
+    } 
 
     private void goodB2G1Sink(int count ) throws Throwable
     {
@@ -73,7 +73,7 @@ public class CWE400_Resource_Exhaustion__sleep_max_value_21 extends AbstractTest
         {
             /* INCIDENTAL: CWE 561 Dead Code, the code below will never run */
             IO.writeLine("Benign, fixed string");
-        }
+        } 
         else
         {
 
@@ -81,10 +81,10 @@ public class CWE400_Resource_Exhaustion__sleep_max_value_21 extends AbstractTest
             if (count > 0 && count <= 2000)
             {
                 Thread.sleep(count);
-            }
+            } 
 
-        }
-    }
+        } 
+    } 
 
     /* goodB2G2() - use BadSource and GoodSink by reversing the blocks in the if in the sink function */
     private void goodB2G2() throws Throwable
@@ -96,7 +96,7 @@ public class CWE400_Resource_Exhaustion__sleep_max_value_21 extends AbstractTest
 
         goodB2G2Private = true;
         goodB2G2Sink(count );
-    }
+    } 
 
     private void goodB2G2Sink(int count ) throws Throwable
     {
@@ -106,9 +106,9 @@ public class CWE400_Resource_Exhaustion__sleep_max_value_21 extends AbstractTest
             if (count > 0 && count <= 2000)
             {
                 Thread.sleep(count);
-            }
-        }
-    }
+            } 
+        } 
+    } 
 
     /* goodG2B() - use GoodSource and BadSink */
     private void goodG2B() throws Throwable
@@ -120,7 +120,7 @@ public class CWE400_Resource_Exhaustion__sleep_max_value_21 extends AbstractTest
 
         goodG2BPrivate = true;
         goodG2BSink(count );
-    }
+    } 
 
     private void goodG2BSink(int count ) throws Throwable
     {
@@ -128,8 +128,8 @@ public class CWE400_Resource_Exhaustion__sleep_max_value_21 extends AbstractTest
         {
             /* POTENTIAL FLAW: Use count as the input to Thread.sleep() */
             Thread.sleep(count);
-        }
-    }
+        } 
+    } 
 
     /* Below is the main(). It is only used when building this testcase on
      * its own for testing or for building a binary to use in testing binary
@@ -140,5 +140,5 @@ public class CWE400_Resource_Exhaustion__sleep_max_value_21 extends AbstractTest
            InstantiationException, IllegalAccessException
     {
         mainFromParent(args);
-    }
-}
+    } 
+} 

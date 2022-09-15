@@ -26,5 +26,5 @@ public class CWE400_Resource_Exhaustion__sleep_console_readLine_81_bad extends C
         /* POTENTIAL FLAW: Use count as the input to Thread.sleep() */
         Thread.sleep(count);
 
-    }
-}
+    } 
+} 

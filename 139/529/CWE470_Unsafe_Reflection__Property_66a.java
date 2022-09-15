@@ -33,12 +33,12 @@ public class CWE470_Unsafe_Reflection__Property_66a extends AbstractTestCase
         String[] dataArray = new String[5];
         dataArray[2] = data;
         (new CWE470_Unsafe_Reflection__Property_66b()).badSink(dataArray  );
-    }
+    } 
 
     public void good() throws Throwable
     {
         goodG2B();
-    }
+    } 
 
     /* goodG2B() - use goodsource and badsink */
     private void goodG2B() throws Throwable
@@ -51,7 +51,7 @@ public class CWE470_Unsafe_Reflection__Property_66a extends AbstractTestCase
         String[] dataArray = new String[5];
         dataArray[2] = data;
         (new CWE470_Unsafe_Reflection__Property_66b()).goodG2BSink(dataArray  );
-    }
+    } 
 
     /* Below is the main(). It is only used when building this testcase on
      * its own for testing or for building a binary to use in testing binary
@@ -62,5 +62,5 @@ public class CWE470_Unsafe_Reflection__Property_66a extends AbstractTestCase
            InstantiationException, IllegalAccessException
     {
         mainFromParent(args);
-    }
-}
+    } 
+} 

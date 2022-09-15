@@ -46,12 +46,12 @@ public class CWE400_Resource_Exhaustion__URLConnection_write_61a extends Abstrac
             try
             {
                 writerBuffered.write("Hello");
-            }
+            } 
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error with stream writing", exceptIO);
-            }
-        }
+            } 
+        } 
 
         /* Close stream reading objects */
         try
@@ -59,44 +59,44 @@ public class CWE400_Resource_Exhaustion__URLConnection_write_61a extends Abstrac
             if (writerBuffered != null)
             {
                 writerBuffered.close();
-            }
-        }
+            } 
+        } 
         catch (IOException exceptIO)
         {
             IO.logger.log(Level.WARNING, "Error closing BufferedWriter", exceptIO);
-        }
+        } 
 
         try
         {
             if (writerOutputStream != null)
             {
                 writerOutputStream.close();
-            }
-        }
+            } 
+        } 
         catch (IOException exceptIO)
         {
             IO.logger.log(Level.WARNING, "Error closing OutputStreamWriter", exceptIO);
-        }
+        } 
 
         try
         {
             if (streamFileOutput != null)
             {
                 streamFileOutput.close();
-            }
-        }
+            } 
+        } 
         catch (IOException exceptIO)
         {
             IO.logger.log(Level.WARNING, "Error closing FileOutputStream", exceptIO);
-        }
+        } 
 
-    }
+    } 
 
     public void good() throws Throwable
     {
         goodG2B();
         goodB2G();
-    }
+    } 
 
     /* goodG2B() - use goodsource and badsink */
     private void goodG2B() throws Throwable
@@ -115,12 +115,12 @@ public class CWE400_Resource_Exhaustion__URLConnection_write_61a extends Abstrac
             try
             {
                 writerBuffered.write("Hello");
-            }
+            } 
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error with stream writing", exceptIO);
-            }
-        }
+            } 
+        } 
 
         /* Close stream reading objects */
         try
@@ -128,38 +128,38 @@ public class CWE400_Resource_Exhaustion__URLConnection_write_61a extends Abstrac
             if (writerBuffered != null)
             {
                 writerBuffered.close();
-            }
-        }
+            } 
+        } 
         catch (IOException exceptIO)
         {
             IO.logger.log(Level.WARNING, "Error closing BufferedWriter", exceptIO);
-        }
+        } 
 
         try
         {
             if (writerOutputStream != null)
             {
                 writerOutputStream.close();
-            }
-        }
+            } 
+        } 
         catch (IOException exceptIO)
         {
             IO.logger.log(Level.WARNING, "Error closing OutputStreamWriter", exceptIO);
-        }
+        } 
 
         try
         {
             if (streamFileOutput != null)
             {
                 streamFileOutput.close();
-            }
-        }
+            } 
+        } 
         catch (IOException exceptIO)
         {
             IO.logger.log(Level.WARNING, "Error closing FileOutputStream", exceptIO);
-        }
+        } 
 
-    }
+    } 
 
     /* goodB2G() - use badsource and goodsink */
     private void goodB2G() throws Throwable
@@ -179,49 +179,49 @@ public class CWE400_Resource_Exhaustion__URLConnection_write_61a extends Abstrac
                 try
                 {
                     writerBuffered.write("Hello");
-                }
+                } 
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error with stream writing", exceptIO);
-                }
-            }
+                } 
+            } 
             /* Close stream reading objects */
             try
             {
                 if (writerBuffered != null)
                 {
                     writerBuffered.close();
-                }
-            }
+                } 
+            } 
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error closing BufferedWriter", exceptIO);
-            }
+            } 
             try
             {
                 if (writerOutputStream != null)
                 {
                     writerOutputStream.close();
-                }
-            }
+                } 
+            } 
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error closing OutputStreamWriter", exceptIO);
-            }
+            } 
             try
             {
                 if (streamFileOutput != null)
                 {
                     streamFileOutput.close();
-                }
-            }
+                } 
+            } 
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error closing FileOutputStream", exceptIO);
-            }
-        }
+            } 
+        } 
 
-    }
+    } 
 
     /* Below is the main(). It is only used when building this testcase on
      * its own for testing or for building a binary to use in testing binary
@@ -232,5 +232,5 @@ public class CWE400_Resource_Exhaustion__URLConnection_write_61a extends Abstrac
            InstantiationException, IllegalAccessException
     {
         mainFromParent(args);
-    }
-}
+    } 
+} 

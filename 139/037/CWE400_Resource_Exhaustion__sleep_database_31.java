@@ -57,17 +57,17 @@ public class CWE400_Resource_Exhaustion__sleep_database_31 extends AbstractTestC
                         try
                         {
                             count = Integer.parseInt(stringNumber.trim());
-                        }
+                        } 
                         catch (NumberFormatException exceptNumberFormat)
                         {
                             IO.logger.log(Level.WARNING, "Number format exception parsing count from string", exceptNumberFormat);
-                        }
-                    }
-                }
+                        } 
+                    } 
+                } 
                 catch (SQLException exceptSql)
                 {
                     IO.logger.log(Level.WARNING, "Error with SQL statement", exceptSql);
-                }
+                } 
                 finally
                 {
                     /* Close database objects */
@@ -76,55 +76,55 @@ public class CWE400_Resource_Exhaustion__sleep_database_31 extends AbstractTestC
                         if (resultSet != null)
                         {
                             resultSet.close();
-                        }
-                    }
+                        } 
+                    } 
                     catch (SQLException exceptSql)
                     {
                         IO.logger.log(Level.WARNING, "Error closing ResultSet", exceptSql);
-                    }
+                    } 
 
                     try
                     {
                         if (preparedStatement != null)
                         {
                             preparedStatement.close();
-                        }
-                    }
+                        } 
+                    } 
                     catch (SQLException exceptSql)
                     {
                         IO.logger.log(Level.WARNING, "Error closing PreparedStatement", exceptSql);
-                    }
+                    } 
 
                     try
                     {
                         if (connection != null)
                         {
                             connection.close();
-                        }
-                    }
+                        } 
+                    } 
                     catch (SQLException exceptSql)
                     {
                         IO.logger.log(Level.WARNING, "Error closing Connection", exceptSql);
-                    }
-                }
-            }
+                    } 
+                } 
+            } 
 
             countCopy = count;
-        }
+        } 
         {
             int count = countCopy;
 
             /* POTENTIAL FLAW: Use count as the input to Thread.sleep() */
             Thread.sleep(count);
 
-        }
-    }
+        } 
+    } 
 
     public void good() throws Throwable
     {
         goodG2B();
         goodB2G();
-    }
+    } 
 
     /* goodG2B() - use goodsource and badsink */
     private void goodG2B() throws Throwable
@@ -137,15 +137,15 @@ public class CWE400_Resource_Exhaustion__sleep_database_31 extends AbstractTestC
             count = 2;
 
             countCopy = count;
-        }
+        } 
         {
             int count = countCopy;
 
             /* POTENTIAL FLAW: Use count as the input to Thread.sleep() */
             Thread.sleep(count);
 
-        }
-    }
+        } 
+    } 
 
     /* goodB2G() - use badsource and goodsink */
     private void goodB2G() throws Throwable
@@ -178,17 +178,17 @@ public class CWE400_Resource_Exhaustion__sleep_database_31 extends AbstractTestC
                         try
                         {
                             count = Integer.parseInt(stringNumber.trim());
-                        }
+                        } 
                         catch (NumberFormatException exceptNumberFormat)
                         {
                             IO.logger.log(Level.WARNING, "Number format exception parsing count from string", exceptNumberFormat);
-                        }
-                    }
-                }
+                        } 
+                    } 
+                } 
                 catch (SQLException exceptSql)
                 {
                     IO.logger.log(Level.WARNING, "Error with SQL statement", exceptSql);
-                }
+                } 
                 finally
                 {
                     /* Close database objects */
@@ -197,41 +197,41 @@ public class CWE400_Resource_Exhaustion__sleep_database_31 extends AbstractTestC
                         if (resultSet != null)
                         {
                             resultSet.close();
-                        }
-                    }
+                        } 
+                    } 
                     catch (SQLException exceptSql)
                     {
                         IO.logger.log(Level.WARNING, "Error closing ResultSet", exceptSql);
-                    }
+                    } 
 
                     try
                     {
                         if (preparedStatement != null)
                         {
                             preparedStatement.close();
-                        }
-                    }
+                        } 
+                    } 
                     catch (SQLException exceptSql)
                     {
                         IO.logger.log(Level.WARNING, "Error closing PreparedStatement", exceptSql);
-                    }
+                    } 
 
                     try
                     {
                         if (connection != null)
                         {
                             connection.close();
-                        }
-                    }
+                        } 
+                    } 
                     catch (SQLException exceptSql)
                     {
                         IO.logger.log(Level.WARNING, "Error closing Connection", exceptSql);
-                    }
-                }
-            }
+                    } 
+                } 
+            } 
 
             countCopy = count;
-        }
+        } 
         {
             int count = countCopy;
 
@@ -239,10 +239,10 @@ public class CWE400_Resource_Exhaustion__sleep_database_31 extends AbstractTestC
             if (count > 0 && count <= 2000)
             {
                 Thread.sleep(count);
-            }
+            } 
 
-        }
-    }
+        } 
+    } 
 
     /* Below is the main(). It is only used when building this testcase on
      * its own for testing or for building a binary to use in testing binary
@@ -253,5 +253,5 @@ public class CWE400_Resource_Exhaustion__sleep_database_31 extends AbstractTestC
            InstantiationException, IllegalAccessException
     {
         mainFromParent(args);
-    }
-}
+    } 
+} 

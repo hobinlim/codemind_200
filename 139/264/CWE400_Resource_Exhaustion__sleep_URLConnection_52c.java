@@ -26,7 +26,7 @@ public class CWE400_Resource_Exhaustion__sleep_URLConnection_52c
         /* POTENTIAL FLAW: Use count as the input to Thread.sleep() */
         Thread.sleep(count);
 
-    }
+    } 
 
     /* goodG2B() - use goodsource and badsink */
     public void goodG2BSink(int count ) throws Throwable
@@ -35,7 +35,7 @@ public class CWE400_Resource_Exhaustion__sleep_URLConnection_52c
         /* POTENTIAL FLAW: Use count as the input to Thread.sleep() */
         Thread.sleep(count);
 
-    }
+    } 
 
     /* goodB2G() - use badsource and goodsink */
     public void goodB2GSink(int count ) throws Throwable
@@ -45,7 +45,7 @@ public class CWE400_Resource_Exhaustion__sleep_URLConnection_52c
         if (count > 0 && count <= 2000)
         {
             Thread.sleep(count);
-        }
+        } 
 
-    }
-}
+    } 
+} 

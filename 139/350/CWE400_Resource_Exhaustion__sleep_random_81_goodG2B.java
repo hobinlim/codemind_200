@@ -26,5 +26,5 @@ public class CWE400_Resource_Exhaustion__sleep_random_81_goodG2B extends CWE400_
         /* POTENTIAL FLAW: Use count as the input to Thread.sleep() */
         Thread.sleep(count);
 
-    }
-}
+    } 
+} 

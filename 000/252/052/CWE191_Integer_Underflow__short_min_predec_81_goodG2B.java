@@ -28,5 +28,5 @@ public class CWE191_Integer_Underflow__short_min_predec_81_goodG2B extends CWE19
 
         IO.writeLine("result: " + result);
 
-    } 
-} 
+    }
+}

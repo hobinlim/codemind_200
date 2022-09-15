@@ -32,12 +32,12 @@ public class CWE470_Unsafe_Reflection__connect_tcp_61a extends AbstractTestCase
 
         IO.writeLine(tempClassObject.toString()); /* Use tempClassObject in some way */
 
-    }
+    } 
 
     public void good() throws Throwable
     {
         goodG2B();
-    }
+    } 
 
     /* goodG2B() - use goodsource and badsink */
     private void goodG2B() throws Throwable
@@ -50,7 +50,7 @@ public class CWE470_Unsafe_Reflection__connect_tcp_61a extends AbstractTestCase
 
         IO.writeLine(tempClassObject.toString()); /* Use tempClassObject in some way */
 
-    }
+    } 
 
     /* Below is the main(). It is only used when building this testcase on
      * its own for testing or for building a binary to use in testing binary
@@ -61,5 +61,5 @@ public class CWE470_Unsafe_Reflection__connect_tcp_61a extends AbstractTestCase
            InstantiationException, IllegalAccessException
     {
         mainFromParent(args);
-    }
-}
+    } 
+} 

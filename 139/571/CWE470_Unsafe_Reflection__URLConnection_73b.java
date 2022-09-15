@@ -33,7 +33,7 @@ public class CWE470_Unsafe_Reflection__URLConnection_73b
 
         IO.writeLine(tempClassObject.toString()); /* Use tempClassObject in some way */
 
-    }
+    } 
 
     /* goodG2B() - use goodsource and badsink */
     public void goodG2BSink(LinkedList<String> dataLinkedList ) throws Throwable
@@ -46,5 +46,5 @@ public class CWE470_Unsafe_Reflection__URLConnection_73b
 
         IO.writeLine(tempClassObject.toString()); /* Use tempClassObject in some way */
 
-    }
-}
+    } 
+} 

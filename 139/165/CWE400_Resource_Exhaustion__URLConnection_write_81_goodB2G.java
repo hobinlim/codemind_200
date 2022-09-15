@@ -46,47 +46,47 @@ public class CWE400_Resource_Exhaustion__URLConnection_write_81_goodB2G extends 
                 try
                 {
                     writerBuffered.write("Hello");
-                }
+                } 
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error with stream writing", exceptIO);
-                }
-            }
+                } 
+            } 
             /* Close stream reading objects */
             try
             {
                 if (writerBuffered != null)
                 {
                     writerBuffered.close();
-                }
-            }
+                } 
+            } 
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error closing BufferedWriter", exceptIO);
-            }
+            } 
             try
             {
                 if (writerOutputStream != null)
                 {
                     writerOutputStream.close();
-                }
-            }
+                } 
+            } 
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error closing OutputStreamWriter", exceptIO);
-            }
+            } 
             try
             {
                 if (streamFileOutput != null)
                 {
                     streamFileOutput.close();
-                }
-            }
+                } 
+            } 
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error closing FileOutputStream", exceptIO);
-            }
-        }
+            } 
+        } 
 
-    }
-}
+    } 
+} 

@@ -42,22 +42,22 @@ public class CWE459_Incomplete_Cleanup__Servlet_temp_file_10 extends AbstractTes
                 if (!tempFile.setWritable(true, true))
                 {
                     IO.logger.log(Level.WARNING, "Could not set Writable permissions");
-                }
+                } 
                 if (!tempFile.setReadable(true, true))
                 {
                     IO.logger.log(Level.WARNING, "Could not set Readable permissions");
-                }
+                } 
                 if (!tempFile.setExecutable(false))
                 {
                     IO.logger.log(Level.WARNING, "Could not set Executable permissions");
-                }
-            }
+                } 
+            } 
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Could not create temporary file", exceptIO);
-            }
-        }
-    }
+            } 
+        } 
+    } 
 
     /* good1() changes IO.staticTrue to IO.staticFalse */
     private void good1(HttpServletRequest request, HttpServletResponse response) throws Throwable
@@ -66,7 +66,7 @@ public class CWE459_Incomplete_Cleanup__Servlet_temp_file_10 extends AbstractTes
         {
             /* INCIDENTAL: CWE 561 Dead Code, the code below will never run */
             IO.writeLine("Benign, fixed string");
-        }
+        } 
         else
         {
 
@@ -80,31 +80,31 @@ public class CWE459_Incomplete_Cleanup__Servlet_temp_file_10 extends AbstractTes
                 if (!tempFile.setWritable(true, true))
                 {
                     IO.logger.log(Level.WARNING, "Could not set Writable permissions");
-                }
+                } 
                 if (!tempFile.setReadable(true, true))
                 {
                     IO.logger.log(Level.WARNING, "Could not set Readable permissions");
-                }
+                } 
                 if (!tempFile.setExecutable(false))
                 {
                     IO.logger.log(Level.WARNING, "Could not set Executable permissions");
-                }
-            }
+                } 
+            } 
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Could not create temporary file", exceptIO);
-            }
+            } 
             finally
             {
                 /* FIX: Delete the temporary file manually */
                 if (tempFile.exists())
                 {
                     tempFile.delete();
-                }
-            }
+                } 
+            } 
 
-        }
-    }
+        } 
+    } 
 
     /* good2() reverses the bodies in the if statement */
     private void good2(HttpServletRequest request, HttpServletResponse response) throws Throwable
@@ -119,36 +119,36 @@ public class CWE459_Incomplete_Cleanup__Servlet_temp_file_10 extends AbstractTes
                 if (!tempFile.setWritable(true, true))
                 {
                     IO.logger.log(Level.WARNING, "Could not set Writable permissions");
-                }
+                } 
                 if (!tempFile.setReadable(true, true))
                 {
                     IO.logger.log(Level.WARNING, "Could not set Readable permissions");
-                }
+                } 
                 if (!tempFile.setExecutable(false))
                 {
                     IO.logger.log(Level.WARNING, "Could not set Executable permissions");
-                }
-            }
+                } 
+            } 
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Could not create temporary file", exceptIO);
-            }
+            } 
             finally
             {
                 /* FIX: Delete the temporary file manually */
                 if (tempFile.exists())
                 {
                     tempFile.delete();
-                }
-            }
-        }
-    }
+                } 
+            } 
+        } 
+    } 
 
     public void good(HttpServletRequest request, HttpServletResponse response) throws Throwable
     {
         good1(request, response);
         good2(request, response);
-    }
+    } 
 
     /* Below is the main(). It is only used when building this testcase on
      * its own for testing or for building a binary to use in testing binary
@@ -159,5 +159,5 @@ public class CWE459_Incomplete_Cleanup__Servlet_temp_file_10 extends AbstractTes
            InstantiationException, IllegalAccessException
     {
         mainFromParent(args);
-    }
-}
+    } 
+} 

@@ -56,12 +56,12 @@ public class CWE400_Resource_Exhaustion__URLConnection_write_75b
                 try
                 {
                     writerBuffered.write("Hello");
-                }
+                } 
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error with stream writing", exceptIO);
-                }
-            }
+                } 
+            } 
 
             /* Close stream reading objects */
             try
@@ -69,46 +69,46 @@ public class CWE400_Resource_Exhaustion__URLConnection_write_75b
                 if (writerBuffered != null)
                 {
                     writerBuffered.close();
-                }
-            }
+                } 
+            } 
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error closing BufferedWriter", exceptIO);
-            }
+            } 
 
             try
             {
                 if (writerOutputStream != null)
                 {
                     writerOutputStream.close();
-                }
-            }
+                } 
+            } 
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error closing OutputStreamWriter", exceptIO);
-            }
+            } 
 
             try
             {
                 if (streamFileOutput != null)
                 {
                     streamFileOutput.close();
-                }
-            }
+                } 
+            } 
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error closing FileOutputStream", exceptIO);
-            }
+            } 
 
-        }
+        } 
         catch (IOException exceptIO)
         {
             IO.logger.log(Level.WARNING, "IOException in deserialization", exceptIO);
-        }
+        } 
         catch (ClassNotFoundException exceptClassNotFound)
         {
             IO.logger.log(Level.WARNING, "ClassNotFoundException in deserialization", exceptClassNotFound);
-        }
+        } 
         finally
         {
             /* clean up stream reading objects */
@@ -117,26 +117,26 @@ public class CWE400_Resource_Exhaustion__URLConnection_write_75b
                 if (streamObjectInput != null)
                 {
                     streamObjectInput.close();
-                }
-            }
+                } 
+            } 
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error closing ObjectInputStream", exceptIO);
-            }
+            } 
 
             try
             {
                 if (streamByteArrayInput != null)
                 {
                     streamByteArrayInput.close();
-                }
-            }
+                } 
+            } 
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error closing ByteArrayInputStream", exceptIO);
-            }
-        }
-    }
+            } 
+        } 
+    } 
 
     /* goodG2B() - use GoodSource and BadSink */
     public void goodG2BSink(byte[] countSerialized ) throws Throwable
@@ -162,12 +162,12 @@ public class CWE400_Resource_Exhaustion__URLConnection_write_75b
                 try
                 {
                     writerBuffered.write("Hello");
-                }
+                } 
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error with stream writing", exceptIO);
-                }
-            }
+                } 
+            } 
 
             /* Close stream reading objects */
             try
@@ -175,46 +175,46 @@ public class CWE400_Resource_Exhaustion__URLConnection_write_75b
                 if (writerBuffered != null)
                 {
                     writerBuffered.close();
-                }
-            }
+                } 
+            } 
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error closing BufferedWriter", exceptIO);
-            }
+            } 
 
             try
             {
                 if (writerOutputStream != null)
                 {
                     writerOutputStream.close();
-                }
-            }
+                } 
+            } 
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error closing OutputStreamWriter", exceptIO);
-            }
+            } 
 
             try
             {
                 if (streamFileOutput != null)
                 {
                     streamFileOutput.close();
-                }
-            }
+                } 
+            } 
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error closing FileOutputStream", exceptIO);
-            }
+            } 
 
-        }
+        } 
         catch (IOException exceptIO)
         {
             IO.logger.log(Level.WARNING, "IOException in deserialization", exceptIO);
-        }
+        } 
         catch (ClassNotFoundException exceptClassNotFound)
         {
             IO.logger.log(Level.WARNING, "ClassNotFoundException in deserialization", exceptClassNotFound);
-        }
+        } 
         finally
         {
             /* clean up stream reading objects */
@@ -223,26 +223,26 @@ public class CWE400_Resource_Exhaustion__URLConnection_write_75b
                 if (streamObjectInput != null)
                 {
                     streamObjectInput.close();
-                }
-            }
+                } 
+            } 
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error closing ObjectInputStream", exceptIO);
-            }
+            } 
 
             try
             {
                 if (streamByteArrayInput != null)
                 {
                     streamByteArrayInput.close();
-                }
-            }
+                } 
+            } 
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error closing ByteArrayInputStream", exceptIO);
-            }
-        }
-    }
+            } 
+        } 
+    } 
 
     /* goodB2G() - use BadSource and GoodSink */
     public void goodB2GSink(byte[] countSerialized ) throws Throwable
@@ -270,57 +270,57 @@ public class CWE400_Resource_Exhaustion__URLConnection_write_75b
                     try
                     {
                         writerBuffered.write("Hello");
-                    }
+                    } 
                     catch (IOException exceptIO)
                     {
                         IO.logger.log(Level.WARNING, "Error with stream writing", exceptIO);
-                    }
-                }
+                    } 
+                } 
                 /* Close stream reading objects */
                 try
                 {
                     if (writerBuffered != null)
                     {
                         writerBuffered.close();
-                    }
-                }
+                    } 
+                } 
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error closing BufferedWriter", exceptIO);
-                }
+                } 
                 try
                 {
                     if (writerOutputStream != null)
                     {
                         writerOutputStream.close();
-                    }
-                }
+                    } 
+                } 
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error closing OutputStreamWriter", exceptIO);
-                }
+                } 
                 try
                 {
                     if (streamFileOutput != null)
                     {
                         streamFileOutput.close();
-                    }
-                }
+                    } 
+                } 
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error closing FileOutputStream", exceptIO);
-                }
-            }
+                } 
+            } 
 
-        }
+        } 
         catch (IOException exceptIO)
         {
             IO.logger.log(Level.WARNING, "IOException in deserialization", exceptIO);
-        }
+        } 
         catch (ClassNotFoundException exceptClassNotFound)
         {
             IO.logger.log(Level.WARNING, "ClassNotFoundException in deserialization", exceptClassNotFound);
-        }
+        } 
         finally
         {
             /* clean up stream reading objects */
@@ -329,24 +329,24 @@ public class CWE400_Resource_Exhaustion__URLConnection_write_75b
                 if (streamObjectInput != null)
                 {
                     streamObjectInput.close();
-                }
-            }
+                } 
+            } 
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error closing ObjectInputStream", exceptIO);
-            }
+            } 
 
             try
             {
                 if (streamByteArrayInput != null)
                 {
                     streamByteArrayInput.close();
-                }
-            }
+                } 
+            } 
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error closing ByteArrayInputStream", exceptIO);
-            }
-        }
-    }
-}
+            } 
+        } 
+    } 
+} 

@@ -37,30 +37,30 @@ public class CWE404_Improper_Resource_Shutdown__FileReader_01 extends AbstractTe
                 if (readerBuffered != null)
                 {
                     readerBuffered.close();
-                }
-            }
+                } 
+            } 
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error closing BufferedReader", exceptIO);
-            }
+            } 
             
             try 
             {
                 if (readerFile != null)
                 {
                     readerFile.close();
-                }
-            }
+                } 
+            } 
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error closing FileReader", exceptIO);
-            }        
-        }
+            }         
+        } 
         catch (IOException exceptIO)
         {
             IO.logger.log(Level.WARNING, "Error with stream reading", exceptIO);
-        }
-    }
+        } 
+    } 
     
     private void good1() 
     {        
@@ -75,11 +75,11 @@ public class CWE404_Improper_Resource_Shutdown__FileReader_01 extends AbstractTe
             String readString = readerBuffered.readLine();
             
             IO.writeLine(readString);
-        }
+        } 
         catch (IOException exceptIO)
         {
             IO.logger.log(Level.WARNING, "Error with stream reading", exceptIO);
-        }
+        } 
         /* FIX: Streams closed appropriately */
         finally
         {
@@ -88,31 +88,31 @@ public class CWE404_Improper_Resource_Shutdown__FileReader_01 extends AbstractTe
                 if (readerBuffered != null)
                 {
                     readerBuffered.close();
-                }
-            }
+                } 
+            } 
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error closing BufferedReader", exceptIO);
-            }
+            } 
             
             try 
             {
                 if (readerFile != null) 
                 {
                     readerFile.close();
-                }
-            }
+                } 
+            } 
             catch (IOException exceptIO) 
             {
                 IO.logger.log(Level.WARNING, "Error closing FileReader", exceptIO);
-            }
-        }
-    }
+            } 
+        } 
+    } 
     
     public void good()  
     {
         good1();
-    }
+    } 
 
     /* Below is the main(). It is only used when building this testcase on 
      * its own for testing or for building a binary to use in testing binary 
@@ -123,5 +123,5 @@ public class CWE404_Improper_Resource_Shutdown__FileReader_01 extends AbstractTe
             InstantiationException, IllegalAccessException 
     {
         mainFromParent(args);
-    }
-}
+    } 
+} 

@@ -60,17 +60,17 @@ public class CWE400_Resource_Exhaustion__sleep_URLConnection_17 extends Abstract
                     try
                     {
                         count = Integer.parseInt(stringNumber.trim());
-                    }
+                    } 
                     catch (NumberFormatException exceptNumberFormat)
                     {
                         IO.logger.log(Level.WARNING, "Number format exception parsing count from string", exceptNumberFormat);
-                    }
-                }
-            }
+                    } 
+                } 
+            } 
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error with stream reading", exceptIO);
-            }
+            } 
             finally
             {
                 /* clean up stream reading objects */
@@ -79,33 +79,33 @@ public class CWE400_Resource_Exhaustion__sleep_URLConnection_17 extends Abstract
                     if (readerBuffered != null)
                     {
                         readerBuffered.close();
-                    }
-                }
+                    } 
+                } 
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error closing BufferedReader", exceptIO);
-                }
+                } 
 
                 try
                 {
                     if (readerInputStream != null)
                     {
                         readerInputStream.close();
-                    }
-                }
+                    } 
+                } 
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error closing InputStreamReader", exceptIO);
-                }
-            }
-        }
+                } 
+            } 
+        } 
 
         for (int j = 0; j < 1; j++)
         {
             /* POTENTIAL FLAW: Use count as the input to Thread.sleep() */
             Thread.sleep(count);
-        }
-    }
+        } 
+    } 
 
     /* goodG2B() - use goodsource and badsink */
     private void goodG2B() throws Throwable
@@ -119,8 +119,8 @@ public class CWE400_Resource_Exhaustion__sleep_URLConnection_17 extends Abstract
         {
             /* POTENTIAL FLAW: Use count as the input to Thread.sleep() */
             Thread.sleep(count);
-        }
-    }
+        } 
+    } 
 
     /* goodB2G() - use badsource and goodsink*/
     private void goodB2G() throws Throwable
@@ -150,17 +150,17 @@ public class CWE400_Resource_Exhaustion__sleep_URLConnection_17 extends Abstract
                     try
                     {
                         count = Integer.parseInt(stringNumber.trim());
-                    }
+                    } 
                     catch (NumberFormatException exceptNumberFormat)
                     {
                         IO.logger.log(Level.WARNING, "Number format exception parsing count from string", exceptNumberFormat);
-                    }
-                }
-            }
+                    } 
+                } 
+            } 
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error with stream reading", exceptIO);
-            }
+            } 
             finally
             {
                 /* clean up stream reading objects */
@@ -169,26 +169,26 @@ public class CWE400_Resource_Exhaustion__sleep_URLConnection_17 extends Abstract
                     if (readerBuffered != null)
                     {
                         readerBuffered.close();
-                    }
-                }
+                    } 
+                } 
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error closing BufferedReader", exceptIO);
-                }
+                } 
 
                 try
                 {
                     if (readerInputStream != null)
                     {
                         readerInputStream.close();
-                    }
-                }
+                    } 
+                } 
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error closing InputStreamReader", exceptIO);
-                }
-            }
-        }
+                } 
+            } 
+        } 
 
         for (int k = 0; k < 1; k++)
         {
@@ -196,15 +196,15 @@ public class CWE400_Resource_Exhaustion__sleep_URLConnection_17 extends Abstract
             if (count > 0 && count <= 2000)
             {
                 Thread.sleep(count);
-            }
-        }
-    }
+            } 
+        } 
+    } 
 
     public void good() throws Throwable
     {
         goodG2B();
         goodB2G();
-    }
+    } 
 
     /* Below is the main(). It is only used when building this testcase on
      * its own for testing or for building a binary to use in testing binary
@@ -215,5 +215,5 @@ public class CWE400_Resource_Exhaustion__sleep_URLConnection_17 extends Abstract
            InstantiationException, IllegalAccessException
     {
         mainFromParent(args);
-    }
-}
+    } 
+} 

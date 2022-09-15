@@ -50,17 +50,17 @@ public class CWE400_Resource_Exhaustion__sleep_PropertiesFile_66a extends Abstra
                     try
                     {
                         count = Integer.parseInt(stringNumber.trim());
-                    }
+                    } 
                     catch(NumberFormatException exceptNumberFormat)
                     {
                         IO.logger.log(Level.WARNING, "Number format exception parsing count from string", exceptNumberFormat);
-                    }
-                }
-            }
+                    } 
+                } 
+            } 
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error with stream reading", exceptIO);
-            }
+            } 
             finally
             {
                 /* Close stream reading object */
@@ -69,25 +69,25 @@ public class CWE400_Resource_Exhaustion__sleep_PropertiesFile_66a extends Abstra
                     if (streamFileInput != null)
                     {
                         streamFileInput.close();
-                    }
-                }
+                    } 
+                } 
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error closing FileInputStream", exceptIO);
-                }
-            }
-        }
+                } 
+            } 
+        } 
 
         int[] countArray = new int[5];
         countArray[2] = count;
         (new CWE400_Resource_Exhaustion__sleep_PropertiesFile_66b()).badSink(countArray  );
-    }
+    } 
 
     public void good() throws Throwable
     {
         goodG2B();
         goodB2G();
-    }
+    } 
 
     /* goodG2B() - use goodsource and badsink */
     private void goodG2B() throws Throwable
@@ -100,7 +100,7 @@ public class CWE400_Resource_Exhaustion__sleep_PropertiesFile_66a extends Abstra
         int[] countArray = new int[5];
         countArray[2] = count;
         (new CWE400_Resource_Exhaustion__sleep_PropertiesFile_66b()).goodG2BSink(countArray  );
-    }
+    } 
 
     /* goodB2G() - use badsource and goodsink */
     private void goodB2G() throws Throwable
@@ -126,17 +126,17 @@ public class CWE400_Resource_Exhaustion__sleep_PropertiesFile_66a extends Abstra
                     try
                     {
                         count = Integer.parseInt(stringNumber.trim());
-                    }
+                    } 
                     catch(NumberFormatException exceptNumberFormat)
                     {
                         IO.logger.log(Level.WARNING, "Number format exception parsing count from string", exceptNumberFormat);
-                    }
-                }
-            }
+                    } 
+                } 
+            } 
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error with stream reading", exceptIO);
-            }
+            } 
             finally
             {
                 /* Close stream reading object */
@@ -145,19 +145,19 @@ public class CWE400_Resource_Exhaustion__sleep_PropertiesFile_66a extends Abstra
                     if (streamFileInput != null)
                     {
                         streamFileInput.close();
-                    }
-                }
+                    } 
+                } 
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error closing FileInputStream", exceptIO);
-                }
-            }
-        }
+                } 
+            } 
+        } 
 
         int[] countArray = new int[5];
         countArray[2] = count;
         (new CWE400_Resource_Exhaustion__sleep_PropertiesFile_66b()).goodB2GSink(countArray  );
-    }
+    } 
 
     /* Below is the main(). It is only used when building this testcase on
      * its own for testing or for building a binary to use in testing binary
@@ -168,6 +168,6 @@ public class CWE400_Resource_Exhaustion__sleep_PropertiesFile_66a extends Abstra
            InstantiationException, IllegalAccessException
     {
         mainFromParent(args);
-    }
+    } 
 
-}
+} 

@@ -30,14 +30,14 @@ public class CWE470_Unsafe_Reflection__Property_12 extends AbstractTestCase
             /* get system property user.home */
             /* POTENTIAL FLAW: Read data from a system property */
             data = System.getProperty("user.home");
-        }
+        } 
         else
         {
 
             /* FIX: Use a hardcoded class name */
             data = "Testing.test";
 
-        }
+        } 
 
         /* POTENTIAL FLAW: Instantiate object of class named in data (which may be from external input) */
         Class<?> tempClass = Class.forName(data);
@@ -45,7 +45,7 @@ public class CWE470_Unsafe_Reflection__Property_12 extends AbstractTestCase
 
         IO.writeLine(tempClassObject.toString()); /* Use tempClassObject in some way */
 
-    }
+    } 
 
     /* goodG2B() - use goodsource and badsink by changing the "if" so that
      * both branches use the GoodSource */
@@ -56,14 +56,14 @@ public class CWE470_Unsafe_Reflection__Property_12 extends AbstractTestCase
         {
             /* FIX: Use a hardcoded class name */
             data = "Testing.test";
-        }
+        } 
         else
         {
 
             /* FIX: Use a hardcoded class name */
             data = "Testing.test";
 
-        }
+        } 
 
         /* POTENTIAL FLAW: Instantiate object of class named in data (which may be from external input) */
         Class<?> tempClass = Class.forName(data);
@@ -71,12 +71,12 @@ public class CWE470_Unsafe_Reflection__Property_12 extends AbstractTestCase
 
         IO.writeLine(tempClassObject.toString()); /* Use tempClassObject in some way */
 
-    }
+    } 
 
     public void good() throws Throwable
     {
         goodG2B();
-    }
+    } 
 
     /* Below is the main(). It is only used when building this testcase on
      * its own for testing or for building a binary to use in testing binary
@@ -87,5 +87,5 @@ public class CWE470_Unsafe_Reflection__Property_12 extends AbstractTestCase
            InstantiationException, IllegalAccessException
     {
         mainFromParent(args);
-    }
-}
+    } 
+} 

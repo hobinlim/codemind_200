@@ -56,17 +56,17 @@ public class CWE400_Resource_Exhaustion__sleep_URLConnection_72a extends Abstrac
                     try
                     {
                         count = Integer.parseInt(stringNumber.trim());
-                    }
+                    } 
                     catch (NumberFormatException exceptNumberFormat)
                     {
                         IO.logger.log(Level.WARNING, "Number format exception parsing count from string", exceptNumberFormat);
-                    }
-                }
-            }
+                    } 
+                } 
+            } 
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error with stream reading", exceptIO);
-            }
+            } 
             finally
             {
                 /* clean up stream reading objects */
@@ -75,39 +75,39 @@ public class CWE400_Resource_Exhaustion__sleep_URLConnection_72a extends Abstrac
                     if (readerBuffered != null)
                     {
                         readerBuffered.close();
-                    }
-                }
+                    } 
+                } 
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error closing BufferedReader", exceptIO);
-                }
+                } 
 
                 try
                 {
                     if (readerInputStream != null)
                     {
                         readerInputStream.close();
-                    }
-                }
+                    } 
+                } 
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error closing InputStreamReader", exceptIO);
-                }
-            }
-        }
+                } 
+            } 
+        } 
 
         Vector<Integer> countVector = new Vector<Integer>(5);
         countVector.add(0, count);
         countVector.add(1, count);
         countVector.add(2, count);
         (new CWE400_Resource_Exhaustion__sleep_URLConnection_72b()).badSink(countVector  );
-    }
+    } 
 
     public void good() throws Throwable
     {
         goodG2B();
         goodB2G();
-    }
+    } 
 
     /* goodG2B() - use GoodSource and BadSink */
     private void goodG2B() throws Throwable
@@ -122,7 +122,7 @@ public class CWE400_Resource_Exhaustion__sleep_URLConnection_72a extends Abstrac
         countVector.add(1, count);
         countVector.add(2, count);
         (new CWE400_Resource_Exhaustion__sleep_URLConnection_72b()).goodG2BSink(countVector  );
-    }
+    } 
 
     /* goodB2G() - use BadSource and GoodSink */
     private void goodB2G() throws Throwable
@@ -152,17 +152,17 @@ public class CWE400_Resource_Exhaustion__sleep_URLConnection_72a extends Abstrac
                     try
                     {
                         count = Integer.parseInt(stringNumber.trim());
-                    }
+                    } 
                     catch (NumberFormatException exceptNumberFormat)
                     {
                         IO.logger.log(Level.WARNING, "Number format exception parsing count from string", exceptNumberFormat);
-                    }
-                }
-            }
+                    } 
+                } 
+            } 
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error with stream reading", exceptIO);
-            }
+            } 
             finally
             {
                 /* clean up stream reading objects */
@@ -171,33 +171,33 @@ public class CWE400_Resource_Exhaustion__sleep_URLConnection_72a extends Abstrac
                     if (readerBuffered != null)
                     {
                         readerBuffered.close();
-                    }
-                }
+                    } 
+                } 
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error closing BufferedReader", exceptIO);
-                }
+                } 
 
                 try
                 {
                     if (readerInputStream != null)
                     {
                         readerInputStream.close();
-                    }
-                }
+                    } 
+                } 
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error closing InputStreamReader", exceptIO);
-                }
-            }
-        }
+                } 
+            } 
+        } 
 
         Vector<Integer> countVector = new Vector<Integer>(5);
         countVector.add(0, count);
         countVector.add(1, count);
         countVector.add(2, count);
         (new CWE400_Resource_Exhaustion__sleep_URLConnection_72b()).goodB2GSink(countVector  );
-    }
+    } 
 
     /* Below is the main(). It is only used when building this testcase on
      * its own for testing or for building a binary to use in testing binary
@@ -208,6 +208,6 @@ public class CWE400_Resource_Exhaustion__sleep_URLConnection_72a extends Abstrac
            InstantiationException, IllegalAccessException
     {
         mainFromParent(args);
-    }
+    } 
 
-}
+} 

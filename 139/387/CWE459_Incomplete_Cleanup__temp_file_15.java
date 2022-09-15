@@ -39,27 +39,27 @@ public class CWE459_Incomplete_Cleanup__temp_file_15 extends AbstractTestCase
                 if (!tempFile.setWritable(true, true))
                 {
                     IO.logger.log(Level.WARNING, "Could not set Writable permissions");
-                }
+                } 
                 if (!tempFile.setReadable(true, true))
                 {
                     IO.logger.log(Level.WARNING, "Could not set Readable permissions");
-                }
+                } 
                 if (!tempFile.setExecutable(false))
                 {
                     IO.logger.log(Level.WARNING, "Could not set Executable permissions");
-                }
-            }
+                } 
+            } 
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Could not create temporary file", exceptIO);
-            }
+            } 
             break;
         default:
             /* INCIDENTAL: CWE 561 Dead Code, the code below will never run */
             IO.writeLine("Benign, fixed string");
             break;
-        }
-    }
+        } 
+    } 
 
     /* good1() change the switch to switch(8) */
     private void good1() throws Throwable
@@ -82,23 +82,23 @@ public class CWE459_Incomplete_Cleanup__temp_file_15 extends AbstractTestCase
                 if (!tempFile.setWritable(true, true))
                 {
                     IO.logger.log(Level.WARNING, "Could not set Writable permissions");
-                }
+                } 
                 if (!tempFile.setReadable(true, true))
                 {
                     IO.logger.log(Level.WARNING, "Could not set Readable permissions");
-                }
+                } 
                 if (!tempFile.setExecutable(false))
                 {
                     IO.logger.log(Level.WARNING, "Could not set Executable permissions");
-                }
-            }
+                } 
+            } 
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Could not create temporary file", exceptIO);
-            }
+            } 
             break;
-        }
-    }
+        } 
+    } 
 
     /* good2() reverses the blocks in the switch  */
     private void good2() throws Throwable
@@ -117,33 +117,33 @@ public class CWE459_Incomplete_Cleanup__temp_file_15 extends AbstractTestCase
                 if (!tempFile.setWritable(true, true))
                 {
                     IO.logger.log(Level.WARNING, "Could not set Writable permissions");
-                }
+                } 
                 if (!tempFile.setReadable(true, true))
                 {
                     IO.logger.log(Level.WARNING, "Could not set Readable permissions");
-                }
+                } 
                 if (!tempFile.setExecutable(false))
                 {
                     IO.logger.log(Level.WARNING, "Could not set Executable permissions");
-                }
-            }
+                } 
+            } 
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Could not create temporary file", exceptIO);
-            }
+            } 
             break;
         default:
             /* INCIDENTAL: CWE 561 Dead Code, the code below will never run */
             IO.writeLine("Benign, fixed string");
             break;
-        }
-    }
+        } 
+    } 
 
     public void good() throws Throwable
     {
         good1();
         good2();
-    }
+    } 
 
     /* Below is the main(). It is only used when building this testcase on
      * its own for testing or for building a binary to use in testing binary
@@ -154,5 +154,5 @@ public class CWE459_Incomplete_Cleanup__temp_file_15 extends AbstractTestCase
            InstantiationException, IllegalAccessException
     {
         mainFromParent(args);
-    }
-}
+    } 
+} 

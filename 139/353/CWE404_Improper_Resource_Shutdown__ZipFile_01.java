@@ -23,12 +23,12 @@ public class CWE404_Improper_Resource_Shutdown__ZipFile_01 extends AbstractTestC
         {
             /* running on Windows */
             filename = "C:\\file.zip";
-        }
+        } 
         else
         {
             /* running on non-Windows */
             filename = "/home/user/file.zip";
-        }
+        } 
     
         ZipFile zFile = null;
         
@@ -44,22 +44,22 @@ public class CWE404_Improper_Resource_Shutdown__ZipFile_01 extends AbstractTestC
                 if (zFile != null)
                 {
                     zFile.close();
-                }
-            }
+                } 
+            } 
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error closing ZipFile", exceptIO);
-            }        
-        }
+            }         
+        } 
         catch (ZipException exceptZip)
         {
             IO.logger.log(Level.WARNING, "Error with ZIP format", exceptZip);
-        }
+        } 
         catch (IOException exceptIO)
         {
             IO.logger.log(Level.WARNING, "Error reading file", exceptIO);
-        }
-    }
+        } 
+    } 
     
     private void good1() 
     {
@@ -68,12 +68,12 @@ public class CWE404_Improper_Resource_Shutdown__ZipFile_01 extends AbstractTestC
         {
             /* running on Windows */
             filename = "C:\\file.zip";
-        }
+        } 
         else
         {
             /* running on non-Windows */
             filename = "/home/user/file.zip";
-        }
+        } 
     
         ZipFile zFile = null;
         
@@ -82,15 +82,15 @@ public class CWE404_Improper_Resource_Shutdown__ZipFile_01 extends AbstractTestC
             zFile = new ZipFile("C:\\file.zip");          
             
             IO.writeLine("File contains " + zFile.size() + " entries.");                  
-        }
+        } 
         catch (ZipException exceptZip)
         {
             IO.logger.log(Level.WARNING, "Error with ZIP format", exceptZip);
-        }
+        } 
         catch (IOException exceptIO)
         {
             IO.logger.log(Level.WARNING, "Error reading file", exceptIO);
-        }
+        } 
         /* FIX: Streams closed appropriately */
         finally
         {
@@ -99,19 +99,19 @@ public class CWE404_Improper_Resource_Shutdown__ZipFile_01 extends AbstractTestC
                 if (zFile != null)
                 {
                     zFile.close();
-                }
-            }
+                } 
+            } 
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error closing ZipFile", exceptIO);
-            }  
-        }
-    }
+            }   
+        } 
+    } 
     
     public void good()  
     {
         good1();
-    }
+    } 
 
     /* Below is the main(). It is only used when building this testcase on 
      * its own for testing or for building a binary to use in testing binary 
@@ -122,5 +122,5 @@ public class CWE404_Improper_Resource_Shutdown__ZipFile_01 extends AbstractTestC
             InstantiationException, IllegalAccessException 
     {
         mainFromParent(args);
-    }
-}
+    } 
+} 

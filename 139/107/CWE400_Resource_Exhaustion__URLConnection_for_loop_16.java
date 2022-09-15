@@ -55,17 +55,17 @@ public class CWE400_Resource_Exhaustion__URLConnection_for_loop_16 extends Abstr
                         try
                         {
                             count = Integer.parseInt(stringNumber.trim());
-                        }
+                        } 
                         catch (NumberFormatException exceptNumberFormat)
                         {
                             IO.logger.log(Level.WARNING, "Number format exception parsing count from string", exceptNumberFormat);
-                        }
-                    }
-                }
+                        } 
+                    } 
+                } 
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error with stream reading", exceptIO);
-                }
+                } 
                 finally
                 {
                     /* clean up stream reading objects */
@@ -74,28 +74,28 @@ public class CWE400_Resource_Exhaustion__URLConnection_for_loop_16 extends Abstr
                         if (readerBuffered != null)
                         {
                             readerBuffered.close();
-                        }
-                    }
+                        } 
+                    } 
                     catch (IOException exceptIO)
                     {
                         IO.logger.log(Level.WARNING, "Error closing BufferedReader", exceptIO);
-                    }
+                    } 
 
                     try
                     {
                         if (readerInputStream != null)
                         {
                             readerInputStream.close();
-                        }
-                    }
+                        } 
+                    } 
                     catch (IOException exceptIO)
                     {
                         IO.logger.log(Level.WARNING, "Error closing InputStreamReader", exceptIO);
-                    }
-                }
-            }
+                    } 
+                } 
+            } 
             break;
-        }
+        } 
 
         while (true)
         {
@@ -104,10 +104,10 @@ public class CWE400_Resource_Exhaustion__URLConnection_for_loop_16 extends Abstr
             for (i = 0; i < count; i++)
             {
                 IO.writeLine("Hello");
-            }
+            } 
             break;
-        }
-    }
+        } 
+    } 
 
     /* goodG2B() - use goodsource and badsink */
     private void goodG2B() throws Throwable
@@ -119,7 +119,7 @@ public class CWE400_Resource_Exhaustion__URLConnection_for_loop_16 extends Abstr
             /* FIX: Use a hardcoded number that won't cause underflow, overflow, divide by zero, or loss-of-precision issues */
             count = 2;
             break;
-        }
+        } 
 
         while (true)
         {
@@ -128,11 +128,11 @@ public class CWE400_Resource_Exhaustion__URLConnection_for_loop_16 extends Abstr
             for (i = 0; i < count; i++)
             {
                 IO.writeLine("Hello");
-            }
+            } 
             break;
-        }
+        } 
 
-    }
+    } 
 
     /* goodB2G() - use badsource and goodsink */
     private void goodB2G() throws Throwable
@@ -160,17 +160,17 @@ public class CWE400_Resource_Exhaustion__URLConnection_for_loop_16 extends Abstr
                         try
                         {
                             count = Integer.parseInt(stringNumber.trim());
-                        }
+                        } 
                         catch (NumberFormatException exceptNumberFormat)
                         {
                             IO.logger.log(Level.WARNING, "Number format exception parsing count from string", exceptNumberFormat);
-                        }
-                    }
-                }
+                        } 
+                    } 
+                } 
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error with stream reading", exceptIO);
-                }
+                } 
                 finally
                 {
                     /* clean up stream reading objects */
@@ -179,28 +179,28 @@ public class CWE400_Resource_Exhaustion__URLConnection_for_loop_16 extends Abstr
                         if (readerBuffered != null)
                         {
                             readerBuffered.close();
-                        }
-                    }
+                        } 
+                    } 
                     catch (IOException exceptIO)
                     {
                         IO.logger.log(Level.WARNING, "Error closing BufferedReader", exceptIO);
-                    }
+                    } 
 
                     try
                     {
                         if (readerInputStream != null)
                         {
                             readerInputStream.close();
-                        }
-                    }
+                        } 
+                    } 
                     catch (IOException exceptIO)
                     {
                         IO.logger.log(Level.WARNING, "Error closing InputStreamReader", exceptIO);
-                    }
-                }
-            }
+                    } 
+                } 
+            } 
             break;
-        }
+        } 
 
         while (true)
         {
@@ -211,17 +211,17 @@ public class CWE400_Resource_Exhaustion__URLConnection_for_loop_16 extends Abstr
                 for (i = 0; i < count; i++)
                 {
                     IO.writeLine("Hello");
-                }
-            }
+                } 
+            } 
             break;
-        }
-    }
+        } 
+    } 
 
     public void good() throws Throwable
     {
         goodG2B();
         goodB2G();
-    }
+    } 
 
     /* Below is the main(). It is only used when building this testcase on
      * its own for testing or for building a binary to use in testing binary
@@ -232,5 +232,5 @@ public class CWE400_Resource_Exhaustion__URLConnection_for_loop_16 extends Abstr
            InstantiationException, IllegalAccessException
     {
         mainFromParent(args);
-    }
-}
+    } 
+} 

@@ -31,5 +31,5 @@ public class CWE470_Unsafe_Reflection__connect_tcp_81_goodG2B extends CWE470_Uns
 
         IO.writeLine(tempClassObject.toString()); /* Use tempClassObject in some way */
 
-    }
-}
+    } 
+} 

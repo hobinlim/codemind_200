@@ -31,7 +31,7 @@ public class CWE400_Resource_Exhaustion__URLConnection_for_loop_81_goodG2B exten
         for (i = 0; i < count; i++)
         {
             IO.writeLine("Hello");
-        }
+        } 
 
-    }
-}
+    } 
+} 

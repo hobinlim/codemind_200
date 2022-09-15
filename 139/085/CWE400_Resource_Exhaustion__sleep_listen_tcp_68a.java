@@ -59,17 +59,17 @@ public class CWE400_Resource_Exhaustion__sleep_listen_tcp_68a extends AbstractTe
                     try
                     {
                         count = Integer.parseInt(stringNumber.trim());
-                    }
+                    } 
                     catch(NumberFormatException exceptNumberFormat)
                     {
                         IO.logger.log(Level.WARNING, "Number format exception parsing count from string", exceptNumberFormat);
-                    }
-                }
-            }
+                    } 
+                } 
+            } 
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error with stream reading", exceptIO);
-            }
+            } 
             finally
             {
                 /* Close stream reading objects */
@@ -78,24 +78,24 @@ public class CWE400_Resource_Exhaustion__sleep_listen_tcp_68a extends AbstractTe
                     if (readerBuffered != null)
                     {
                         readerBuffered.close();
-                    }
-                }
+                    } 
+                } 
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error closing BufferedReader", exceptIO);
-                }
+                } 
 
                 try
                 {
                     if (readerInputStream != null)
                     {
                         readerInputStream.close();
-                    }
-                }
+                    } 
+                } 
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error closing InputStreamReader", exceptIO);
-                }
+                } 
 
                 /* Close socket objects */
                 try
@@ -103,35 +103,35 @@ public class CWE400_Resource_Exhaustion__sleep_listen_tcp_68a extends AbstractTe
                     if (socket != null)
                     {
                         socket.close();
-                    }
-                }
+                    } 
+                } 
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error closing Socket", exceptIO);
-                }
+                } 
 
                 try
                 {
                     if (listener != null)
                     {
                         listener.close();
-                    }
-                }
+                    } 
+                } 
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error closing ServerSocket", exceptIO);
-                }
-            }
-        }
+                } 
+            } 
+        } 
 
         (new CWE400_Resource_Exhaustion__sleep_listen_tcp_68b()).badSink();
-    }
+    } 
 
     public void good() throws Throwable
     {
         goodG2B();
         goodB2G();
-    }
+    } 
 
     /* goodG2B() - use goodsource and badsink */
     private void goodG2B() throws Throwable
@@ -141,7 +141,7 @@ public class CWE400_Resource_Exhaustion__sleep_listen_tcp_68a extends AbstractTe
         count = 2;
 
         (new CWE400_Resource_Exhaustion__sleep_listen_tcp_68b()).goodG2BSink();
-    }
+    } 
 
     /* goodB2G() - use badsource and goodsink */
     private void goodB2G() throws Throwable
@@ -173,17 +173,17 @@ public class CWE400_Resource_Exhaustion__sleep_listen_tcp_68a extends AbstractTe
                     try
                     {
                         count = Integer.parseInt(stringNumber.trim());
-                    }
+                    } 
                     catch(NumberFormatException exceptNumberFormat)
                     {
                         IO.logger.log(Level.WARNING, "Number format exception parsing count from string", exceptNumberFormat);
-                    }
-                }
-            }
+                    } 
+                } 
+            } 
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error with stream reading", exceptIO);
-            }
+            } 
             finally
             {
                 /* Close stream reading objects */
@@ -192,24 +192,24 @@ public class CWE400_Resource_Exhaustion__sleep_listen_tcp_68a extends AbstractTe
                     if (readerBuffered != null)
                     {
                         readerBuffered.close();
-                    }
-                }
+                    } 
+                } 
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error closing BufferedReader", exceptIO);
-                }
+                } 
 
                 try
                 {
                     if (readerInputStream != null)
                     {
                         readerInputStream.close();
-                    }
-                }
+                    } 
+                } 
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error closing InputStreamReader", exceptIO);
-                }
+                } 
 
                 /* Close socket objects */
                 try
@@ -217,29 +217,29 @@ public class CWE400_Resource_Exhaustion__sleep_listen_tcp_68a extends AbstractTe
                     if (socket != null)
                     {
                         socket.close();
-                    }
-                }
+                    } 
+                } 
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error closing Socket", exceptIO);
-                }
+                } 
 
                 try
                 {
                     if (listener != null)
                     {
                         listener.close();
-                    }
-                }
+                    } 
+                } 
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error closing ServerSocket", exceptIO);
-                }
-            }
-        }
+                } 
+            } 
+        } 
 
         (new CWE400_Resource_Exhaustion__sleep_listen_tcp_68b()).goodB2GSink();
-    }
+    } 
 
     /* Below is the main(). It is only used when building this testcase on
      * its own for testing or for building a binary to use in testing binary
@@ -250,5 +250,5 @@ public class CWE400_Resource_Exhaustion__sleep_listen_tcp_68a extends AbstractTe
            InstantiationException, IllegalAccessException
     {
         mainFromParent(args);
-    }
-}
+    } 
+} 

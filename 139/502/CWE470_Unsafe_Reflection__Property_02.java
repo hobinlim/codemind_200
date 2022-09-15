@@ -30,13 +30,13 @@ public class CWE470_Unsafe_Reflection__Property_02 extends AbstractTestCase
             /* get system property user.home */
             /* POTENTIAL FLAW: Read data from a system property */
             data = System.getProperty("user.home");
-        }
+        } 
         else
         {
             /* INCIDENTAL: CWE 561 Dead Code, the code below will never run
              * but ensure data is inititialized before the Sink to avoid compiler errors */
             data = null;
-        }
+        } 
 
         /* POTENTIAL FLAW: Instantiate object of class named in data (which may be from external input) */
         Class<?> tempClass = Class.forName(data);
@@ -44,7 +44,7 @@ public class CWE470_Unsafe_Reflection__Property_02 extends AbstractTestCase
 
         IO.writeLine(tempClassObject.toString()); /* Use tempClassObject in some way */
 
-    }
+    } 
 
     /* goodG2B1() - use goodsource and badsink by changing true to false */
     private void goodG2B1() throws Throwable
@@ -55,14 +55,14 @@ public class CWE470_Unsafe_Reflection__Property_02 extends AbstractTestCase
             /* INCIDENTAL: CWE 561 Dead Code, the code below will never run
              * but ensure data is inititialized before the Sink to avoid compiler errors */
             data = null;
-        }
+        } 
         else
         {
 
             /* FIX: Use a hardcoded class name */
             data = "Testing.test";
 
-        }
+        } 
 
         /* POTENTIAL FLAW: Instantiate object of class named in data (which may be from external input) */
         Class<?> tempClass = Class.forName(data);
@@ -70,7 +70,7 @@ public class CWE470_Unsafe_Reflection__Property_02 extends AbstractTestCase
 
         IO.writeLine(tempClassObject.toString()); /* Use tempClassObject in some way */
 
-    }
+    } 
 
     /* goodG2B2() - use goodsource and badsink by reversing statements in if */
     private void goodG2B2() throws Throwable
@@ -80,13 +80,13 @@ public class CWE470_Unsafe_Reflection__Property_02 extends AbstractTestCase
         {
             /* FIX: Use a hardcoded class name */
             data = "Testing.test";
-        }
+        } 
         else
         {
             /* INCIDENTAL: CWE 561 Dead Code, the code below will never run
              * but ensure data is inititialized before the Sink to avoid compiler errors */
             data = null;
-        }
+        } 
 
         /* POTENTIAL FLAW: Instantiate object of class named in data (which may be from external input) */
         Class<?> tempClass = Class.forName(data);
@@ -94,13 +94,13 @@ public class CWE470_Unsafe_Reflection__Property_02 extends AbstractTestCase
 
         IO.writeLine(tempClassObject.toString()); /* Use tempClassObject in some way */
 
-    }
+    } 
 
     public void good() throws Throwable
     {
         goodG2B1();
         goodG2B2();
-    }
+    } 
 
     /* Below is the main(). It is only used when building this testcase on
      * its own for testing or for building a binary to use in testing binary
@@ -111,5 +111,5 @@ public class CWE470_Unsafe_Reflection__Property_02 extends AbstractTestCase
            InstantiationException, IllegalAccessException
     {
         mainFromParent(args);
-    }
-}
+    } 
+} 

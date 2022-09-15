@@ -53,11 +53,11 @@ public class CWE470_Unsafe_Reflection__connect_tcp_81a extends AbstractTestCase
 
                 /* POTENTIAL FLAW: Read data using an outbound tcp connection */
                 data = readerBuffered.readLine();
-            }
+            } 
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error with stream reading", exceptIO);
-            }
+            } 
             finally
             {
                 /* clean up stream reading objects */
@@ -66,24 +66,24 @@ public class CWE470_Unsafe_Reflection__connect_tcp_81a extends AbstractTestCase
                     if (readerBuffered != null)
                     {
                         readerBuffered.close();
-                    }
-                }
+                    } 
+                } 
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error closing BufferedReader", exceptIO);
-                }
+                } 
 
                 try
                 {
                     if (readerInputStream != null)
                     {
                         readerInputStream.close();
-                    }
-                }
+                    } 
+                } 
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error closing InputStreamReader", exceptIO);
-                }
+                } 
 
                 /* clean up socket objects */
                 try
@@ -91,23 +91,23 @@ public class CWE470_Unsafe_Reflection__connect_tcp_81a extends AbstractTestCase
                     if (socket != null)
                     {
                         socket.close();
-                    }
-                }
+                    } 
+                } 
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error closing Socket", exceptIO);
-                }
-            }
-        }
+                } 
+            } 
+        } 
 
         CWE470_Unsafe_Reflection__connect_tcp_81_base baseObject = new CWE470_Unsafe_Reflection__connect_tcp_81_bad();
         baseObject.action(data );
-    }
+    } 
 
     public void good() throws Throwable
     {
         goodG2B();
-    }
+    } 
 
     /* goodG2B() - use goodsource and badsink */
     private void goodG2B() throws Throwable
@@ -119,7 +119,7 @@ public class CWE470_Unsafe_Reflection__connect_tcp_81a extends AbstractTestCase
 
         CWE470_Unsafe_Reflection__connect_tcp_81_base baseObject = new CWE470_Unsafe_Reflection__connect_tcp_81_goodG2B();
         baseObject.action(data );
-    }
+    } 
 
     /* Below is the main(). It is only used when building this testcase on
      * its own for testing or for building a binary to use in testing binary
@@ -130,6 +130,6 @@ public class CWE470_Unsafe_Reflection__connect_tcp_81a extends AbstractTestCase
            InstantiationException, IllegalAccessException
     {
         mainFromParent(args);
-    }
+    } 
 
-}
+} 

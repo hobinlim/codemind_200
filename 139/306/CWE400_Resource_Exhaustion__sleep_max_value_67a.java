@@ -23,7 +23,7 @@ public class CWE400_Resource_Exhaustion__sleep_max_value_67a extends AbstractTes
     static class Container
     {
         public int containerOne;
-    }
+    } 
 
     public void bad() throws Throwable
     {
@@ -35,13 +35,13 @@ public class CWE400_Resource_Exhaustion__sleep_max_value_67a extends AbstractTes
         Container countContainer = new Container();
         countContainer.containerOne = count;
         (new CWE400_Resource_Exhaustion__sleep_max_value_67b()).badSink(countContainer  );
-    }
+    } 
 
     public void good() throws Throwable
     {
         goodG2B();
         goodB2G();
-    }
+    } 
 
     /* goodG2B() - use goodsource and badsink */
     private void goodG2B() throws Throwable
@@ -54,7 +54,7 @@ public class CWE400_Resource_Exhaustion__sleep_max_value_67a extends AbstractTes
         Container countContainer = new Container();
         countContainer.containerOne = count;
         (new CWE400_Resource_Exhaustion__sleep_max_value_67b()).goodG2BSink(countContainer  );
-    }
+    } 
 
     /* goodB2G() - use badsource and goodsink */
     private void goodB2G() throws Throwable
@@ -67,7 +67,7 @@ public class CWE400_Resource_Exhaustion__sleep_max_value_67a extends AbstractTes
         Container countContainer = new Container();
         countContainer.containerOne = count;
         (new CWE400_Resource_Exhaustion__sleep_max_value_67b()).goodB2GSink(countContainer  );
-    }
+    } 
 
     /* Below is the main(). It is only used when building this testcase on
      * its own for testing or for building a binary to use in testing binary
@@ -78,6 +78,6 @@ public class CWE400_Resource_Exhaustion__sleep_max_value_67a extends AbstractTes
            InstantiationException, IllegalAccessException
     {
         mainFromParent(args);
-    }
+    } 
 
-}
+} 

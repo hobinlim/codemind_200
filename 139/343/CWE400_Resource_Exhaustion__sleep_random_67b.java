@@ -27,7 +27,7 @@ public class CWE400_Resource_Exhaustion__sleep_random_67b
         /* POTENTIAL FLAW: Use count as the input to Thread.sleep() */
         Thread.sleep(count);
 
-    }
+    } 
 
     /* goodG2B() - use goodsource and badsink */
     public void goodG2BSink(CWE400_Resource_Exhaustion__sleep_random_67a.Container countContainer ) throws Throwable
@@ -37,7 +37,7 @@ public class CWE400_Resource_Exhaustion__sleep_random_67b
         /* POTENTIAL FLAW: Use count as the input to Thread.sleep() */
         Thread.sleep(count);
 
-    }
+    } 
 
     /* goodB2G() - use badsource and goodsink */
     public void goodB2GSink(CWE400_Resource_Exhaustion__sleep_random_67a.Container countContainer ) throws Throwable
@@ -48,7 +48,7 @@ public class CWE400_Resource_Exhaustion__sleep_random_67b
         if (count > 0 && count <= 2000)
         {
             Thread.sleep(count);
-        }
+        } 
 
-    }
-}
+    } 
+} 

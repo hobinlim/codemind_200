@@ -66,17 +66,17 @@ public class CWE400_Resource_Exhaustion__URLConnection_write_21 extends Abstract
                     try
                     {
                         count = Integer.parseInt(stringNumber.trim());
-                    }
+                    } 
                     catch (NumberFormatException exceptNumberFormat)
                     {
                         IO.logger.log(Level.WARNING, "Number format exception parsing count from string", exceptNumberFormat);
-                    }
-                }
-            }
+                    } 
+                } 
+            } 
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error with stream reading", exceptIO);
-            }
+            } 
             finally
             {
                 /* clean up stream reading objects */
@@ -85,30 +85,30 @@ public class CWE400_Resource_Exhaustion__URLConnection_write_21 extends Abstract
                     if (readerBuffered != null)
                     {
                         readerBuffered.close();
-                    }
-                }
+                    } 
+                } 
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error closing BufferedReader", exceptIO);
-                }
+                } 
 
                 try
                 {
                     if (readerInputStream != null)
                     {
                         readerInputStream.close();
-                    }
-                }
+                    } 
+                } 
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error closing InputStreamReader", exceptIO);
-                }
-            }
-        }
+                } 
+            } 
+        } 
 
         badPrivate = true;
         badSink(count );
-    }
+    } 
 
     private void badSink(int count ) throws Throwable
     {
@@ -125,48 +125,48 @@ public class CWE400_Resource_Exhaustion__URLConnection_write_21 extends Abstract
                 try
                 {
                     writerBuffered.write("Hello");
-                }
+                } 
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error with stream writing", exceptIO);
-                }
-            }
+                } 
+            } 
             /* Close stream reading objects */
             try
             {
                 if (writerBuffered != null)
                 {
                     writerBuffered.close();
-                }
-            }
+                } 
+            } 
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error closing BufferedWriter", exceptIO);
-            }
+            } 
             try
             {
                 if (writerOutputStream != null)
                 {
                     writerOutputStream.close();
-                }
-            }
+                } 
+            } 
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error closing OutputStreamWriter", exceptIO);
-            }
+            } 
             try
             {
                 if (streamFileOutput != null)
                 {
                     streamFileOutput.close();
-                }
-            }
+                } 
+            } 
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error closing FileOutputStream", exceptIO);
-            }
-        }
-    }
+            } 
+        } 
+    } 
 
     /* The variables below are used to drive control flow in the sink functions. */
     private boolean goodB2G1Private = false;
@@ -178,7 +178,7 @@ public class CWE400_Resource_Exhaustion__URLConnection_write_21 extends Abstract
         goodB2G1();
         goodB2G2();
         goodG2B();
-    }
+    } 
 
     /* goodB2G1() - use BadSource and GoodSink by setting the variable to false instead of true */
     private void goodB2G1() throws Throwable
@@ -208,17 +208,17 @@ public class CWE400_Resource_Exhaustion__URLConnection_write_21 extends Abstract
                     try
                     {
                         count = Integer.parseInt(stringNumber.trim());
-                    }
+                    } 
                     catch (NumberFormatException exceptNumberFormat)
                     {
                         IO.logger.log(Level.WARNING, "Number format exception parsing count from string", exceptNumberFormat);
-                    }
-                }
-            }
+                    } 
+                } 
+            } 
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error with stream reading", exceptIO);
-            }
+            } 
             finally
             {
                 /* clean up stream reading objects */
@@ -227,30 +227,30 @@ public class CWE400_Resource_Exhaustion__URLConnection_write_21 extends Abstract
                     if (readerBuffered != null)
                     {
                         readerBuffered.close();
-                    }
-                }
+                    } 
+                } 
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error closing BufferedReader", exceptIO);
-                }
+                } 
 
                 try
                 {
                     if (readerInputStream != null)
                     {
                         readerInputStream.close();
-                    }
-                }
+                    } 
+                } 
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error closing InputStreamReader", exceptIO);
-                }
-            }
-        }
+                } 
+            } 
+        } 
 
         goodB2G1Private = false;
         goodB2G1Sink(count );
-    }
+    } 
 
     private void goodB2G1Sink(int count ) throws Throwable
     {
@@ -258,7 +258,7 @@ public class CWE400_Resource_Exhaustion__URLConnection_write_21 extends Abstract
         {
             /* INCIDENTAL: CWE 561 Dead Code, the code below will never run */
             IO.writeLine("Benign, fixed string");
-        }
+        } 
         else
         {
 
@@ -275,50 +275,50 @@ public class CWE400_Resource_Exhaustion__URLConnection_write_21 extends Abstract
                     try
                     {
                         writerBuffered.write("Hello");
-                    }
+                    } 
                     catch (IOException exceptIO)
                     {
                         IO.logger.log(Level.WARNING, "Error with stream writing", exceptIO);
-                    }
-                }
+                    } 
+                } 
                 /* Close stream reading objects */
                 try
                 {
                     if (writerBuffered != null)
                     {
                         writerBuffered.close();
-                    }
-                }
+                    } 
+                } 
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error closing BufferedWriter", exceptIO);
-                }
+                } 
                 try
                 {
                     if (writerOutputStream != null)
                     {
                         writerOutputStream.close();
-                    }
-                }
+                    } 
+                } 
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error closing OutputStreamWriter", exceptIO);
-                }
+                } 
                 try
                 {
                     if (streamFileOutput != null)
                     {
                         streamFileOutput.close();
-                    }
-                }
+                    } 
+                } 
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error closing FileOutputStream", exceptIO);
-                }
-            }
+                } 
+            } 
 
-        }
-    }
+        } 
+    } 
 
     /* goodB2G2() - use BadSource and GoodSink by reversing the blocks in the if in the sink function */
     private void goodB2G2() throws Throwable
@@ -348,17 +348,17 @@ public class CWE400_Resource_Exhaustion__URLConnection_write_21 extends Abstract
                     try
                     {
                         count = Integer.parseInt(stringNumber.trim());
-                    }
+                    } 
                     catch (NumberFormatException exceptNumberFormat)
                     {
                         IO.logger.log(Level.WARNING, "Number format exception parsing count from string", exceptNumberFormat);
-                    }
-                }
-            }
+                    } 
+                } 
+            } 
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error with stream reading", exceptIO);
-            }
+            } 
             finally
             {
                 /* clean up stream reading objects */
@@ -367,30 +367,30 @@ public class CWE400_Resource_Exhaustion__URLConnection_write_21 extends Abstract
                     if (readerBuffered != null)
                     {
                         readerBuffered.close();
-                    }
-                }
+                    } 
+                } 
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error closing BufferedReader", exceptIO);
-                }
+                } 
 
                 try
                 {
                     if (readerInputStream != null)
                     {
                         readerInputStream.close();
-                    }
-                }
+                    } 
+                } 
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error closing InputStreamReader", exceptIO);
-                }
-            }
-        }
+                } 
+            } 
+        } 
 
         goodB2G2Private = true;
         goodB2G2Sink(count );
-    }
+    } 
 
     private void goodB2G2Sink(int count ) throws Throwable
     {
@@ -409,49 +409,49 @@ public class CWE400_Resource_Exhaustion__URLConnection_write_21 extends Abstract
                     try
                     {
                         writerBuffered.write("Hello");
-                    }
+                    } 
                     catch (IOException exceptIO)
                     {
                         IO.logger.log(Level.WARNING, "Error with stream writing", exceptIO);
-                    }
-                }
+                    } 
+                } 
                 /* Close stream reading objects */
                 try
                 {
                     if (writerBuffered != null)
                     {
                         writerBuffered.close();
-                    }
-                }
+                    } 
+                } 
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error closing BufferedWriter", exceptIO);
-                }
+                } 
                 try
                 {
                     if (writerOutputStream != null)
                     {
                         writerOutputStream.close();
-                    }
-                }
+                    } 
+                } 
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error closing OutputStreamWriter", exceptIO);
-                }
+                } 
                 try
                 {
                     if (streamFileOutput != null)
                     {
                         streamFileOutput.close();
-                    }
-                }
+                    } 
+                } 
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error closing FileOutputStream", exceptIO);
-                }
-            }
-        }
-    }
+                } 
+            } 
+        } 
+    } 
 
     /* goodG2B() - use GoodSource and BadSink */
     private void goodG2B() throws Throwable
@@ -463,7 +463,7 @@ public class CWE400_Resource_Exhaustion__URLConnection_write_21 extends Abstract
 
         goodG2BPrivate = true;
         goodG2BSink(count );
-    }
+    } 
 
     private void goodG2BSink(int count ) throws Throwable
     {
@@ -480,48 +480,48 @@ public class CWE400_Resource_Exhaustion__URLConnection_write_21 extends Abstract
                 try
                 {
                     writerBuffered.write("Hello");
-                }
+                } 
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error with stream writing", exceptIO);
-                }
-            }
+                } 
+            } 
             /* Close stream reading objects */
             try
             {
                 if (writerBuffered != null)
                 {
                     writerBuffered.close();
-                }
-            }
+                } 
+            } 
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error closing BufferedWriter", exceptIO);
-            }
+            } 
             try
             {
                 if (writerOutputStream != null)
                 {
                     writerOutputStream.close();
-                }
-            }
+                } 
+            } 
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error closing OutputStreamWriter", exceptIO);
-            }
+            } 
             try
             {
                 if (streamFileOutput != null)
                 {
                     streamFileOutput.close();
-                }
-            }
+                } 
+            } 
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error closing FileOutputStream", exceptIO);
-            }
-        }
-    }
+            } 
+        } 
+    } 
 
     /* Below is the main(). It is only used when building this testcase on
      * its own for testing or for building a binary to use in testing binary
@@ -532,5 +532,5 @@ public class CWE400_Resource_Exhaustion__URLConnection_write_21 extends Abstract
            InstantiationException, IllegalAccessException
     {
         mainFromParent(args);
-    }
-}
+    } 
+} 

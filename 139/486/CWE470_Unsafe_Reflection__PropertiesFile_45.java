@@ -42,7 +42,7 @@ public class CWE470_Unsafe_Reflection__PropertiesFile_45 extends AbstractTestCas
 
         IO.writeLine(tempClassObject.toString()); /* Use tempClassObject in some way */
 
-    }
+    } 
 
     /* uses badsource and badsink */
     public void bad() throws Throwable
@@ -63,11 +63,11 @@ public class CWE470_Unsafe_Reflection__PropertiesFile_45 extends AbstractTestCas
 
                 /* POTENTIAL FLAW: Read data from a .properties file */
                 data = properties.getProperty("data");
-            }
+            } 
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error with stream reading", exceptIO);
-            }
+            } 
             finally
             {
                 /* Close stream reading object */
@@ -76,23 +76,23 @@ public class CWE470_Unsafe_Reflection__PropertiesFile_45 extends AbstractTestCas
                     if (streamFileInput != null)
                     {
                         streamFileInput.close();
-                    }
-                }
+                    } 
+                } 
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error closing FileInputStream", exceptIO);
-                }
-            }
-        }
+                } 
+            } 
+        } 
 
         dataBad = data;
         badSink();
-    }
+    } 
 
     public void good() throws Throwable
     {
         goodG2B();
-    }
+    } 
 
     private void goodG2BSink() throws Throwable
     {
@@ -104,7 +104,7 @@ public class CWE470_Unsafe_Reflection__PropertiesFile_45 extends AbstractTestCas
 
         IO.writeLine(tempClassObject.toString()); /* Use tempClassObject in some way */
 
-    }
+    } 
 
     /* goodG2B() - use goodsource and badsink */
     private void goodG2B() throws Throwable
@@ -116,7 +116,7 @@ public class CWE470_Unsafe_Reflection__PropertiesFile_45 extends AbstractTestCas
 
         dataGoodG2B = data;
         goodG2BSink();
-    }
+    } 
 
     /* Below is the main(). It is only used when building this testcase on
      * its own for testing or for building a binary to use in testing binary
@@ -127,5 +127,5 @@ public class CWE470_Unsafe_Reflection__PropertiesFile_45 extends AbstractTestCas
            InstantiationException, IllegalAccessException
     {
         mainFromParent(args);
-    }
-}
+    } 
+} 

@@ -28,5 +28,5 @@ public class CWE191_Integer_Underflow__short_min_predec_81_bad extends CWE191_In
 
         IO.writeLine("result: " + result);
 
-    } 
-} 
+    }
+}

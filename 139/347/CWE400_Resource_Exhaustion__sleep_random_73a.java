@@ -35,13 +35,13 @@ public class CWE400_Resource_Exhaustion__sleep_random_73a extends AbstractTestCa
         countLinkedList.add(1, count);
         countLinkedList.add(2, count);
         (new CWE400_Resource_Exhaustion__sleep_random_73b()).badSink(countLinkedList  );
-    }
+    } 
 
     public void good() throws Throwable
     {
         goodG2B();
         goodB2G();
-    }
+    } 
 
     /* goodG2B() - use GoodSource and BadSink */
     private void goodG2B() throws Throwable
@@ -56,7 +56,7 @@ public class CWE400_Resource_Exhaustion__sleep_random_73a extends AbstractTestCa
         countLinkedList.add(1, count);
         countLinkedList.add(2, count);
         (new CWE400_Resource_Exhaustion__sleep_random_73b()).goodG2BSink(countLinkedList  );
-    }
+    } 
 
     /* goodB2G() - use BadSource and GoodSink */
     private void goodB2G() throws Throwable
@@ -71,7 +71,7 @@ public class CWE400_Resource_Exhaustion__sleep_random_73a extends AbstractTestCa
         countLinkedList.add(1, count);
         countLinkedList.add(2, count);
         (new CWE400_Resource_Exhaustion__sleep_random_73b()).goodB2GSink(countLinkedList  );
-    }
+    } 
 
     /* Below is the main(). It is only used when building this testcase on
      * its own for testing or for building a binary to use in testing binary
@@ -82,6 +82,6 @@ public class CWE400_Resource_Exhaustion__sleep_random_73a extends AbstractTestCa
            InstantiationException, IllegalAccessException
     {
         mainFromParent(args);
-    }
+    } 
 
-}
+} 

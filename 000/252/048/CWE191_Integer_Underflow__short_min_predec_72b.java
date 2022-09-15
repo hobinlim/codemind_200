@@ -30,7 +30,7 @@ public class CWE191_Integer_Underflow__short_min_predec_72b
 
         IO.writeLine("result: " + result);
 
-    } 
+    }
 
     /* goodG2B() - use GoodSource and BadSink */
     public void goodG2BSink(Vector<Short> dataVector ) throws Throwable
@@ -42,7 +42,7 @@ public class CWE191_Integer_Underflow__short_min_predec_72b
 
         IO.writeLine("result: " + result);
 
-    } 
+    }
 
     /* goodB2G() - use BadSource and GoodSink */
     public void goodB2GSink(Vector<Short> dataVector ) throws Throwable
@@ -54,11 +54,11 @@ public class CWE191_Integer_Underflow__short_min_predec_72b
         {
             short result = (short)(--data);
             IO.writeLine("result: " + result);
-        } 
+        }
         else
         {
             IO.writeLine("data value is too small to decrement.");
-        } 
+        }
 
-    } 
-} 
+    }
+}

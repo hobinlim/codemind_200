@@ -36,8 +36,8 @@ public class CWE470_Unsafe_Reflection__Environment_17 extends AbstractTestCase
             Class<?> tempClass = Class.forName(data);
             Object tempClassObject = tempClass.newInstance();
             IO.writeLine(tempClassObject.toString()); /* Use tempClassObject in some way */
-        }
-    }
+        } 
+    } 
 
     /* goodG2B() - use goodsource and badsink by reversing the block outside the
      * for statement with the one in the for statement */
@@ -54,13 +54,13 @@ public class CWE470_Unsafe_Reflection__Environment_17 extends AbstractTestCase
             Class<?> tempClass = Class.forName(data);
             Object tempClassObject = tempClass.newInstance();
             IO.writeLine(tempClassObject.toString()); /* Use tempClassObject in some way */
-        }
-    }
+        } 
+    } 
 
     public void good() throws Throwable
     {
         goodG2B();
-    }
+    } 
 
     /* Below is the main(). It is only used when building this testcase on
      * its own for testing or for building a binary to use in testing binary
@@ -71,5 +71,5 @@ public class CWE470_Unsafe_Reflection__Environment_17 extends AbstractTestCase
            InstantiationException, IllegalAccessException
     {
         mainFromParent(args);
-    }
-}
+    } 
+} 

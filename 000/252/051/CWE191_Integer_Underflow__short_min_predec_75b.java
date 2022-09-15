@@ -41,15 +41,15 @@ public class CWE191_Integer_Underflow__short_min_predec_75b
 
             IO.writeLine("result: " + result);
 
-        } 
+        }
         catch (IOException exceptIO)
         {
             IO.logger.log(Level.WARNING, "IOException in deserialization", exceptIO);
-        } 
+        }
         catch (ClassNotFoundException exceptClassNotFound)
         {
             IO.logger.log(Level.WARNING, "ClassNotFoundException in deserialization", exceptClassNotFound);
-        } 
+        }
         finally
         {
             /* clean up stream reading objects */
@@ -58,26 +58,26 @@ public class CWE191_Integer_Underflow__short_min_predec_75b
                 if (streamObjectInput != null)
                 {
                     streamObjectInput.close();
-                } 
-            } 
+                }
+            }
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error closing ObjectInputStream", exceptIO);
-            } 
+            }
 
             try
             {
                 if (streamByteArrayInput != null)
                 {
                     streamByteArrayInput.close();
-                } 
-            } 
+                }
+            }
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error closing ByteArrayInputStream", exceptIO);
-            } 
-        } 
-    } 
+            }
+        }
+    }
 
     /* goodG2B() - use GoodSource and BadSink */
     public void goodG2BSink(byte[] dataSerialized ) throws Throwable
@@ -96,15 +96,15 @@ public class CWE191_Integer_Underflow__short_min_predec_75b
 
             IO.writeLine("result: " + result);
 
-        } 
+        }
         catch (IOException exceptIO)
         {
             IO.logger.log(Level.WARNING, "IOException in deserialization", exceptIO);
-        } 
+        }
         catch (ClassNotFoundException exceptClassNotFound)
         {
             IO.logger.log(Level.WARNING, "ClassNotFoundException in deserialization", exceptClassNotFound);
-        } 
+        }
         finally
         {
             /* clean up stream reading objects */
@@ -113,26 +113,26 @@ public class CWE191_Integer_Underflow__short_min_predec_75b
                 if (streamObjectInput != null)
                 {
                     streamObjectInput.close();
-                } 
-            } 
+                }
+            }
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error closing ObjectInputStream", exceptIO);
-            } 
+            }
 
             try
             {
                 if (streamByteArrayInput != null)
                 {
                     streamByteArrayInput.close();
-                } 
-            } 
+                }
+            }
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error closing ByteArrayInputStream", exceptIO);
-            } 
-        } 
-    } 
+            }
+        }
+    }
 
     /* goodB2G() - use BadSource and GoodSink */
     public void goodB2GSink(byte[] dataSerialized ) throws Throwable
@@ -152,21 +152,21 @@ public class CWE191_Integer_Underflow__short_min_predec_75b
             {
                 short result = (short)(--data);
                 IO.writeLine("result: " + result);
-            } 
+            }
             else
             {
                 IO.writeLine("data value is too small to decrement.");
-            } 
+            }
 
-        } 
+        }
         catch (IOException exceptIO)
         {
             IO.logger.log(Level.WARNING, "IOException in deserialization", exceptIO);
-        } 
+        }
         catch (ClassNotFoundException exceptClassNotFound)
         {
             IO.logger.log(Level.WARNING, "ClassNotFoundException in deserialization", exceptClassNotFound);
-        } 
+        }
         finally
         {
             /* clean up stream reading objects */
@@ -175,24 +175,24 @@ public class CWE191_Integer_Underflow__short_min_predec_75b
                 if (streamObjectInput != null)
                 {
                     streamObjectInput.close();
-                } 
-            } 
+                }
+            }
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error closing ObjectInputStream", exceptIO);
-            } 
+            }
 
             try
             {
                 if (streamByteArrayInput != null)
                 {
                     streamByteArrayInput.close();
-                } 
-            } 
+                }
+            }
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error closing ByteArrayInputStream", exceptIO);
-            } 
-        } 
-    } 
-} 
+            }
+        }
+    }
+}

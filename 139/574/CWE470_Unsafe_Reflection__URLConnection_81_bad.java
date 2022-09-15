@@ -31,5 +31,5 @@ public class CWE470_Unsafe_Reflection__URLConnection_81_bad extends CWE470_Unsaf
 
         IO.writeLine(tempClassObject.toString()); /* Use tempClassObject in some way */
 
-    }
-}
+    } 
+} 

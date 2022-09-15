@@ -39,16 +39,16 @@ public class CWE400_Resource_Exhaustion__sleep_Property_22a extends AbstractTest
             try
             {
                 count = Integer.parseInt(stringNumber.trim());
-            }
+            } 
             catch(NumberFormatException exceptNumberFormat)
             {
                 IO.logger.log(Level.WARNING, "Number format exception parsing count from string", exceptNumberFormat);
-            }
-        }
+            } 
+        } 
 
         badPublicStatic = true;
         (new CWE400_Resource_Exhaustion__sleep_Property_22b()).badSink(count );
-    }
+    } 
 
     /* The public static variables below are used to drive control flow in the sink functions.
      * The public static variable mimics a global variable in the C/C++ language family. */
@@ -61,7 +61,7 @@ public class CWE400_Resource_Exhaustion__sleep_Property_22a extends AbstractTest
         goodB2G1();
         goodB2G2();
         goodG2B();
-    }
+    } 
 
     /* goodB2G1() - use badsource and goodsink by setting the static variable to false instead of true */
     private void goodB2G1() throws Throwable
@@ -77,16 +77,16 @@ public class CWE400_Resource_Exhaustion__sleep_Property_22a extends AbstractTest
             try
             {
                 count = Integer.parseInt(stringNumber.trim());
-            }
+            } 
             catch(NumberFormatException exceptNumberFormat)
             {
                 IO.logger.log(Level.WARNING, "Number format exception parsing count from string", exceptNumberFormat);
-            }
-        }
+            } 
+        } 
 
         goodB2G1PublicStatic = false;
         (new CWE400_Resource_Exhaustion__sleep_Property_22b()).goodB2G1Sink(count );
-    }
+    } 
 
     /* goodB2G2() - use badsource and goodsink by reversing the blocks in the if in the sink function */
     private void goodB2G2() throws Throwable
@@ -102,16 +102,16 @@ public class CWE400_Resource_Exhaustion__sleep_Property_22a extends AbstractTest
             try
             {
                 count = Integer.parseInt(stringNumber.trim());
-            }
+            } 
             catch(NumberFormatException exceptNumberFormat)
             {
                 IO.logger.log(Level.WARNING, "Number format exception parsing count from string", exceptNumberFormat);
-            }
-        }
+            } 
+        } 
 
         goodB2G2PublicStatic = true;
         (new CWE400_Resource_Exhaustion__sleep_Property_22b()).goodB2G2Sink(count );
-    }
+    } 
 
     /* goodG2B() - use goodsource and badsink */
     private void goodG2B() throws Throwable
@@ -123,7 +123,7 @@ public class CWE400_Resource_Exhaustion__sleep_Property_22a extends AbstractTest
 
         goodG2BPublicStatic = true;
         (new CWE400_Resource_Exhaustion__sleep_Property_22b()).goodG2BSink(count );
-    }
+    } 
 
     /* Below is the main(). It is only used when building this testcase on
      * its own for testing or for building a binary to use in testing binary
@@ -134,5 +134,5 @@ public class CWE400_Resource_Exhaustion__sleep_Property_22a extends AbstractTest
            InstantiationException, IllegalAccessException
     {
         mainFromParent(args);
-    }
-}
+    } 
+} 

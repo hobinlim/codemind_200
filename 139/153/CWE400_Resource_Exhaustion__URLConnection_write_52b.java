@@ -25,17 +25,17 @@ public class CWE400_Resource_Exhaustion__URLConnection_write_52b
     public void badSink(int count ) throws Throwable
     {
         (new CWE400_Resource_Exhaustion__URLConnection_write_52c()).badSink(count );
-    }
+    } 
 
     /* goodG2B() - use goodsource and badsink */
     public void goodG2BSink(int count ) throws Throwable
     {
         (new CWE400_Resource_Exhaustion__URLConnection_write_52c()).goodG2BSink(count );
-    }
+    } 
 
     /* goodB2G() - use badsource and goodsink */
     public void goodB2GSink(int count ) throws Throwable
     {
         (new CWE400_Resource_Exhaustion__URLConnection_write_52c()).goodB2GSink(count );
-    }
-}
+    } 
+} 

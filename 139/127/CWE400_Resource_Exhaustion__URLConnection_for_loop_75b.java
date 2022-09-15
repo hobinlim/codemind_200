@@ -44,17 +44,17 @@ public class CWE400_Resource_Exhaustion__URLConnection_for_loop_75b
             for (i = 0; i < count; i++)
             {
                 IO.writeLine("Hello");
-            }
+            } 
 
-        }
+        } 
         catch (IOException exceptIO)
         {
             IO.logger.log(Level.WARNING, "IOException in deserialization", exceptIO);
-        }
+        } 
         catch (ClassNotFoundException exceptClassNotFound)
         {
             IO.logger.log(Level.WARNING, "ClassNotFoundException in deserialization", exceptClassNotFound);
-        }
+        } 
         finally
         {
             /* clean up stream reading objects */
@@ -63,26 +63,26 @@ public class CWE400_Resource_Exhaustion__URLConnection_for_loop_75b
                 if (streamObjectInput != null)
                 {
                     streamObjectInput.close();
-                }
-            }
+                } 
+            } 
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error closing ObjectInputStream", exceptIO);
-            }
+            } 
 
             try
             {
                 if (streamByteArrayInput != null)
                 {
                     streamByteArrayInput.close();
-                }
-            }
+                } 
+            } 
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error closing ByteArrayInputStream", exceptIO);
-            }
-        }
-    }
+            } 
+        } 
+    } 
 
     /* goodG2B() - use GoodSource and BadSink */
     public void goodG2BSink(byte[] countSerialized ) throws Throwable
@@ -102,17 +102,17 @@ public class CWE400_Resource_Exhaustion__URLConnection_for_loop_75b
             for (i = 0; i < count; i++)
             {
                 IO.writeLine("Hello");
-            }
+            } 
 
-        }
+        } 
         catch (IOException exceptIO)
         {
             IO.logger.log(Level.WARNING, "IOException in deserialization", exceptIO);
-        }
+        } 
         catch (ClassNotFoundException exceptClassNotFound)
         {
             IO.logger.log(Level.WARNING, "ClassNotFoundException in deserialization", exceptClassNotFound);
-        }
+        } 
         finally
         {
             /* clean up stream reading objects */
@@ -121,26 +121,26 @@ public class CWE400_Resource_Exhaustion__URLConnection_for_loop_75b
                 if (streamObjectInput != null)
                 {
                     streamObjectInput.close();
-                }
-            }
+                } 
+            } 
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error closing ObjectInputStream", exceptIO);
-            }
+            } 
 
             try
             {
                 if (streamByteArrayInput != null)
                 {
                     streamByteArrayInput.close();
-                }
-            }
+                } 
+            } 
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error closing ByteArrayInputStream", exceptIO);
-            }
-        }
-    }
+            } 
+        } 
+    } 
 
     /* goodB2G() - use BadSource and GoodSink */
     public void goodB2GSink(byte[] countSerialized ) throws Throwable
@@ -163,18 +163,18 @@ public class CWE400_Resource_Exhaustion__URLConnection_for_loop_75b
                 for (i = 0; i < count; i++)
                 {
                     IO.writeLine("Hello");
-                }
-            }
+                } 
+            } 
 
-        }
+        } 
         catch (IOException exceptIO)
         {
             IO.logger.log(Level.WARNING, "IOException in deserialization", exceptIO);
-        }
+        } 
         catch (ClassNotFoundException exceptClassNotFound)
         {
             IO.logger.log(Level.WARNING, "ClassNotFoundException in deserialization", exceptClassNotFound);
-        }
+        } 
         finally
         {
             /* clean up stream reading objects */
@@ -183,24 +183,24 @@ public class CWE400_Resource_Exhaustion__URLConnection_for_loop_75b
                 if (streamObjectInput != null)
                 {
                     streamObjectInput.close();
-                }
-            }
+                } 
+            } 
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error closing ObjectInputStream", exceptIO);
-            }
+            } 
 
             try
             {
                 if (streamByteArrayInput != null)
                 {
                     streamByteArrayInput.close();
-                }
-            }
+                } 
+            } 
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error closing ByteArrayInputStream", exceptIO);
-            }
-        }
-    }
-}
+            } 
+        } 
+    } 
+} 

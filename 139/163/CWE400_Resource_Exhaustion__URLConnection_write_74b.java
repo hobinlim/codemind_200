@@ -47,12 +47,12 @@ public class CWE400_Resource_Exhaustion__URLConnection_write_74b
             try
             {
                 writerBuffered.write("Hello");
-            }
+            } 
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error with stream writing", exceptIO);
-            }
-        }
+            } 
+        } 
 
         /* Close stream reading objects */
         try
@@ -60,38 +60,38 @@ public class CWE400_Resource_Exhaustion__URLConnection_write_74b
             if (writerBuffered != null)
             {
                 writerBuffered.close();
-            }
-        }
+            } 
+        } 
         catch (IOException exceptIO)
         {
             IO.logger.log(Level.WARNING, "Error closing BufferedWriter", exceptIO);
-        }
+        } 
 
         try
         {
             if (writerOutputStream != null)
             {
                 writerOutputStream.close();
-            }
-        }
+            } 
+        } 
         catch (IOException exceptIO)
         {
             IO.logger.log(Level.WARNING, "Error closing OutputStreamWriter", exceptIO);
-        }
+        } 
 
         try
         {
             if (streamFileOutput != null)
             {
                 streamFileOutput.close();
-            }
-        }
+            } 
+        } 
         catch (IOException exceptIO)
         {
             IO.logger.log(Level.WARNING, "Error closing FileOutputStream", exceptIO);
-        }
+        } 
 
-    }
+    } 
 
     /* goodG2B() - use GoodSource and BadSink */
     public void goodG2BSink(HashMap<Integer,Integer> countHashMap ) throws Throwable
@@ -110,12 +110,12 @@ public class CWE400_Resource_Exhaustion__URLConnection_write_74b
             try
             {
                 writerBuffered.write("Hello");
-            }
+            } 
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error with stream writing", exceptIO);
-            }
-        }
+            } 
+        } 
 
         /* Close stream reading objects */
         try
@@ -123,38 +123,38 @@ public class CWE400_Resource_Exhaustion__URLConnection_write_74b
             if (writerBuffered != null)
             {
                 writerBuffered.close();
-            }
-        }
+            } 
+        } 
         catch (IOException exceptIO)
         {
             IO.logger.log(Level.WARNING, "Error closing BufferedWriter", exceptIO);
-        }
+        } 
 
         try
         {
             if (writerOutputStream != null)
             {
                 writerOutputStream.close();
-            }
-        }
+            } 
+        } 
         catch (IOException exceptIO)
         {
             IO.logger.log(Level.WARNING, "Error closing OutputStreamWriter", exceptIO);
-        }
+        } 
 
         try
         {
             if (streamFileOutput != null)
             {
                 streamFileOutput.close();
-            }
-        }
+            } 
+        } 
         catch (IOException exceptIO)
         {
             IO.logger.log(Level.WARNING, "Error closing FileOutputStream", exceptIO);
-        }
+        } 
 
-    }
+    } 
 
     /* goodB2G() - use BadSource and GoodSink */
     public void goodB2GSink(HashMap<Integer,Integer> countHashMap ) throws Throwable
@@ -174,47 +174,47 @@ public class CWE400_Resource_Exhaustion__URLConnection_write_74b
                 try
                 {
                     writerBuffered.write("Hello");
-                }
+                } 
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error with stream writing", exceptIO);
-                }
-            }
+                } 
+            } 
             /* Close stream reading objects */
             try
             {
                 if (writerBuffered != null)
                 {
                     writerBuffered.close();
-                }
-            }
+                } 
+            } 
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error closing BufferedWriter", exceptIO);
-            }
+            } 
             try
             {
                 if (writerOutputStream != null)
                 {
                     writerOutputStream.close();
-                }
-            }
+                } 
+            } 
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error closing OutputStreamWriter", exceptIO);
-            }
+            } 
             try
             {
                 if (streamFileOutput != null)
                 {
                     streamFileOutput.close();
-                }
-            }
+                } 
+            } 
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error closing FileOutputStream", exceptIO);
-            }
-        }
+            } 
+        } 
 
-    }
-}
+    } 
+} 

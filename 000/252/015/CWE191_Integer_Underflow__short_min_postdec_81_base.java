@@ -21,4 +21,4 @@ import testcasesupport.*;
 public abstract class CWE191_Integer_Underflow__short_min_postdec_81_base
 {
     public abstract void action(short data ) throws Throwable;
-} 
+}

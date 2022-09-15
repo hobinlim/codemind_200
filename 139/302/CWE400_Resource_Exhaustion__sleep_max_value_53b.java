@@ -23,17 +23,17 @@ public class CWE400_Resource_Exhaustion__sleep_max_value_53b
     public void badSink(int count ) throws Throwable
     {
         (new CWE400_Resource_Exhaustion__sleep_max_value_53c()).badSink(count );
-    }
+    } 
 
     /* goodG2B() - use goodsource and badsink */
     public void goodG2BSink(int count ) throws Throwable
     {
         (new CWE400_Resource_Exhaustion__sleep_max_value_53c()).goodG2BSink(count );
-    }
+    } 
 
     /* goodB2G() - use badsource and goodsink */
     public void goodB2GSink(int count ) throws Throwable
     {
         (new CWE400_Resource_Exhaustion__sleep_max_value_53c()).goodB2GSink(count );
-    }
-}
+    } 
+} 

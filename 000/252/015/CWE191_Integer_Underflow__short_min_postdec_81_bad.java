@@ -29,5 +29,5 @@ public class CWE191_Integer_Underflow__short_min_postdec_81_bad extends CWE191_I
 
         IO.writeLine("result: " + result);
 
-    } 
-} 
+    }
+}

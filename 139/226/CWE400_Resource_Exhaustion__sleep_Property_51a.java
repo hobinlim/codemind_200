@@ -35,21 +35,21 @@ public class CWE400_Resource_Exhaustion__sleep_Property_51a extends AbstractTest
             try
             {
                 count = Integer.parseInt(stringNumber.trim());
-            }
+            } 
             catch(NumberFormatException exceptNumberFormat)
             {
                 IO.logger.log(Level.WARNING, "Number format exception parsing count from string", exceptNumberFormat);
-            }
-        }
+            } 
+        } 
 
         (new CWE400_Resource_Exhaustion__sleep_Property_51b()).badSink(count  );
-    }
+    } 
 
     public void good() throws Throwable
     {
         goodG2B();
         goodB2G();
-    }
+    } 
 
     /* goodG2B() - use goodsource and badsink */
     private void goodG2B() throws Throwable
@@ -60,7 +60,7 @@ public class CWE400_Resource_Exhaustion__sleep_Property_51a extends AbstractTest
         count = 2;
 
         (new CWE400_Resource_Exhaustion__sleep_Property_51b()).goodG2BSink(count  );
-    }
+    } 
 
     /* goodB2G() - use badsource and goodsink */
     private void goodB2G() throws Throwable
@@ -76,15 +76,15 @@ public class CWE400_Resource_Exhaustion__sleep_Property_51a extends AbstractTest
             try
             {
                 count = Integer.parseInt(stringNumber.trim());
-            }
+            } 
             catch(NumberFormatException exceptNumberFormat)
             {
                 IO.logger.log(Level.WARNING, "Number format exception parsing count from string", exceptNumberFormat);
-            }
-        }
+            } 
+        } 
 
         (new CWE400_Resource_Exhaustion__sleep_Property_51b()).goodB2GSink(count  );
-    }
+    } 
 
     /* Below is the main(). It is only used when building this testcase on
      * its own for testing or for building a binary to use in testing binary
@@ -95,5 +95,5 @@ public class CWE400_Resource_Exhaustion__sleep_Property_51a extends AbstractTest
            InstantiationException, IllegalAccessException
     {
         mainFromParent(args);
-    }
-}
+    } 
+} 

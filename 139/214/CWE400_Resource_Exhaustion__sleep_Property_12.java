@@ -35,26 +35,26 @@ public class CWE400_Resource_Exhaustion__sleep_Property_12 extends AbstractTestC
                 try
                 {
                     count = Integer.parseInt(stringNumber.trim());
-                }
+                } 
                 catch(NumberFormatException exceptNumberFormat)
                 {
                     IO.logger.log(Level.WARNING, "Number format exception parsing count from string", exceptNumberFormat);
-                }
-            }
-        }
+                } 
+            } 
+        } 
         else
         {
 
             /* FIX: Use a hardcoded number that won't cause underflow, overflow, divide by zero, or loss-of-precision issues */
             count = 2;
 
-        }
+        } 
 
         if(IO.staticReturnsTrueOrFalse())
         {
             /* POTENTIAL FLAW: Use count as the input to Thread.sleep() */
             Thread.sleep(count);
-        }
+        } 
         else
         {
 
@@ -62,10 +62,10 @@ public class CWE400_Resource_Exhaustion__sleep_Property_12 extends AbstractTestC
             if (count > 0 && count <= 2000)
             {
                 Thread.sleep(count);
-            }
+            } 
 
-        }
-    }
+        } 
+    } 
 
     /* goodG2B() - use goodsource and badsink by changing the first "if" so that
      * both branches use the GoodSource */
@@ -76,28 +76,28 @@ public class CWE400_Resource_Exhaustion__sleep_Property_12 extends AbstractTestC
         {
             /* FIX: Use a hardcoded number that won't cause underflow, overflow, divide by zero, or loss-of-precision issues */
             count = 2;
-        }
+        } 
         else
         {
 
             /* FIX: Use a hardcoded number that won't cause underflow, overflow, divide by zero, or loss-of-precision issues */
             count = 2;
 
-        }
+        } 
 
         if(IO.staticReturnsTrueOrFalse())
         {
             /* POTENTIAL FLAW: Use count as the input to Thread.sleep() */
             Thread.sleep(count);
-        }
+        } 
         else
         {
 
             /* POTENTIAL FLAW: Use count as the input to Thread.sleep() */
             Thread.sleep(count);
 
-        }
-    }
+        } 
+    } 
 
     /* goodB2G() - use badsource and goodsink by changing the second "if" so that
      * both branches use the GoodSink */
@@ -114,13 +114,13 @@ public class CWE400_Resource_Exhaustion__sleep_Property_12 extends AbstractTestC
                 try
                 {
                     count = Integer.parseInt(stringNumber.trim());
-                }
+                } 
                 catch(NumberFormatException exceptNumberFormat)
                 {
                     IO.logger.log(Level.WARNING, "Number format exception parsing count from string", exceptNumberFormat);
-                }
-            }
-        }
+                } 
+            } 
+        } 
         else
         {
 
@@ -133,14 +133,14 @@ public class CWE400_Resource_Exhaustion__sleep_Property_12 extends AbstractTestC
                 try
                 {
                     count = Integer.parseInt(stringNumber.trim());
-                }
+                } 
                 catch(NumberFormatException exceptNumberFormat)
                 {
                     IO.logger.log(Level.WARNING, "Number format exception parsing count from string", exceptNumberFormat);
-                }
-            }
+                } 
+            } 
 
-        }
+        } 
 
         if(IO.staticReturnsTrueOrFalse())
         {
@@ -148,8 +148,8 @@ public class CWE400_Resource_Exhaustion__sleep_Property_12 extends AbstractTestC
             if (count > 0 && count <= 2000)
             {
                 Thread.sleep(count);
-            }
-        }
+            } 
+        } 
         else
         {
 
@@ -157,16 +157,16 @@ public class CWE400_Resource_Exhaustion__sleep_Property_12 extends AbstractTestC
             if (count > 0 && count <= 2000)
             {
                 Thread.sleep(count);
-            }
+            } 
 
-        }
-    }
+        } 
+    } 
 
     public void good() throws Throwable
     {
         goodG2B();
         goodB2G();
-    }
+    } 
 
     /* Below is the main(). It is only used when building this testcase on
      * its own for testing or for building a binary to use in testing binary
@@ -177,5 +177,5 @@ public class CWE400_Resource_Exhaustion__sleep_Property_12 extends AbstractTestC
            InstantiationException, IllegalAccessException
     {
         mainFromParent(args);
-    }
-}
+    } 
+} 

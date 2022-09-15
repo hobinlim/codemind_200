@@ -28,11 +28,11 @@ public class CWE191_Integer_Underflow__short_min_predec_81_goodB2G extends CWE19
         {
             short result = (short)(--data);
             IO.writeLine("result: " + result);
-        } 
+        }
         else
         {
             IO.writeLine("data value is too small to decrement.");
-        } 
+        }
 
-    } 
-} 
+    }
+}

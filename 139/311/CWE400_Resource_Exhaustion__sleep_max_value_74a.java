@@ -33,13 +33,13 @@ public class CWE400_Resource_Exhaustion__sleep_max_value_74a extends AbstractTes
         countHashMap.put(1, count);
         countHashMap.put(2, count);
         (new CWE400_Resource_Exhaustion__sleep_max_value_74b()).badSink(countHashMap  );
-    }
+    } 
 
     public void good() throws Throwable
     {
         goodG2B();
         goodB2G();
-    }
+    } 
 
     /* goodG2B() - use GoodSource and BadSink */
     private void goodG2B() throws Throwable
@@ -54,7 +54,7 @@ public class CWE400_Resource_Exhaustion__sleep_max_value_74a extends AbstractTes
         countHashMap.put(1, count);
         countHashMap.put(2, count);
         (new CWE400_Resource_Exhaustion__sleep_max_value_74b()).goodG2BSink(countHashMap  );
-    }
+    } 
 
     /* goodB2G() - use BadSource and GoodSink */
     private void goodB2G() throws Throwable
@@ -69,7 +69,7 @@ public class CWE400_Resource_Exhaustion__sleep_max_value_74a extends AbstractTes
         countHashMap.put(1, count);
         countHashMap.put(2, count);
         (new CWE400_Resource_Exhaustion__sleep_max_value_74b()).goodB2GSink(countHashMap  );
-    }
+    } 
 
     /* Below is the main(). It is only used when building this testcase on
      * its own for testing or for building a binary to use in testing binary
@@ -80,5 +80,5 @@ public class CWE400_Resource_Exhaustion__sleep_max_value_74a extends AbstractTes
            InstantiationException, IllegalAccessException
     {
         mainFromParent(args);
-    }
-}
+    } 
+} 
