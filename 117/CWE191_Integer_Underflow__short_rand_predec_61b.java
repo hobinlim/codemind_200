@@ -31,7 +31,7 @@ public class CWE191_Integer_Underflow__short_rand_predec_61b
     }
 
     /* goodG2B() - use goodsource and badsink */
-    public short goodG2BSource() throws Throwable
+    public short goodG2BSource() throws Throwable 
     {
         short data;
 
