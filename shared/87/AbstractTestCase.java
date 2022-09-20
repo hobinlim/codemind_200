@@ -12,7 +12,7 @@ public abstract class AbstractTestCase extends AbstractTestCaseBase
     public abstract void good() throws Throwable;
     
     public void runTest(String className) 
-    {
+    { 
         IO.writeLine("Starting tests for Class " + className);
 
         try 

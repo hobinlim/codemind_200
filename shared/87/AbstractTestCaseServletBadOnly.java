@@ -18,7 +18,7 @@ import java.io.IOException;
 import javax.servlet.http.*;
 
 public abstract class AbstractTestCaseServletBadOnly extends AbstractTestCaseServletBase 
-{
+{ 
     private static final long serialVersionUID = 1L; /* needed since Servlets are serializable */
     
     public abstract void bad(HttpServletRequest request,

@@ -18,7 +18,7 @@ public abstract class AbstractTestCaseClassIssueBad extends AbstractTestCaseBase
             bad();
             
             IO.writeLine("Completed bad() for Class " + className);
-        } 
+        }  
         catch (Throwable throwableException) 
         {
             IO.writeLine("Caught a throwable from bad() for Class "  + className);

@@ -18,7 +18,7 @@ import java.io.IOException;
 import javax.servlet.http.*;
 
 public abstract class AbstractTestCaseServletBase extends HttpServlet 
-{
+{ 
     private static final long serialVersionUID = 1L; /* needed since Servlets are serializable */
 
     /* from a static method like main(), there is not an easy way to get the current

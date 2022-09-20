@@ -20,7 +20,7 @@ public abstract class AbstractTestCaseClassIssueGood extends AbstractTestCaseBas
             IO.writeLine("Completed good() for Class " + className);  
         }
         catch (Throwable throwableException) 
-        {
+        { 
 
             IO.writeLine("Caught a throwable from good() for Class " + className);
 
