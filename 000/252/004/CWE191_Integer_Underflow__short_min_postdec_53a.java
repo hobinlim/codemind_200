@@ -22,9 +22,10 @@ public class CWE191_Integer_Underflow__short_min_postdec_53a extends AbstractTes
 {
     public void bad() throws Throwable
     {
-        short data;
+        short data;  
 
         /* POTENTIAL FLAW: Use the maximum size of the data type */
+		
         data = Short.MIN_VALUE;
 
         (new CWE191_Integer_Underflow__short_min_postdec_53b()).badSink(data );

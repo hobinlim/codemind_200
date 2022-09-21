@@ -25,21 +25,33 @@ public class CWE191_Integer_Underflow__short_min_postdec_51b
 
         /* POTENTIAL FLAW: if data == Short.MIN_VALUE, this will overflow */
         data--;
-        short result = (short)(data);
+		
+		
+		
+        short result = (short)(data);   
 
         IO.writeLine("result: " + result);
+
+
+
 
     }
 
     /* goodG2B() - use goodsource and badsink */
     public void goodG2BSink(short data ) throws Throwable
     {
+		
+		
 
         /* POTENTIAL FLAW: if data == Short.MIN_VALUE, this will overflow */
         data--;
         short result = (short)(data);
+		
+		
 
         IO.writeLine("result: " + result);
+		
+		
 
     }
 

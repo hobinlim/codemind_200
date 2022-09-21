@@ -21,11 +21,15 @@ import testcasesupport.*;
 public class CWE191_Integer_Underflow__short_min_postdec_52c
 {
     public void badSink(short data ) throws Throwable
-    {
+    {    
 
         /* POTENTIAL FLAW: if data == Short.MIN_VALUE, this will overflow */
         data--;
         short result = (short)(data);
+		
+		
+		
+		
 
         IO.writeLine("result: " + result);
 

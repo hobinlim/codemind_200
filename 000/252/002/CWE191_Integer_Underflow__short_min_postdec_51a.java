@@ -19,10 +19,14 @@ package testcases.CWE191_Integer_Underflow.s04;
 import testcasesupport.*;
 
 public class CWE191_Integer_Underflow__short_min_postdec_51a extends AbstractTestCase
+
+
 {
     public void bad() throws Throwable
     {
         short data;
+		
+		
 
         /* POTENTIAL FLAW: Use the maximum size of the data type */
         data = Short.MIN_VALUE;
@@ -32,8 +36,12 @@ public class CWE191_Integer_Underflow__short_min_postdec_51a extends AbstractTes
 
     public void good() throws Throwable
     {
+		
+		
+		
         goodG2B();
         goodB2G();
+		
     }
 
     /* goodG2B() - use goodsource and badsink */
@@ -44,13 +52,21 @@ public class CWE191_Integer_Underflow__short_min_postdec_51a extends AbstractTes
         /* FIX: Use a hardcoded number that won't cause underflow, overflow, divide by zero, or loss-of-precision issues */
         data = 2;
 
+
+
         (new CWE191_Integer_Underflow__short_min_postdec_51b()).goodG2BSink(data  );
     }
 
     /* goodB2G() - use badsource and goodsink */
     private void goodB2G() throws Throwable
+	
+	
+	
+	
     {
         short data;
+
+
 
         /* POTENTIAL FLAW: Use the maximum size of the data type */
         data = Short.MIN_VALUE;

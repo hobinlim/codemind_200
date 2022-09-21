@@ -20,12 +20,12 @@ import testcasesupport.*;
 
 public class CWE191_Integer_Underflow__short_min_postdec_53c
 {
-    public void badSink(short data ) throws Throwable
+    public void badSink(short data ) throws Throwable  
     {
         (new CWE191_Integer_Underflow__short_min_postdec_53d()).badSink(data );
-    }
+    }   
 
-    /* goodG2B() - use goodsource and badsink */
+    /* goodG2B() - use goodsource and badsink */  
     public void goodG2BSink(short data ) throws Throwable
     {
         (new CWE191_Integer_Underflow__short_min_postdec_53d()).goodG2BSink(data );
