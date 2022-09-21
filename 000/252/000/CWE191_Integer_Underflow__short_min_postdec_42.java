@@ -37,6 +37,9 @@ public class CWE191_Integer_Underflow__short_min_postdec_42 extends AbstractTest
     public void bad() throws Throwable
     {
         short data = badSource();
+		
+		
+		
 
         /* POTENTIAL FLAW: if data == Short.MIN_VALUE, this will overflow */
         data--;
