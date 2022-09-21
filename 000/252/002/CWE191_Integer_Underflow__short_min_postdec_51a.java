@@ -26,17 +26,17 @@ public class CWE191_Integer_Underflow__short_min_postdec_51a extends AbstractTes
     {
         short data;
 		
+		   
 		
-		
-		
+		   
 		
 		
 
         /* POTENTIAL FLAW: Use the maximum size of the data type */
         data = Short.MIN_VALUE;
-
+     
         (new CWE191_Integer_Underflow__short_min_postdec_51b()).badSink(data  );
-    }
+    }    
 
     public void good() throws Throwable
     {
@@ -52,11 +52,13 @@ public class CWE191_Integer_Underflow__short_min_postdec_51a extends AbstractTes
     private void goodG2B() throws Throwable
     {
         short data;
+		
+		
+		
+		
 
         /* FIX: Use a hardcoded number that won't cause underflow, overflow, divide by zero, or loss-of-precision issues */
         data = 2;
-
-
 
 
 
@@ -65,7 +67,6 @@ public class CWE191_Integer_Underflow__short_min_postdec_51a extends AbstractTes
 
     /* goodB2G() - use badsource and goodsink */
     private void goodB2G() throws Throwable
-	
 	
 	
 	

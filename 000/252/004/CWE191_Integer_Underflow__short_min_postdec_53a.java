@@ -18,8 +18,16 @@ Template File: sources-sinks-53a.tmpl.java
 package testcases.CWE191_Integer_Underflow.s04;
 import testcasesupport.*;
 
+
+
+
+
 public class CWE191_Integer_Underflow__short_min_postdec_53a extends AbstractTestCase
 {
+	
+	
+	
+	
     public void bad() throws Throwable
     {
         short data;  
@@ -30,11 +38,7 @@ public class CWE191_Integer_Underflow__short_min_postdec_53a extends AbstractTes
 
         (new CWE191_Integer_Underflow__short_min_postdec_53b()).badSink(data );
 		
-		
-		
-		
-		
-		
+				
     }
 
     public void good() throws Throwable
@@ -42,6 +46,12 @@ public class CWE191_Integer_Underflow__short_min_postdec_53a extends AbstractTes
         goodG2B();
         goodB2G();
     }
+
+
+
+
+
+
 
     /* goodG2B() - use goodsource and badsink */
     private void goodG2B() throws Throwable

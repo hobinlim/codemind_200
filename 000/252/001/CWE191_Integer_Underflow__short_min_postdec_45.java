@@ -15,7 +15,7 @@ Template File: sources-sinks-45.tmpl.java
  *
  * */
 
-
+  
 
 package testcases.CWE191_Integer_Underflow.s04;
 import testcasesupport.*;
@@ -23,24 +23,24 @@ import testcasesupport.*;
 public class CWE191_Integer_Underflow__short_min_postdec_45 extends AbstractTestCase
 {
     private short dataBad;
-	
+	   
     private short dataGoodG2B;
-	
+	  
     private short dataGoodB2G;
 
-
+    
     private void badSink() throws Throwable
     {
         short data = dataBad;
 
 
-
+    
 
         /* POTENTIAL FLAW: if data == Short.MIN_VALUE, this will overflow */
         data--;
         short result = (short)(data);
 		
-		
+	    	
 		
 
         IO.writeLine("result: " + result);
@@ -57,6 +57,9 @@ public class CWE191_Integer_Underflow__short_min_postdec_45 extends AbstractTest
         dataBad = data;
         badSink();
     }
+	
+	
+	
 
     public void good() throws Throwable
     {
@@ -75,6 +78,10 @@ public class CWE191_Integer_Underflow__short_min_postdec_45 extends AbstractTest
         IO.writeLine("result: " + result);
 
     }
+	
+	
+	
+	
 
     /* goodG2B() - use goodsource and badsink */
     private void goodG2B() throws Throwable
@@ -87,6 +94,10 @@ public class CWE191_Integer_Underflow__short_min_postdec_45 extends AbstractTest
         dataGoodG2B = data;
         goodG2BSink();
     }
+	
+	
+	
+	
 
     private void goodB2GSink() throws Throwable
     {
@@ -105,6 +116,9 @@ public class CWE191_Integer_Underflow__short_min_postdec_45 extends AbstractTest
         }
 
     }
+	
+	
+	
 
     /* goodB2G() - use badsource and goodsink */
     private void goodB2G() throws Throwable
