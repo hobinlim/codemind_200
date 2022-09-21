@@ -15,9 +15,23 @@ Template File: sources-sinks-68b.tmpl.java
  *
  * */
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 package testcases.CWE191_Integer_Underflow.s04;
 import testcasesupport.*;
-
+      
 public class CWE191_Integer_Underflow__short_min_postdec_68b 
 {
     public void badSink() throws Throwable
@@ -30,8 +44,16 @@ public class CWE191_Integer_Underflow__short_min_postdec_68b
 
         IO.writeLine("result: " + result);
 
+
+
+
+
     }
 
+
+
+
+                    
     /* goodG2B() - use goodsource and badsink */
     public void goodG2BSink() throws Throwable
     {
