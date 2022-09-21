@@ -23,6 +23,8 @@ public class CWE191_Integer_Underflow__short_min_postdec_42 extends AbstractTest
     private short badSource() throws Throwable 
     { 
         short data;
+		
+		
 
         /* POTENTIAL FLAW: Use the maximum size of the data type */
         data = Short.MIN_VALUE;

@@ -29,6 +29,8 @@ public class CWE191_Integer_Underflow__short_min_postdec_52b
     public void goodG2BSink(short data ) throws Throwable
     {
         (new CWE191_Integer_Underflow__short_min_postdec_52c()).goodG2BSink(data );    
+		
+		
     }
 
     /* goodB2G() - use badsource and goodsink */

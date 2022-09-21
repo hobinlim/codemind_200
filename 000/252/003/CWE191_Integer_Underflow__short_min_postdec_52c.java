@@ -25,8 +25,7 @@ public class CWE191_Integer_Underflow__short_min_postdec_52c
 
         /* POTENTIAL FLAW: if data == Short.MIN_VALUE, this will overflow */
         data--;
-        short result = (short)(data);
-		
+        short result = (short)(data);     
 		
 		
 		

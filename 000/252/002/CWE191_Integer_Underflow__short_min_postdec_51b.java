@@ -31,6 +31,8 @@ public class CWE191_Integer_Underflow__short_min_postdec_51b
         short result = (short)(data);   
 
         IO.writeLine("result: " + result);
+		
+		
 
 
 

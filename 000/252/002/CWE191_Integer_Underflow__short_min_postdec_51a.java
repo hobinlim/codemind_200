@@ -54,6 +54,8 @@ public class CWE191_Integer_Underflow__short_min_postdec_51a extends AbstractTes
 
 
 
+
+
         (new CWE191_Integer_Underflow__short_min_postdec_51b()).goodG2BSink(data  );
     }
 

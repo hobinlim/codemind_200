@@ -29,6 +29,9 @@ public class CWE191_Integer_Underflow__short_min_postdec_53a extends AbstractTes
         data = Short.MIN_VALUE;
 
         (new CWE191_Integer_Underflow__short_min_postdec_53b()).badSink(data );
+		
+		
+		
     }
 
     public void good() throws Throwable
