@@ -4,11 +4,11 @@ Label Definition File: CWE191_Integer_Underflow.label.xml
 Template File: sources-sinks-42.tmpl.java
 */
 /*
- * @description
- * CWE: 191 Integer Underflow
+ * @description 
+ * CWE: 191 Integer Underflow 
  * BadSource: min Set data to the max value for short
- * GoodSource: A hardcoded non-zero, non-min, non-max, even number
- * Sinks: decrement
+ * GoodSource: A hardcoded non-zero, non-min, non-max, even number 
+ * Sinks: decrement 
  *    GoodSink: Ensure there will not be an underflow before decrementing data
  *    BadSink : Decrement data, which can cause an Underflow
  * Flow Variant: 42 Data flow: data returned from one method to another in the same class
@@ -20,8 +20,8 @@ import testcasesupport.*;
 
 public class CWE191_Integer_Underflow__short_min_postdec_42 extends AbstractTestCase
 {
-    private short badSource() throws Throwable
-    {
+    private short badSource() throws Throwable 
+    { 
         short data;
 
         /* POTENTIAL FLAW: Use the maximum size of the data type */
@@ -38,26 +38,26 @@ public class CWE191_Integer_Underflow__short_min_postdec_42 extends AbstractTest
         data--;
         short result = (short)(data);
 
-        IO.writeLine("result: " + result);
+        IO.writeLine("result: " + result); 
 
     }
 
-    /* goodG2B() - use goodsource and badsink */
-    private short goodG2BSource() throws Throwable
+    /* goodG2B() - use goodsource and badsink */ 
+    private short goodG2BSource() throws Throwable 
     {
         short data;
 
         /* FIX: Use a hardcoded number that won't cause underflow, overflow, divide by zero, or loss-of-precision issues */
         data = 2;
 
-        return data;
+        return data; 
     }
 
-    private void goodG2B() throws Throwable
-    {
+    private void goodG2B() throws Throwable 
+    { 
         short data = goodG2BSource();
 
-        /* POTENTIAL FLAW: if data == Short.MIN_VALUE, this will overflow */
+        /* POTENTIAL FLAW: if data == Short.MIN_VALUE, this will overflow */ 
         data--;
         short result = (short)(data);
 
@@ -81,11 +81,11 @@ public class CWE191_Integer_Underflow__short_min_postdec_42 extends AbstractTest
         short data = goodB2GSource();
 
         /* FIX: Add a check to prevent an underflow from occurring */
-        if (data > Short.MIN_VALUE)
+        if (data > Short.MIN_VALUE) 
         {
             data--;
-            short result = (short)(data);
-            IO.writeLine("result: " + result);
+            short result = (short)(data); 
+            IO.writeLine("result: " + result); 
         }
         else
         {
@@ -100,10 +100,10 @@ public class CWE191_Integer_Underflow__short_min_postdec_42 extends AbstractTest
         goodB2G();
     }
 
-    /* Below is the main(). It is only used when building this testcase on
-     * its own for testing or for building a binary to use in testing binary
-     * analysis tools. It is not used when compiling all the testcases as one
-     * application, which is how source code analysis tools are tested.
+    /* Below is the main(). It is only used when building this testcase on 
+     * its own for testing or for building a binary to use in testing binary 
+     * analysis tools. It is not used when compiling all the testcases as one 
+     * application, which is how source code analysis tools are tested. 
      */
     public static void main(String[] args) throws ClassNotFoundException,
            InstantiationException, IllegalAccessException
