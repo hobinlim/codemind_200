@@ -5,8 +5,8 @@ Template File: sources-sinks-68b.tmpl.java
 */
 /*
  * @description
- * CWE: 191 Integer Underflow
- * BadSource: min Set data to the max value for short
+ * CWE: 191 Integer Underflow 
+ * BadSource: min Set data to the max value for short 
  * GoodSource: A hardcoded non-zero, non-min, non-max, even number
  * Sinks: decrement
  *    GoodSink: Ensure there will not be an underflow before decrementing data
@@ -18,15 +18,15 @@ Template File: sources-sinks-68b.tmpl.java
 package testcases.CWE191_Integer_Underflow.s04;
 import testcasesupport.*;
 
-public class CWE191_Integer_Underflow__short_min_postdec_68b
+public class CWE191_Integer_Underflow__short_min_postdec_68b 
 {
     public void badSink() throws Throwable
-    {
+    { 
         short data = CWE191_Integer_Underflow__short_min_postdec_68a.data;
 
         /* POTENTIAL FLAW: if data == Short.MIN_VALUE, this will overflow */
         data--;
-        short result = (short)(data);
+        short result = (short)(data); 
 
         IO.writeLine("result: " + result);
 
@@ -35,12 +35,12 @@ public class CWE191_Integer_Underflow__short_min_postdec_68b
     /* goodG2B() - use goodsource and badsink */
     public void goodG2BSink() throws Throwable
     {
-        short data = CWE191_Integer_Underflow__short_min_postdec_68a.data;
+        short data = CWE191_Integer_Underflow__short_min_postdec_68a.data; 
 
         /* POTENTIAL FLAW: if data == Short.MIN_VALUE, this will overflow */
         data--;
         short result = (short)(data);
-
+ 
         IO.writeLine("result: " + result);
 
     }
@@ -51,13 +51,13 @@ public class CWE191_Integer_Underflow__short_min_postdec_68b
         short data = CWE191_Integer_Underflow__short_min_postdec_68a.data;
 
         /* FIX: Add a check to prevent an underflow from occurring */
-        if (data > Short.MIN_VALUE)
+        if (data > Short.MIN_VALUE) 
         {
             data--;
             short result = (short)(data);
             IO.writeLine("result: " + result);
         }
-        else
+        else 
         {
             IO.writeLine("data value is too small to decrement.");
         }
