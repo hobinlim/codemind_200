@@ -8,7 +8,7 @@ Template File: sources-sinks-54e.tmpl.java
  * CWE: 191 Integer Underflow
  * BadSource: min Set data to the max value for short
  * GoodSource: A hardcoded non-zero, non-min, non-max, even number
- * Sinks: decrement
+ * Sinks: decrement 
  *    GoodSink: Ensure there will not be an underflow before decrementing data
  *    BadSink : Decrement data, which can cause an Underflow
  * Flow Variant: 54 Data flow: data passed as an argument from one method through three others to a fifth; all five functions are in different classes in the same package

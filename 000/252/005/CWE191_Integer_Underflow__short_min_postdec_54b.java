@@ -4,7 +4,7 @@ Label Definition File: CWE191_Integer_Underflow.label.xml
 Template File: sources-sinks-54b.tmpl.java
 */
 /*
- * @description
+ * @description 
  * CWE: 191 Integer Underflow
  * BadSource: min Set data to the max value for short
  * GoodSource: A hardcoded non-zero, non-min, non-max, even number
@@ -20,11 +20,11 @@ import testcasesupport.*;
 
 public class CWE191_Integer_Underflow__short_min_postdec_54b
 {
-    public void badSink(short data ) throws Throwable
+    public void badSink(short data ) throws Throwable 
     {
         (new CWE191_Integer_Underflow__short_min_postdec_54c()).badSink(data );
     }
-
+ 
     /* goodG2B() - use goodsource and badsink */
     public void goodG2BSink(short data ) throws Throwable
     {

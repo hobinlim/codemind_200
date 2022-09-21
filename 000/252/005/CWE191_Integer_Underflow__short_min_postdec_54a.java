@@ -2,7 +2,7 @@
 Filename: CWE191_Integer_Underflow__short_min_postdec_54a.java
 Label Definition File: CWE191_Integer_Underflow.label.xml
 Template File: sources-sinks-54a.tmpl.java
-*/
+*/ 
 /*
  * @description
  * CWE: 191 Integer Underflow
@@ -14,17 +14,17 @@ Template File: sources-sinks-54a.tmpl.java
  * Flow Variant: 54 Data flow: data passed as an argument from one method through three others to a fifth; all five functions are in different classes in the same package
  *
  * */
-
+ 
 package testcases.CWE191_Integer_Underflow.s04;
-import testcasesupport.*;
+import testcasesupport.*; 
 
 public class CWE191_Integer_Underflow__short_min_postdec_54a extends AbstractTestCase
 {
     public void bad() throws Throwable
-    {
+    { 
         short data;
 
-        /* POTENTIAL FLAW: Use the maximum size of the data type */
+        /* POTENTIAL FLAW: Use the maximum size of the data type */ 
         data = Short.MIN_VALUE;
 
         (new CWE191_Integer_Underflow__short_min_postdec_54b()).badSink(data );

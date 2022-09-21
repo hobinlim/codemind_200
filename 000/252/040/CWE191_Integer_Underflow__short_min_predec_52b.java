@@ -7,7 +7,7 @@ Template File: sources-sinks-52b.tmpl.java
  * @description
  * CWE: 191 Integer Underflow
  * BadSource: min Set data to the max value for short
- * GoodSource: A hardcoded non-zero, non-min, non-max, even number
+ * GoodSource: A hardcoded non-zero, non-min, non-max, even number     
  * Sinks: decrement
  *    GoodSink: Ensure there will not be an underflow before decrementing data
  *    BadSink : Decrement data, which can cause an Underflow
