@@ -15,14 +15,19 @@ Template File: sources-sinks-45.tmpl.java
  *
  * */
 
+
+
 package testcases.CWE191_Integer_Underflow.s04;
 import testcasesupport.*;
 
 public class CWE191_Integer_Underflow__short_min_postdec_45 extends AbstractTestCase
 {
     private short dataBad;
+	
     private short dataGoodG2B;
+	
     private short dataGoodB2G;
+
 
     private void badSink() throws Throwable
     {

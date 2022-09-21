@@ -27,6 +27,10 @@ public class CWE191_Integer_Underflow__short_min_postdec_51a extends AbstractTes
         short data;
 		
 		
+		
+		
+		
+		
 
         /* POTENTIAL FLAW: Use the maximum size of the data type */
         data = Short.MIN_VALUE;

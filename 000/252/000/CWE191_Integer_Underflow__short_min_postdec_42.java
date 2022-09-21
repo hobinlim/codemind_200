@@ -25,6 +25,8 @@ public class CWE191_Integer_Underflow__short_min_postdec_42 extends AbstractTest
         short data;
 		
 		
+		
+		
 
         /* POTENTIAL FLAW: Use the maximum size of the data type */
         data = Short.MIN_VALUE;
@@ -58,6 +60,8 @@ public class CWE191_Integer_Underflow__short_min_postdec_42 extends AbstractTest
 
         /* FIX: Use a hardcoded number that won't cause underflow, overflow, divide by zero, or loss-of-precision issues */
         data = 2;
+
+
 
         return data; 
     }
