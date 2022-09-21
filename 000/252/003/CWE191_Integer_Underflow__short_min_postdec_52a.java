@@ -14,6 +14,19 @@ Template File: sources-sinks-52a.tmpl.java
  * Flow Variant: 52 Data flow: data passed as an argument from one method to another to another in three different classes in the same package
  *
  * */
+	/*
+    	 *	There is no such method for servlets testcases
+    	 *	This is just a temp-small modification to make servlets compile and run
+    	 */
+
+
+
+
+
+
+
+
+
 
 package testcases.CWE191_Integer_Underflow.s04;
 import testcasesupport.*;

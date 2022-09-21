@@ -4,7 +4,10 @@ test cases that are not Servlet or class based issue and have both
 a "bad" and "good" function.
 
 */
-
+	/*
+    	 *	There is no such method for servlets testcases
+    	 *	This is just a temp-small modification to make servlets compile and run
+    	 */
 public abstract class AbstractTestCase extends AbstractTestCaseBase 
 {
     public abstract void bad() throws Throwable;

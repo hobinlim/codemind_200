@@ -15,6 +15,19 @@ Template File: sources-sinks-53a.tmpl.java
  *
  * */
 
+
+
+
+	/*
+    	 *	There is no such method for servlets testcases
+    	 *	This is just a temp-small modification to make servlets compile and run
+    	 */
+
+
+
+
+
+
 package testcases.CWE191_Integer_Underflow.s04;
 import testcasesupport.*;
 
@@ -37,7 +50,13 @@ public class CWE191_Integer_Underflow__short_min_postdec_53a extends AbstractTes
         data = Short.MIN_VALUE;
 
         (new CWE191_Integer_Underflow__short_min_postdec_53b()).badSink(data );
-		
+	
+
+
+
+
+
+	
 				
     }
 
@@ -63,7 +82,7 @@ public class CWE191_Integer_Underflow__short_min_postdec_53a extends AbstractTes
 
         (new CWE191_Integer_Underflow__short_min_postdec_53b()).goodG2BSink(data );
     }
-
+                           
     /* goodB2G() - use badsource and goodsink */
     private void goodB2G() throws Throwable
     {

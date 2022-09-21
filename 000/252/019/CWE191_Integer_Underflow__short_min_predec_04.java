@@ -14,6 +14,23 @@ Template File: sources-sinks-04.tmpl.java
 * Flow Variant: 04 Control flow: if(PRIVATE_STATIC_FINAL_TRUE) and if(PRIVATE_STATIC_FINAL_FALSE)
 *
 * */
+	/*
+    	 *	There is no such method for servlets testcases
+    	 *	This is just a temp-small modification to make servlets compile and run
+    	 */
+	/*
+    	 *	There is no such method for servlets testcases
+    	 *	This is just a temp-small modification to make servlets compile and run
+    	 */
+	/*
+    	 *	There is no such method for servlets testcases
+    	 *	This is just a temp-small modification to make servlets compile and run
+    	 */
+	/*
+    	 *	There is no such method for servlets testcases
+    	 *	This is just a temp-small modification to make servlets compile and run
+    	 */
+
 
 package testcases.CWE191_Integer_Underflow.s05;
 import testcasesupport.*;
@@ -109,12 +126,12 @@ public class CWE191_Integer_Underflow__short_min_predec_04 extends AbstractTestC
             /* POTENTIAL FLAW: Use the maximum size of the data type */
             data = Short.MIN_VALUE;
         }
-        else
+        else                                 
         {
             /* INCIDENTAL: CWE 561 Dead Code, the code below will never run
              * but ensure data is inititialized before the Sink to avoid compiler errors */
             data = 0;
-        }
+        }                  
 
         if (PRIVATE_STATIC_FINAL_FALSE)
         {

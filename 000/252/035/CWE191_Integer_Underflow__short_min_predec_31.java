@@ -15,6 +15,11 @@ Template File: sources-sinks-31.tmpl.java
  *
  * */
 
+	/*
+    	 *	There is no such method for servlets testcases
+    	 *	This is just a temp-small modification to make servlets compile and run
+    	 */
+
 package testcases.CWE191_Integer_Underflow.s05;
 import testcasesupport.*;
 
@@ -58,7 +63,12 @@ public class CWE191_Integer_Underflow__short_min_predec_31 extends AbstractTestC
             /* FIX: Use a hardcoded number that won't cause underflow, overflow, divide by zero, or loss-of-precision issues */
             data = 2;
 
-            dataCopy = data;
+            dataCopy = data;                          
+
+
+
+
+
         }
         {
             short data = dataCopy;

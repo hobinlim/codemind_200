@@ -5,6 +5,11 @@ example, see CWE 580.
 
 */
 
+
+	/*
+    	 *	There is no such method for servlets testcases
+    	 *	This is just a temp-small modification to make servlets compile and run
+    	 */
 public abstract class AbstractTestCaseClassIssueBad extends AbstractTestCaseBase implements Cloneable 
 {    
     public abstract void bad() throws Throwable;

@@ -14,6 +14,19 @@ Template File: sources-sinks-08.tmpl.java
 * Flow Variant: 08 Control flow: if(privateReturnsTrue()) and if(privateReturnsFalse())
 *
 * */
+	/*
+    	 *	There is no such method for servlets testcases
+    	 *	This is just a temp-small modification to make servlets compile and run
+    	 */
+	/*
+    	 *	There is no such method for servlets testcases
+    	 *	This is just a temp-small modification to make servlets compile and run
+    	 */
+	/*
+    	 *	There is no such method for servlets testcases
+    	 *	This is just a temp-small modification to make servlets compile and run
+    	 */
+
 
 package testcases.CWE191_Integer_Underflow.s05;
 import testcasesupport.*;
@@ -34,7 +47,11 @@ public class CWE191_Integer_Underflow__short_min_predec_08 extends AbstractTestC
     }
 
     public void bad() throws Throwable
-    {
+    {                                              
+
+
+
+
         short data;
         if (privateReturnsTrue())
         {
@@ -50,7 +67,14 @@ public class CWE191_Integer_Underflow__short_min_predec_08 extends AbstractTestC
 
         if (privateReturnsTrue())
         {
+
+
+
             /* POTENTIAL FLAW: if data == Short.MIN_VALUE, this will overflow */
+	/*
+    	 *	There is no such method for servlets testcases
+    	 *	This is just a temp-small modification to make servlets compile and run
+    	 */
             short result = (short)(--data);
             IO.writeLine("result: " + result);
         }

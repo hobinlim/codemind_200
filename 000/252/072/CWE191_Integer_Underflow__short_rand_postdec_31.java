@@ -46,7 +46,9 @@ public class CWE191_Integer_Underflow__short_rand_postdec_31 extends AbstractTes
     public void good() throws Throwable
     {
         goodG2B();
+
         goodB2G();
+
     }
 
     /* goodG2B() - use goodsource and badsink */
@@ -61,6 +63,11 @@ public class CWE191_Integer_Underflow__short_rand_postdec_31 extends AbstractTes
 
             dataCopy = data;
         }
+
+	/*
+    	 *	There is no such method for servlets testcases
+    	 *	This is just a temp-small modification to make servlets compile and run
+    	 */
         {
             short data = dataCopy;
 
