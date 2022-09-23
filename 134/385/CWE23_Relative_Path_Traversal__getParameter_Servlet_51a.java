@@ -31,12 +31,12 @@ public class CWE23_Relative_Path_Traversal__getParameter_Servlet_51a extends Abs
         data = request.getParameter("name");
 
         (new CWE23_Relative_Path_Traversal__getParameter_Servlet_51b()).badSink(data , request, response );
-    }
+    } 
 
     public void good(HttpServletRequest request, HttpServletResponse response) throws Throwable
     {
         goodG2B(request, response);
-    }
+    } 
 
     /* goodG2B() - use goodsource and badsink */
     private void goodG2B(HttpServletRequest request, HttpServletResponse response) throws Throwable
@@ -47,7 +47,7 @@ public class CWE23_Relative_Path_Traversal__getParameter_Servlet_51a extends Abs
         data = "foo";
 
         (new CWE23_Relative_Path_Traversal__getParameter_Servlet_51b()).goodG2BSink(data , request, response );
-    }
+    } 
 
     /* Below is the main(). It is only used when building this testcase on
      * its own for testing or for building a binary to use in testing binary
@@ -58,6 +58,6 @@ public class CWE23_Relative_Path_Traversal__getParameter_Servlet_51a extends Abs
            InstantiationException, IllegalAccessException
     {
         mainFromParent(args);
-    }
+    } 
 
-}
+} 

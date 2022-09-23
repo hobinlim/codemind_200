@@ -31,17 +31,17 @@ public class CWE256_Plaintext_Storage_of_Password__basic_54b
     public void badSink(String password ) throws Throwable
     {
         (new CWE256_Plaintext_Storage_of_Password__basic_54c()).badSink(password );
-    }
+    } 
 
     /* goodG2B() - use goodsource and badsink */
     public void goodG2BSink(String password ) throws Throwable
     {
         (new CWE256_Plaintext_Storage_of_Password__basic_54c()).goodG2BSink(password );
-    }
+    } 
 
     /* goodB2G() - use badsource and goodsink */
     public void goodB2GSink(String password ) throws Throwable
     {
         (new CWE256_Plaintext_Storage_of_Password__basic_54c()).goodB2GSink(password );
-    }
-}
+    } 
+} 

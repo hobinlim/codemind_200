@@ -45,17 +45,17 @@ public class CWE256_Plaintext_Storage_of_Password__basic_81_goodB2G extends CWE2
 
             String decryptedPassword = new String(aesCipher.doFinal(password.getBytes("UTF-8")), "UTF-8");
             password = decryptedPassword;
-        }
+        } 
 
         Connection dBConnection = null;
         try
         {
             dBConnection = DriverManager.getConnection("192.168.105.23", "sa", password);
-        }
+        } 
         catch (SQLException exceptSql)
         {
             IO.logger.log(Level.WARNING, "Error getting database connection", exceptSql);
-        }
+        } 
         finally
         {
             try
@@ -63,13 +63,13 @@ public class CWE256_Plaintext_Storage_of_Password__basic_81_goodB2G extends CWE2
                 if (dBConnection != null)
                 {
                     dBConnection.close();
-                }
-            }
+                } 
+            } 
             catch (SQLException exceptSql)
             {
                 IO.logger.log(Level.WARNING, "Error closing Connection", exceptSql);
-            }
-        }
+            } 
+        } 
 
-    }
-}
+    } 
+} 

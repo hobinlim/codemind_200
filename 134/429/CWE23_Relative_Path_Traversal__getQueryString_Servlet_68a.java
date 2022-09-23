@@ -41,17 +41,17 @@ public class CWE23_Relative_Path_Traversal__getQueryString_Servlet_68a extends A
                 {
                     data = token.substring(3); /* set data to "foo" */
                     break; /* exit while loop */
-                }
-            }
-        }
+                } 
+            } 
+        } 
 
         (new CWE23_Relative_Path_Traversal__getQueryString_Servlet_68b()).badSink(request, response);
-    }
+    } 
 
     public void good(HttpServletRequest request, HttpServletResponse response) throws Throwable
     {
         goodG2B(request, response);
-    }
+    } 
 
     /* goodG2B() - use goodsource and badsink */
     private void goodG2B(HttpServletRequest request, HttpServletResponse response) throws Throwable
@@ -61,7 +61,7 @@ public class CWE23_Relative_Path_Traversal__getQueryString_Servlet_68a extends A
         data = "foo";
 
         (new CWE23_Relative_Path_Traversal__getQueryString_Servlet_68b()).goodG2BSink(request, response);
-    }
+    } 
 
     /* Below is the main(). It is only used when building this testcase on
      * its own for testing or for building a binary to use in testing binary
@@ -72,5 +72,5 @@ public class CWE23_Relative_Path_Traversal__getQueryString_Servlet_68a extends A
            InstantiationException, IllegalAccessException
     {
         mainFromParent(args);
-    }
-}
+    } 
+} 

@@ -42,11 +42,11 @@ public class CWE259_Hard_Coded_Password__driverManager_72b
                 connection = DriverManager.getConnection("data-url", "root", data);
                 preparedStatement = connection.prepareStatement("select * from test_table");
                 resultSet = preparedStatement.executeQuery();
-            }
+            } 
             catch (SQLException exceptSql)
             {
                 IO.logger.log(Level.WARNING, "Error with database connection", exceptSql);
-            }
+            } 
             finally
             {
                 try
@@ -54,40 +54,40 @@ public class CWE259_Hard_Coded_Password__driverManager_72b
                     if (resultSet != null)
                     {
                         resultSet.close();
-                    }
-                }
+                    } 
+                } 
                 catch (SQLException exceptSql)
                 {
                     IO.logger.log(Level.WARNING, "Error closing ResultSet", exceptSql);
-                }
+                } 
 
                 try
                 {
                     if (preparedStatement != null)
                     {
                         preparedStatement.close();
-                    }
-                }
+                    } 
+                } 
                 catch (SQLException exceptSql)
                 {
                     IO.logger.log(Level.WARNING, "Error closing PreparedStatement", exceptSql);
-                }
+                } 
 
                 try
                 {
                     if (connection != null)
                     {
                         connection.close();
-                    }
-                }
+                    } 
+                } 
                 catch (SQLException exceptSql)
                 {
                     IO.logger.log(Level.WARNING, "Error closing Connection", exceptSql);
-                }
-            }
-        }
+                } 
+            } 
+        } 
 
-    }
+    } 
 
     /* goodG2B() - use goodsource and badsink */
     public void goodG2BSink(Vector<String> dataVector ) throws Throwable
@@ -106,11 +106,11 @@ public class CWE259_Hard_Coded_Password__driverManager_72b
                 connection = DriverManager.getConnection("data-url", "root", data);
                 preparedStatement = connection.prepareStatement("select * from test_table");
                 resultSet = preparedStatement.executeQuery();
-            }
+            } 
             catch (SQLException exceptSql)
             {
                 IO.logger.log(Level.WARNING, "Error with database connection", exceptSql);
-            }
+            } 
             finally
             {
                 try
@@ -118,38 +118,38 @@ public class CWE259_Hard_Coded_Password__driverManager_72b
                     if (resultSet != null)
                     {
                         resultSet.close();
-                    }
-                }
+                    } 
+                } 
                 catch (SQLException exceptSql)
                 {
                     IO.logger.log(Level.WARNING, "Error closing ResultSet", exceptSql);
-                }
+                } 
 
                 try
                 {
                     if (preparedStatement != null)
                     {
                         preparedStatement.close();
-                    }
-                }
+                    } 
+                } 
                 catch (SQLException exceptSql)
                 {
                     IO.logger.log(Level.WARNING, "Error closing PreparedStatement", exceptSql);
-                }
+                } 
 
                 try
                 {
                     if (connection != null)
                     {
                         connection.close();
-                    }
-                }
+                    } 
+                } 
                 catch (SQLException exceptSql)
                 {
                     IO.logger.log(Level.WARNING, "Error closing Connection", exceptSql);
-                }
-            }
-        }
+                } 
+            } 
+        } 
 
-    }
-}
+    } 
+} 

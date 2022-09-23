@@ -45,20 +45,20 @@ public class CWE253_Incorrect_Check_of_Function_Return_Value__FileInputStream_06
                 if (fis.read(byteArray) == 0)
                 {
                     IO.writeLine("Error reading file.");
-                }
+                } 
                 else
                 {
                     IO.writeLine(new String(byteArray, "UTF-8"));
-                }
-            }
+                } 
+            } 
             catch (FileNotFoundException exceptFileNotFound)
             {
                 IO.logger.log(Level.WARNING, "FileNotFoundException opening file", exceptFileNotFound);
-            }
+            } 
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "IOException reading file", exceptIO);
-            }
+            } 
             finally
             {
                 try
@@ -66,15 +66,15 @@ public class CWE253_Incorrect_Check_of_Function_Return_Value__FileInputStream_06
                     if (fis != null)
                     {
                         fis.close();
-                    }
-                }
+                    } 
+                } 
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "IOException closing FileInputStream", exceptIO);
-                }
-            }
-        }
-    }
+                } 
+            } 
+        } 
+    } 
 
     /* good1() changes PRIVATE_STATIC_FINAL_FIVE==5 to PRIVATE_STATIC_FINAL_FIVE!=5 */
     private void good1() throws Throwable
@@ -83,7 +83,7 @@ public class CWE253_Incorrect_Check_of_Function_Return_Value__FileInputStream_06
         {
             /* INCIDENTAL: CWE 561 Dead Code, the code below will never run */
             IO.writeLine("Benign, fixed string");
-        }
+        } 
         else
         {
 
@@ -102,27 +102,27 @@ public class CWE253_Incorrect_Check_of_Function_Return_Value__FileInputStream_06
                 if (numberOfBytesRead == -1)
                 {
                     IO.writeLine("The end of the file has been reached.");
-                }
+                } 
                 else
                 {
                     if (numberOfBytesRead < bytesToRead)
                     {
                         IO.writeLine("Could not read " + bytesToRead + " bytes.");
-                    }
+                    } 
                     else
                     {
                         IO.writeLine(new String(byteArray, "UTF-8"));
-                    }
-                }
-            }
+                    } 
+                } 
+            } 
             catch (FileNotFoundException exceptFileNotFound)
             {
                 IO.logger.log(Level.WARNING, "FileNotFoundException opening file", exceptFileNotFound);
-            }
+            } 
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "IOException reading file", exceptIO);
-            }
+            } 
             finally
             {
                 try
@@ -130,16 +130,16 @@ public class CWE253_Incorrect_Check_of_Function_Return_Value__FileInputStream_06
                     if (fis != null)
                     {
                         fis.close();
-                    }
-                }
+                    } 
+                } 
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "IOException closing FileInputStream", exceptIO);
-                }
-            }
+                } 
+            } 
 
-        }
-    }
+        } 
+    } 
 
     /* good2() reverses the bodies in the if statement */
     private void good2() throws Throwable
@@ -157,27 +157,27 @@ public class CWE253_Incorrect_Check_of_Function_Return_Value__FileInputStream_06
                 if (numberOfBytesRead == -1)
                 {
                     IO.writeLine("The end of the file has been reached.");
-                }
+                } 
                 else
                 {
                     if (numberOfBytesRead < bytesToRead)
                     {
                         IO.writeLine("Could not read " + bytesToRead + " bytes.");
-                    }
+                    } 
                     else
                     {
                         IO.writeLine(new String(byteArray, "UTF-8"));
-                    }
-                }
-            }
+                    } 
+                } 
+            } 
             catch (FileNotFoundException exceptFileNotFound)
             {
                 IO.logger.log(Level.WARNING, "FileNotFoundException opening file", exceptFileNotFound);
-            }
+            } 
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "IOException reading file", exceptIO);
-            }
+            } 
             finally
             {
                 try
@@ -185,21 +185,21 @@ public class CWE253_Incorrect_Check_of_Function_Return_Value__FileInputStream_06
                     if (fis != null)
                     {
                         fis.close();
-                    }
-                }
+                    } 
+                } 
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "IOException closing FileInputStream", exceptIO);
-                }
-            }
-        }
-    }
+                } 
+            } 
+        } 
+    } 
 
     public void good() throws Throwable
     {
         good1();
         good2();
-    }
+    } 
 
     /* Below is the main(). It is only used when building this testcase on
      * its own for testing or for building a binary to use in testing binary
@@ -210,5 +210,5 @@ public class CWE253_Incorrect_Check_of_Function_Return_Value__FileInputStream_06
            InstantiationException, IllegalAccessException
     {
         mainFromParent(args);
-    }
-}
+    } 
+} 

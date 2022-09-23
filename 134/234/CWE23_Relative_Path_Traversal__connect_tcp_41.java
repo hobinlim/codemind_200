@@ -38,12 +38,12 @@ public class CWE23_Relative_Path_Traversal__connect_tcp_41 extends AbstractTestC
         {
             /* running on Windows */
             root = "C:\\uploads\\";
-        }
+        } 
         else
         {
             /* running on non-Windows */
             root = "/home/user/uploads/";
-        }
+        } 
 
         if (data != null)
         {
@@ -60,11 +60,11 @@ public class CWE23_Relative_Path_Traversal__connect_tcp_41 extends AbstractTestC
                     readerInputStreamSink = new InputStreamReader(streamFileInputSink, "UTF-8");
                     readerBufferdSink = new BufferedReader(readerInputStreamSink);
                     IO.writeLine(readerBufferdSink.readLine());
-                }
+                } 
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error with stream reading", exceptIO);
-                }
+                } 
                 finally
                 {
                     /* Close stream reading objects */
@@ -73,41 +73,41 @@ public class CWE23_Relative_Path_Traversal__connect_tcp_41 extends AbstractTestC
                         if (readerBufferdSink != null)
                         {
                             readerBufferdSink.close();
-                        }
-                    }
+                        } 
+                    } 
                     catch (IOException exceptIO)
                     {
                         IO.logger.log(Level.WARNING, "Error closing BufferedReader", exceptIO);
-                    }
+                    } 
 
                     try
                     {
                         if (readerInputStreamSink != null)
                         {
                             readerInputStreamSink.close();
-                        }
-                    }
+                        } 
+                    } 
                     catch (IOException exceptIO)
                     {
                         IO.logger.log(Level.WARNING, "Error closing InputStreamReader", exceptIO);
-                    }
+                    } 
 
                     try
                     {
                         if (streamFileInputSink != null)
                         {
                             streamFileInputSink.close();
-                        }
-                    }
+                        } 
+                    } 
                     catch (IOException exceptIO)
                     {
                         IO.logger.log(Level.WARNING, "Error closing FileInputStream", exceptIO);
-                    }
-                }
-            }
-        }
+                    } 
+                } 
+            } 
+        } 
 
-    }
+    } 
 
     public void bad() throws Throwable
     {
@@ -133,11 +133,11 @@ public class CWE23_Relative_Path_Traversal__connect_tcp_41 extends AbstractTestC
 
                 /* POTENTIAL FLAW: Read data using an outbound tcp connection */
                 data = readerBuffered.readLine();
-            }
+            } 
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error with stream reading", exceptIO);
-            }
+            } 
             finally
             {
                 /* clean up stream reading objects */
@@ -146,24 +146,24 @@ public class CWE23_Relative_Path_Traversal__connect_tcp_41 extends AbstractTestC
                     if (readerBuffered != null)
                     {
                         readerBuffered.close();
-                    }
-                }
+                    } 
+                } 
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error closing BufferedReader", exceptIO);
-                }
+                } 
 
                 try
                 {
                     if (readerInputStream != null)
                     {
                         readerInputStream.close();
-                    }
-                }
+                    } 
+                } 
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error closing InputStreamReader", exceptIO);
-                }
+                } 
 
                 /* clean up socket objects */
                 try
@@ -171,22 +171,22 @@ public class CWE23_Relative_Path_Traversal__connect_tcp_41 extends AbstractTestC
                     if (socket != null)
                     {
                         socket.close();
-                    }
-                }
+                    } 
+                } 
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error closing Socket", exceptIO);
-                }
-            }
-        }
+                } 
+            } 
+        } 
 
         badSink(data  );
-    }
+    } 
 
     public void good() throws Throwable
     {
         goodG2B();
-    }
+    } 
 
     private void goodG2BSink(String data ) throws Throwable
     {
@@ -196,12 +196,12 @@ public class CWE23_Relative_Path_Traversal__connect_tcp_41 extends AbstractTestC
         {
             /* running on Windows */
             root = "C:\\uploads\\";
-        }
+        } 
         else
         {
             /* running on non-Windows */
             root = "/home/user/uploads/";
-        }
+        } 
 
         if (data != null)
         {
@@ -218,11 +218,11 @@ public class CWE23_Relative_Path_Traversal__connect_tcp_41 extends AbstractTestC
                     readerInputStreamSink = new InputStreamReader(streamFileInputSink, "UTF-8");
                     readerBufferdSink = new BufferedReader(readerInputStreamSink);
                     IO.writeLine(readerBufferdSink.readLine());
-                }
+                } 
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error with stream reading", exceptIO);
-                }
+                } 
                 finally
                 {
                     /* Close stream reading objects */
@@ -231,41 +231,41 @@ public class CWE23_Relative_Path_Traversal__connect_tcp_41 extends AbstractTestC
                         if (readerBufferdSink != null)
                         {
                             readerBufferdSink.close();
-                        }
-                    }
+                        } 
+                    } 
                     catch (IOException exceptIO)
                     {
                         IO.logger.log(Level.WARNING, "Error closing BufferedReader", exceptIO);
-                    }
+                    } 
 
                     try
                     {
                         if (readerInputStreamSink != null)
                         {
                             readerInputStreamSink.close();
-                        }
-                    }
+                        } 
+                    } 
                     catch (IOException exceptIO)
                     {
                         IO.logger.log(Level.WARNING, "Error closing InputStreamReader", exceptIO);
-                    }
+                    } 
 
                     try
                     {
                         if (streamFileInputSink != null)
                         {
                             streamFileInputSink.close();
-                        }
-                    }
+                        } 
+                    } 
                     catch (IOException exceptIO)
                     {
                         IO.logger.log(Level.WARNING, "Error closing FileInputStream", exceptIO);
-                    }
-                }
-            }
-        }
+                    } 
+                } 
+            } 
+        } 
 
-    }
+    } 
 
     /* goodG2B() - use goodsource and badsink */
     private void goodG2B() throws Throwable
@@ -276,7 +276,7 @@ public class CWE23_Relative_Path_Traversal__connect_tcp_41 extends AbstractTestC
         data = "foo";
 
         goodG2BSink(data  );
-    }
+    } 
 
     /* Below is the main(). It is only used when building this testcase on
      * its own for testing or for building a binary to use in testing binary
@@ -287,5 +287,5 @@ public class CWE23_Relative_Path_Traversal__connect_tcp_41 extends AbstractTestC
            InstantiationException, IllegalAccessException
     {
         mainFromParent(args);
-    }
-}
+    } 
+} 

@@ -47,11 +47,11 @@ public class CWE23_Relative_Path_Traversal__Property_75a extends AbstractTestCas
             outputObject.writeObject(data);
             byte[] dataSerialized = streamByteArrayOutput.toByteArray();
             (new CWE23_Relative_Path_Traversal__Property_75b()).badSink(dataSerialized  );
-        }
+        } 
         catch (IOException exceptIO)
         {
             IO.logger.log(Level.WARNING, "IOException in serialization", exceptIO);
-        }
+        } 
         finally
         {
             /* clean up stream writing objects */
@@ -60,31 +60,31 @@ public class CWE23_Relative_Path_Traversal__Property_75a extends AbstractTestCas
                 if (outputObject != null)
                 {
                     outputObject.close();
-                }
-            }
+                } 
+            } 
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error closing ObjectOutputStream", exceptIO);
-            }
+            } 
 
             try
             {
                 if (streamByteArrayOutput != null)
                 {
                     streamByteArrayOutput.close();
-                }
-            }
+                } 
+            } 
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error closing ByteArrayOutputStream", exceptIO);
-            }
-        }
-    }
+            } 
+        } 
+    } 
 
     public void good() throws Throwable
     {
         goodG2B();
-    }
+    } 
 
     /* goodG2B() - use goodsource and badsink */
     private void goodG2B() throws Throwable
@@ -105,11 +105,11 @@ public class CWE23_Relative_Path_Traversal__Property_75a extends AbstractTestCas
             outputObject.writeObject(data);
             byte[] dataSerialized = streamByteArrayOutput.toByteArray();
             (new CWE23_Relative_Path_Traversal__Property_75b()).goodG2BSink(dataSerialized  );
-        }
+        } 
         catch (IOException exceptIO)
         {
             IO.logger.log(Level.WARNING, "IOException in serialization", exceptIO);
-        }
+        } 
         finally
         {
             /* clean up stream writing objects */
@@ -118,26 +118,26 @@ public class CWE23_Relative_Path_Traversal__Property_75a extends AbstractTestCas
                 if (outputObject != null)
                 {
                     outputObject.close();
-                }
-            }
+                } 
+            } 
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error closing ObjectOutputStream", exceptIO);
-            }
+            } 
 
             try
             {
                 if (streamByteArrayOutput != null)
                 {
                     streamByteArrayOutput.close();
-                }
-            }
+                } 
+            } 
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error closing ByteArrayOutputStream", exceptIO);
-            }
-        }
-    }
+            } 
+        } 
+    } 
 
     /* Below is the main(). It is only used when building this testcase on
      * its own for testing or for building a binary to use in testing binary
@@ -148,5 +148,5 @@ public class CWE23_Relative_Path_Traversal__Property_75a extends AbstractTestCas
            InstantiationException, IllegalAccessException
     {
         mainFromParent(args);
-    }
-}
+    } 
+} 

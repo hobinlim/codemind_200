@@ -45,15 +45,15 @@ public class CWE226_Sensitive_Information_Uncleared_Before_Release__basic_15 ext
                 readerBuffered = new BufferedReader(readerInputStream);
                 password.append(readerBuffered.readLine());
                 dBConnection = DriverManager.getConnection("192.168.105.23", "sa", password.toString());
-            }
+            } 
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error with stream reading", exceptIO);
-            }
+            } 
             catch (SQLException exceptSql)
             {
                 IO.logger.log(Level.WARNING, "Error getting database connection", exceptSql);
-            }
+            } 
             finally
             {
                 /* FLAW: the password is stored in a mutable object (StringBuffer) and it is not cleared */
@@ -63,44 +63,44 @@ public class CWE226_Sensitive_Information_Uncleared_Before_Release__basic_15 ext
                     if (dBConnection != null)
                     {
                         dBConnection.close();
-                    }
-                }
+                    } 
+                } 
                 catch (SQLException exceptSql)
                 {
                     IO.logger.log(Level.WARNING, "Error closing Connection", exceptSql);
-                }
+                } 
 
                 try
                 {
                     if (readerBuffered != null)
                     {
                         readerBuffered.close();
-                    }
-                }
+                    } 
+                } 
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error closing BufferedReader", exceptIO);
-                }
+                } 
 
                 try
                 {
                     if (readerInputStream != null)
                     {
                         readerInputStream.close();
-                    }
-                }
+                    } 
+                } 
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error closing InputStreamReader", exceptIO);
-                }
-            }
+                } 
+            } 
             break;
         default:
             /* INCIDENTAL: CWE 561 Dead Code, the code below will never run */
             IO.writeLine("Benign, fixed string");
             break;
-        }
-    }
+        } 
+    } 
 
     /* good1() change the switch to switch(8) */
     private void good1() throws Throwable
@@ -123,15 +123,15 @@ public class CWE226_Sensitive_Information_Uncleared_Before_Release__basic_15 ext
                 readerBuffered = new BufferedReader(readerInputStream);
                 password.append(readerBuffered.readLine());
                 dBConnection = DriverManager.getConnection("192.168.105.23", "sa", password.toString());
-            }
+            } 
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error with stream reading", exceptIO);
-            }
+            } 
             catch (SQLException exceptSql)
             {
                 IO.logger.log(Level.WARNING, "Error getting database connection", exceptSql);
-            }
+            } 
             finally
             {
                 /* FIX: Zeroize the password */
@@ -142,40 +142,40 @@ public class CWE226_Sensitive_Information_Uncleared_Before_Release__basic_15 ext
                     if (dBConnection != null)
                     {
                         dBConnection.close();
-                    }
-                }
+                    } 
+                } 
                 catch (SQLException exceptSql)
                 {
                     IO.logger.log(Level.WARNING, "Error closing Connection", exceptSql);
-                }
+                } 
 
                 try
                 {
                     if (readerBuffered != null)
                     {
                         readerBuffered.close();
-                    }
-                }
+                    } 
+                } 
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error closing BufferedReader", exceptIO);
-                }
+                } 
 
                 try
                 {
                     if (readerInputStream != null)
                     {
                         readerInputStream.close();
-                    }
-                }
+                    } 
+                } 
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error closing InputStreamReader", exceptIO);
-                }
-            }
+                } 
+            } 
             break;
-        }
-    }
+        } 
+    } 
 
     /* good2() reverses the blocks in the switch  */
     private void good2() throws Throwable
@@ -194,15 +194,15 @@ public class CWE226_Sensitive_Information_Uncleared_Before_Release__basic_15 ext
                 readerBuffered = new BufferedReader(readerInputStream);
                 password.append(readerBuffered.readLine());
                 dBConnection = DriverManager.getConnection("192.168.105.23", "sa", password.toString());
-            }
+            } 
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error with stream reading", exceptIO);
-            }
+            } 
             catch (SQLException exceptSql)
             {
                 IO.logger.log(Level.WARNING, "Error getting database connection", exceptSql);
-            }
+            } 
             finally
             {
                 /* FIX: Zeroize the password */
@@ -213,50 +213,50 @@ public class CWE226_Sensitive_Information_Uncleared_Before_Release__basic_15 ext
                     if (dBConnection != null)
                     {
                         dBConnection.close();
-                    }
-                }
+                    } 
+                } 
                 catch (SQLException exceptSql)
                 {
                     IO.logger.log(Level.WARNING, "Error closing Connection", exceptSql);
-                }
+                } 
 
                 try
                 {
                     if (readerBuffered != null)
                     {
                         readerBuffered.close();
-                    }
-                }
+                    } 
+                } 
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error closing BufferedReader", exceptIO);
-                }
+                } 
 
                 try
                 {
                     if (readerInputStream != null)
                     {
                         readerInputStream.close();
-                    }
-                }
+                    } 
+                } 
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error closing InputStreamReader", exceptIO);
-                }
-            }
+                } 
+            } 
             break;
         default:
             /* INCIDENTAL: CWE 561 Dead Code, the code below will never run */
             IO.writeLine("Benign, fixed string");
             break;
-        }
-    }
+        } 
+    } 
 
     public void good() throws Throwable
     {
         good1();
         good2();
-    }
+    } 
 
     /* Below is the main(). It is only used when building this testcase on
      * its own for testing or for building a binary to use in testing binary
@@ -267,5 +267,5 @@ public class CWE226_Sensitive_Information_Uncleared_Before_Release__basic_15 ext
            InstantiationException, IllegalAccessException
     {
         mainFromParent(args);
-    }
-}
+    } 
+} 

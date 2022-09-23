@@ -15,7 +15,7 @@ public class CWE248_Uncaught_Exception__Error_01 extends AbstractTestCase
     {
         /* FLAW: Error not caught */
         throw new Error("Really bad Error");
-    }
+    } 
 
     private void good1() 
     {
@@ -23,17 +23,17 @@ public class CWE248_Uncaught_Exception__Error_01 extends AbstractTestCase
         try
         {
             throw new Error("Really bad Error");
-        }
+        } 
         catch(Error error)
         {
             IO.logger.log(Level.WARNING, "Caught an Error", error);
-        }
-    }
+        } 
+    } 
 
     public void good() 
     {
         good1();
-    } 
+    }  
 
     /* Override runTest for this test case so that it doesn't catch the Error */
     public void runTest(String classname) 
@@ -45,7 +45,7 @@ public class CWE248_Uncaught_Exception__Error_01 extends AbstractTestCase
 
         bad();
         IO.writeLine("Completed bad() for Class " + classname);
-    } /* runTest */
+    }  /* runTest */
 
     /* Below is the main(). It is only used when building this testcase on
      * its own for testing or for building a binary to use in testing binary
@@ -56,5 +56,5 @@ public class CWE248_Uncaught_Exception__Error_01 extends AbstractTestCase
             InstantiationException, IllegalAccessException
     {
         mainFromParent(args);
-    }
-}
+    } 
+} 

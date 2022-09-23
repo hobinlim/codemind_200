@@ -52,11 +52,11 @@ public class CWE23_Relative_Path_Traversal__URLConnection_61b
                 /* This will be reading the first "line" of the response body,
                  * which could be very long if there are no newlines in the HTML */
                 data = readerBuffered.readLine();
-            }
+            } 
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error with stream reading", exceptIO);
-            }
+            } 
             finally
             {
                 /* clean up stream reading objects */
@@ -65,29 +65,29 @@ public class CWE23_Relative_Path_Traversal__URLConnection_61b
                     if (readerBuffered != null)
                     {
                         readerBuffered.close();
-                    }
-                }
+                    } 
+                } 
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error closing BufferedReader", exceptIO);
-                }
+                } 
 
                 try
                 {
                     if (readerInputStream != null)
                     {
                         readerInputStream.close();
-                    }
-                }
+                    } 
+                } 
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error closing InputStreamReader", exceptIO);
-                }
-            }
-        }
+                } 
+            } 
+        } 
 
         return data;
-    }
+    } 
 
     /* goodG2B() - use goodsource and badsink */
     public String goodG2BSource() throws Throwable
@@ -98,5 +98,5 @@ public class CWE23_Relative_Path_Traversal__URLConnection_61b
         data = "foo";
 
         return data;
-    }
-}
+    } 
+} 

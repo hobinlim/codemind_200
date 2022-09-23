@@ -38,20 +38,20 @@ public class CWE23_Relative_Path_Traversal__getCookies_Servlet_74a extends Abstr
             {
                 /* POTENTIAL FLAW: Read data from the first cookie value */
                 data = cookieSources[0].getValue();
-            }
-        }
+            } 
+        } 
 
         HashMap<Integer,String> dataHashMap = new HashMap<Integer,String>();
         dataHashMap.put(0, data);
         dataHashMap.put(1, data);
         dataHashMap.put(2, data);
         (new CWE23_Relative_Path_Traversal__getCookies_Servlet_74b()).badSink(dataHashMap , request, response );
-    }
+    } 
 
     public void good(HttpServletRequest request, HttpServletResponse response) throws Throwable
     {
         goodG2B(request, response);
-    }
+    } 
 
     /* goodG2B() - use goodsource and badsink */
     private void goodG2B(HttpServletRequest request, HttpServletResponse response) throws Throwable
@@ -66,7 +66,7 @@ public class CWE23_Relative_Path_Traversal__getCookies_Servlet_74a extends Abstr
         dataHashMap.put(1, data);
         dataHashMap.put(2, data);
         (new CWE23_Relative_Path_Traversal__getCookies_Servlet_74b()).goodG2BSink(dataHashMap , request, response );
-    }
+    } 
 
     /* Below is the main(). It is only used when building this testcase on
      * its own for testing or for building a binary to use in testing binary
@@ -77,5 +77,5 @@ public class CWE23_Relative_Path_Traversal__getCookies_Servlet_74a extends Abstr
            InstantiationException, IllegalAccessException
     {
         mainFromParent(args);
-    }
-}
+    } 
+} 

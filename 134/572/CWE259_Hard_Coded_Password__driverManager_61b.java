@@ -31,7 +31,7 @@ public class CWE259_Hard_Coded_Password__driverManager_61b
         data = "7e5tc4s3";
 
         return data;
-    }
+    } 
 
     /* goodG2B() - use goodsource and badsink */
     public String goodG2BSource() throws Throwable
@@ -48,14 +48,14 @@ public class CWE259_Hard_Coded_Password__driverManager_61b
 
             /* POTENTIAL FLAW: Read data from the console using readLine */
             data = readerBuffered.readLine();
-        }
+        } 
         catch (IOException exceptIO)
         {
             IO.logger.log(Level.WARNING, "Error with stream reading", exceptIO);
-        }
+        } 
 
         /* NOTE: Tools may report a flaw here because readerBuffered and readerInputStream are not closed.  Unfortunately, closing those will close System.in, which will cause any future attempts to read from the console to fail and throw an exception */
 
         return data;
-    }
-}
+    } 
+} 

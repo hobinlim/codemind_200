@@ -47,11 +47,11 @@ public class CWE23_Relative_Path_Traversal__console_readLine_81a extends Abstrac
 
                 /* POTENTIAL FLAW: Read data from the console using readLine */
                 data = readerBuffered.readLine();
-            }
+            } 
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error with stream reading", exceptIO);
-            }
+            } 
             finally
             {
                 try
@@ -59,36 +59,36 @@ public class CWE23_Relative_Path_Traversal__console_readLine_81a extends Abstrac
                     if (readerBuffered != null)
                     {
                         readerBuffered.close();
-                    }
-                }
+                    } 
+                } 
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error closing BufferedReader", exceptIO);
-                }
+                } 
 
                 try
                 {
                     if (readerInputStream != null)
                     {
                         readerInputStream.close();
-                    }
-                }
+                    } 
+                } 
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error closing InputStreamReader", exceptIO);
-                }
-            }
-        }
+                } 
+            } 
+        } 
         /* NOTE: Tools may report a flaw here because buffread and isr are not closed.  Unfortunately, closing those will close System.in, which will cause any future attempts to read from the console to fail and throw an exception */
 
         CWE23_Relative_Path_Traversal__console_readLine_81_base baseObject = new CWE23_Relative_Path_Traversal__console_readLine_81_bad();
         baseObject.action(data );
-    }
+    } 
 
     public void good() throws Throwable
     {
         goodG2B();
-    }
+    } 
 
     /* goodG2B() - use goodsource and badsink */
     private void goodG2B() throws Throwable
@@ -100,7 +100,7 @@ public class CWE23_Relative_Path_Traversal__console_readLine_81a extends Abstrac
 
         CWE23_Relative_Path_Traversal__console_readLine_81_base baseObject = new CWE23_Relative_Path_Traversal__console_readLine_81_goodG2B();
         baseObject.action(data );
-    }
+    } 
 
     /* Below is the main(). It is only used when building this testcase on
      * its own for testing or for building a binary to use in testing binary
@@ -111,6 +111,6 @@ public class CWE23_Relative_Path_Traversal__console_readLine_81a extends Abstrac
            InstantiationException, IllegalAccessException
     {
         mainFromParent(args);
-    }
+    } 
 
-}
+} 

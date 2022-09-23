@@ -56,11 +56,11 @@ public class CWE23_Relative_Path_Traversal__listen_tcp_51a extends AbstractTestC
 
                 /* POTENTIAL FLAW: Read data using a listening tcp connection */
                 data = readerBuffered.readLine();
-            }
+            } 
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error with stream reading", exceptIO);
-            }
+            } 
             finally
             {
                 /* Close stream reading objects */
@@ -69,24 +69,24 @@ public class CWE23_Relative_Path_Traversal__listen_tcp_51a extends AbstractTestC
                     if (readerBuffered != null)
                     {
                         readerBuffered.close();
-                    }
-                }
+                    } 
+                } 
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error closing BufferedReader", exceptIO);
-                }
+                } 
 
                 try
                 {
                     if (readerInputStream != null)
                     {
                         readerInputStream.close();
-                    }
-                }
+                    } 
+                } 
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error closing InputStreamReader", exceptIO);
-                }
+                } 
 
                 /* Close socket objects */
                 try
@@ -94,34 +94,34 @@ public class CWE23_Relative_Path_Traversal__listen_tcp_51a extends AbstractTestC
                     if (socket != null)
                     {
                         socket.close();
-                    }
-                }
+                    } 
+                } 
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error closing Socket", exceptIO);
-                }
+                } 
 
                 try
                 {
                     if (listener != null)
                     {
                         listener.close();
-                    }
-                }
+                    } 
+                } 
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error closing ServerSocket", exceptIO);
-                }
-            }
-        }
+                } 
+            } 
+        } 
 
         (new CWE23_Relative_Path_Traversal__listen_tcp_51b()).badSink(data  );
-    }
+    } 
 
     public void good() throws Throwable
     {
         goodG2B();
-    }
+    } 
 
     /* goodG2B() - use goodsource and badsink */
     private void goodG2B() throws Throwable
@@ -132,7 +132,7 @@ public class CWE23_Relative_Path_Traversal__listen_tcp_51a extends AbstractTestC
         data = "foo";
 
         (new CWE23_Relative_Path_Traversal__listen_tcp_51b()).goodG2BSink(data  );
-    }
+    } 
 
     /* Below is the main(). It is only used when building this testcase on
      * its own for testing or for building a binary to use in testing binary
@@ -143,6 +143,6 @@ public class CWE23_Relative_Path_Traversal__listen_tcp_51a extends AbstractTestC
            InstantiationException, IllegalAccessException
     {
         mainFromParent(args);
-    }
+    } 
 
-}
+} 

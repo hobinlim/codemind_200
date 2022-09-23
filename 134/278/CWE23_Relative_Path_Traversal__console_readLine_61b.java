@@ -47,11 +47,11 @@ public class CWE23_Relative_Path_Traversal__console_readLine_61b
 
                 /* POTENTIAL FLAW: Read data from the console using readLine */
                 data = readerBuffered.readLine();
-            }
+            } 
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error with stream reading", exceptIO);
-            }
+            } 
             finally
             {
                 try
@@ -59,30 +59,30 @@ public class CWE23_Relative_Path_Traversal__console_readLine_61b
                     if (readerBuffered != null)
                     {
                         readerBuffered.close();
-                    }
-                }
+                    } 
+                } 
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error closing BufferedReader", exceptIO);
-                }
+                } 
 
                 try
                 {
                     if (readerInputStream != null)
                     {
                         readerInputStream.close();
-                    }
-                }
+                    } 
+                } 
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error closing InputStreamReader", exceptIO);
-                }
-            }
-        }
+                } 
+            } 
+        } 
         /* NOTE: Tools may report a flaw here because buffread and isr are not closed.  Unfortunately, closing those will close System.in, which will cause any future attempts to read from the console to fail and throw an exception */
 
         return data;
-    }
+    } 
 
     /* goodG2B() - use goodsource and badsink */
     public String goodG2BSource() throws Throwable
@@ -93,5 +93,5 @@ public class CWE23_Relative_Path_Traversal__console_readLine_61b
         data = "foo";
 
         return data;
-    }
-}
+    } 
+} 

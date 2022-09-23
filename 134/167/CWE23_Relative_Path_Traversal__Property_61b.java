@@ -32,7 +32,7 @@ public class CWE23_Relative_Path_Traversal__Property_61b
         data = System.getProperty("user.home");
 
         return data;
-    }
+    } 
 
     /* goodG2B() - use goodsource and badsink */
     public String goodG2BSource() throws Throwable
@@ -43,5 +43,5 @@ public class CWE23_Relative_Path_Traversal__Property_61b
         data = "foo";
 
         return data;
-    }
-}
+    } 
+} 

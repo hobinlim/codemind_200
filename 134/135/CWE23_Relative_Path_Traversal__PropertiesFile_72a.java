@@ -49,11 +49,11 @@ public class CWE23_Relative_Path_Traversal__PropertiesFile_72a extends AbstractT
 
                 /* POTENTIAL FLAW: Read data from a .properties file */
                 data = properties.getProperty("data");
-            }
+            } 
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error with stream reading", exceptIO);
-            }
+            } 
             finally
             {
                 /* Close stream reading object */
@@ -62,26 +62,26 @@ public class CWE23_Relative_Path_Traversal__PropertiesFile_72a extends AbstractT
                     if (streamFileInput != null)
                     {
                         streamFileInput.close();
-                    }
-                }
+                    } 
+                } 
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error closing FileInputStream", exceptIO);
-                }
-            }
-        }
+                } 
+            } 
+        } 
 
         Vector<String> dataVector = new Vector<String>(5);
         dataVector.add(0, data);
         dataVector.add(1, data);
         dataVector.add(2, data);
         (new CWE23_Relative_Path_Traversal__PropertiesFile_72b()).badSink(dataVector  );
-    }
+    } 
 
     public void good() throws Throwable
     {
         goodG2B();
-    }
+    } 
 
     /* goodG2B() - use goodsource and badsink */
     private void goodG2B() throws Throwable
@@ -96,7 +96,7 @@ public class CWE23_Relative_Path_Traversal__PropertiesFile_72a extends AbstractT
         dataVector.add(1, data);
         dataVector.add(2, data);
         (new CWE23_Relative_Path_Traversal__PropertiesFile_72b()).goodG2BSink(dataVector  );
-    }
+    } 
 
     /* Below is the main(). It is only used when building this testcase on
      * its own for testing or for building a binary to use in testing binary
@@ -107,6 +107,6 @@ public class CWE23_Relative_Path_Traversal__PropertiesFile_72a extends AbstractT
            InstantiationException, IllegalAccessException
     {
         mainFromParent(args);
-    }
+    } 
 
-}
+} 

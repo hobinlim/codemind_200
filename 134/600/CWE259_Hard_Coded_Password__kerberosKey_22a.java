@@ -43,9 +43,9 @@ public class CWE259_Hard_Coded_Password__kerberosKey_22a extends AbstractTestCas
             /* POTENTIAL FLAW: data used as password in KerberosKey() */
             KerberosKey key = new KerberosKey(principal, data.toCharArray(), null);
             IO.writeLine(key.toString());
-        }
+        } 
 
-    }
+    } 
 
     /* The public static variables below are used to drive control flow in the source functions.
      * The public static variable mimics a global variable in the C/C++ language family. */
@@ -56,7 +56,7 @@ public class CWE259_Hard_Coded_Password__kerberosKey_22a extends AbstractTestCas
     {
         goodG2B1();
         goodG2B2();
-    }
+    } 
 
     /* goodG2B1() - use goodsource and badsink by setting the static variable to false instead of true */
     private void goodG2B1() throws Throwable
@@ -72,9 +72,9 @@ public class CWE259_Hard_Coded_Password__kerberosKey_22a extends AbstractTestCas
             /* POTENTIAL FLAW: data used as password in KerberosKey() */
             KerberosKey key = new KerberosKey(principal, data.toCharArray(), null);
             IO.writeLine(key.toString());
-        }
+        } 
 
-    }
+    } 
 
     /* goodG2B2() - use goodsource and badsink by reversing the blocks in the if in the sink function */
     private void goodG2B2() throws Throwable
@@ -90,9 +90,9 @@ public class CWE259_Hard_Coded_Password__kerberosKey_22a extends AbstractTestCas
             /* POTENTIAL FLAW: data used as password in KerberosKey() */
             KerberosKey key = new KerberosKey(principal, data.toCharArray(), null);
             IO.writeLine(key.toString());
-        }
+        } 
 
-    }
+    } 
 
     /* Below is the main(). It is only used when building this testcase on
      * its own for testing or for building a binary to use in testing binary
@@ -103,6 +103,6 @@ public class CWE259_Hard_Coded_Password__kerberosKey_22a extends AbstractTestCas
            InstantiationException, IllegalAccessException
     {
         mainFromParent(args);
-    }
+    } 
 
-}
+} 

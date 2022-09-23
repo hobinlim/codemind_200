@@ -53,11 +53,11 @@ public class CWE23_Relative_Path_Traversal__URLConnection_72a extends AbstractTe
                 /* This will be reading the first "line" of the response body,
                  * which could be very long if there are no newlines in the HTML */
                 data = readerBuffered.readLine();
-            }
+            } 
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error with stream reading", exceptIO);
-            }
+            } 
             finally
             {
                 /* clean up stream reading objects */
@@ -66,38 +66,38 @@ public class CWE23_Relative_Path_Traversal__URLConnection_72a extends AbstractTe
                     if (readerBuffered != null)
                     {
                         readerBuffered.close();
-                    }
-                }
+                    } 
+                } 
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error closing BufferedReader", exceptIO);
-                }
+                } 
 
                 try
                 {
                     if (readerInputStream != null)
                     {
                         readerInputStream.close();
-                    }
-                }
+                    } 
+                } 
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error closing InputStreamReader", exceptIO);
-                }
-            }
-        }
+                } 
+            } 
+        } 
 
         Vector<String> dataVector = new Vector<String>(5);
         dataVector.add(0, data);
         dataVector.add(1, data);
         dataVector.add(2, data);
         (new CWE23_Relative_Path_Traversal__URLConnection_72b()).badSink(dataVector  );
-    }
+    } 
 
     public void good() throws Throwable
     {
         goodG2B();
-    }
+    } 
 
     /* goodG2B() - use goodsource and badsink */
     private void goodG2B() throws Throwable
@@ -112,7 +112,7 @@ public class CWE23_Relative_Path_Traversal__URLConnection_72a extends AbstractTe
         dataVector.add(1, data);
         dataVector.add(2, data);
         (new CWE23_Relative_Path_Traversal__URLConnection_72b()).goodG2BSink(dataVector  );
-    }
+    } 
 
     /* Below is the main(). It is only used when building this testcase on
      * its own for testing or for building a binary to use in testing binary
@@ -123,6 +123,6 @@ public class CWE23_Relative_Path_Traversal__URLConnection_72a extends AbstractTe
            InstantiationException, IllegalAccessException
     {
         mainFromParent(args);
-    }
+    } 
 
-}
+} 

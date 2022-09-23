@@ -49,11 +49,11 @@ public class CWE23_Relative_Path_Traversal__PropertiesFile_15 extends AbstractTe
                     properties.load(streamFileInput);
                     /* POTENTIAL FLAW: Read data from a .properties file */
                     data = properties.getProperty("data");
-                }
+                } 
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error with stream reading", exceptIO);
-                }
+                } 
                 finally
                 {
                     /* Close stream reading object */
@@ -62,33 +62,33 @@ public class CWE23_Relative_Path_Traversal__PropertiesFile_15 extends AbstractTe
                         if (streamFileInput != null)
                         {
                             streamFileInput.close();
-                        }
-                    }
+                        } 
+                    } 
                     catch (IOException exceptIO)
                     {
                         IO.logger.log(Level.WARNING, "Error closing FileInputStream", exceptIO);
-                    }
-                }
-            }
+                    } 
+                } 
+            } 
             break;
         default:
             /* INCIDENTAL: CWE 561 Dead Code, the code below will never run
              * but ensure data is inititialized before the Sink to avoid compiler errors */
             data = null;
             break;
-        }
+        } 
 
         String root;
         if(System.getProperty("os.name").toLowerCase().indexOf("win") >= 0)
         {
             /* running on Windows */
             root = "C:\\uploads\\";
-        }
+        } 
         else
         {
             /* running on non-Windows */
             root = "/home/user/uploads/";
-        }
+        } 
 
         if (data != null)
         {
@@ -105,11 +105,11 @@ public class CWE23_Relative_Path_Traversal__PropertiesFile_15 extends AbstractTe
                     readerInputStreamSink = new InputStreamReader(streamFileInputSink, "UTF-8");
                     readerBufferdSink = new BufferedReader(readerInputStreamSink);
                     IO.writeLine(readerBufferdSink.readLine());
-                }
+                } 
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error with stream reading", exceptIO);
-                }
+                } 
                 finally
                 {
                     /* Close stream reading objects */
@@ -118,41 +118,41 @@ public class CWE23_Relative_Path_Traversal__PropertiesFile_15 extends AbstractTe
                         if (readerBufferdSink != null)
                         {
                             readerBufferdSink.close();
-                        }
-                    }
+                        } 
+                    } 
                     catch (IOException exceptIO)
                     {
                         IO.logger.log(Level.WARNING, "Error closing BufferedReader", exceptIO);
-                    }
+                    } 
 
                     try
                     {
                         if (readerInputStreamSink != null)
                         {
                             readerInputStreamSink.close();
-                        }
-                    }
+                        } 
+                    } 
                     catch (IOException exceptIO)
                     {
                         IO.logger.log(Level.WARNING, "Error closing InputStreamReader", exceptIO);
-                    }
+                    } 
 
                     try
                     {
                         if (streamFileInputSink != null)
                         {
                             streamFileInputSink.close();
-                        }
-                    }
+                        } 
+                    } 
                     catch (IOException exceptIO)
                     {
                         IO.logger.log(Level.WARNING, "Error closing FileInputStream", exceptIO);
-                    }
-                }
-            }
-        }
+                    } 
+                } 
+            } 
+        } 
 
-    }
+    } 
 
     /* goodG2B1() - use goodsource and badsink by changing the  switch to switch(5) */
     private void goodG2B1() throws Throwable
@@ -170,19 +170,19 @@ public class CWE23_Relative_Path_Traversal__PropertiesFile_15 extends AbstractTe
             /* FIX: Use a hardcoded string */
             data = "foo";
             break;
-        }
+        } 
 
         String root;
         if(System.getProperty("os.name").toLowerCase().indexOf("win") >= 0)
         {
             /* running on Windows */
             root = "C:\\uploads\\";
-        }
+        } 
         else
         {
             /* running on non-Windows */
             root = "/home/user/uploads/";
-        }
+        } 
 
         if (data != null)
         {
@@ -199,11 +199,11 @@ public class CWE23_Relative_Path_Traversal__PropertiesFile_15 extends AbstractTe
                     readerInputStreamSink = new InputStreamReader(streamFileInputSink, "UTF-8");
                     readerBufferdSink = new BufferedReader(readerInputStreamSink);
                     IO.writeLine(readerBufferdSink.readLine());
-                }
+                } 
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error with stream reading", exceptIO);
-                }
+                } 
                 finally
                 {
                     /* Close stream reading objects */
@@ -212,41 +212,41 @@ public class CWE23_Relative_Path_Traversal__PropertiesFile_15 extends AbstractTe
                         if (readerBufferdSink != null)
                         {
                             readerBufferdSink.close();
-                        }
-                    }
+                        } 
+                    } 
                     catch (IOException exceptIO)
                     {
                         IO.logger.log(Level.WARNING, "Error closing BufferedReader", exceptIO);
-                    }
+                    } 
 
                     try
                     {
                         if (readerInputStreamSink != null)
                         {
                             readerInputStreamSink.close();
-                        }
-                    }
+                        } 
+                    } 
                     catch (IOException exceptIO)
                     {
                         IO.logger.log(Level.WARNING, "Error closing InputStreamReader", exceptIO);
-                    }
+                    } 
 
                     try
                     {
                         if (streamFileInputSink != null)
                         {
                             streamFileInputSink.close();
-                        }
-                    }
+                        } 
+                    } 
                     catch (IOException exceptIO)
                     {
                         IO.logger.log(Level.WARNING, "Error closing FileInputStream", exceptIO);
-                    }
-                }
-            }
-        }
+                    } 
+                } 
+            } 
+        } 
 
-    }
+    } 
 
     /* goodG2B2() - use goodsource and badsink by reversing the blocks in the switch  */
     private void goodG2B2() throws Throwable
@@ -264,19 +264,19 @@ public class CWE23_Relative_Path_Traversal__PropertiesFile_15 extends AbstractTe
              * but ensure data is inititialized before the Sink to avoid compiler errors */
             data = null;
             break;
-        }
+        } 
 
         String root;
         if(System.getProperty("os.name").toLowerCase().indexOf("win") >= 0)
         {
             /* running on Windows */
             root = "C:\\uploads\\";
-        }
+        } 
         else
         {
             /* running on non-Windows */
             root = "/home/user/uploads/";
-        }
+        } 
 
         if (data != null)
         {
@@ -293,11 +293,11 @@ public class CWE23_Relative_Path_Traversal__PropertiesFile_15 extends AbstractTe
                     readerInputStreamSink = new InputStreamReader(streamFileInputSink, "UTF-8");
                     readerBufferdSink = new BufferedReader(readerInputStreamSink);
                     IO.writeLine(readerBufferdSink.readLine());
-                }
+                } 
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error with stream reading", exceptIO);
-                }
+                } 
                 finally
                 {
                     /* Close stream reading objects */
@@ -306,47 +306,47 @@ public class CWE23_Relative_Path_Traversal__PropertiesFile_15 extends AbstractTe
                         if (readerBufferdSink != null)
                         {
                             readerBufferdSink.close();
-                        }
-                    }
+                        } 
+                    } 
                     catch (IOException exceptIO)
                     {
                         IO.logger.log(Level.WARNING, "Error closing BufferedReader", exceptIO);
-                    }
+                    } 
 
                     try
                     {
                         if (readerInputStreamSink != null)
                         {
                             readerInputStreamSink.close();
-                        }
-                    }
+                        } 
+                    } 
                     catch (IOException exceptIO)
                     {
                         IO.logger.log(Level.WARNING, "Error closing InputStreamReader", exceptIO);
-                    }
+                    } 
 
                     try
                     {
                         if (streamFileInputSink != null)
                         {
                             streamFileInputSink.close();
-                        }
-                    }
+                        } 
+                    } 
                     catch (IOException exceptIO)
                     {
                         IO.logger.log(Level.WARNING, "Error closing FileInputStream", exceptIO);
-                    }
-                }
-            }
-        }
+                    } 
+                } 
+            } 
+        } 
 
-    }
+    } 
 
     public void good() throws Throwable
     {
         goodG2B1();
         goodG2B2();
-    }
+    } 
 
     /* Below is the main(). It is only used when building this testcase on
      * its own for testing or for building a binary to use in testing binary
@@ -357,5 +357,5 @@ public class CWE23_Relative_Path_Traversal__PropertiesFile_15 extends AbstractTe
            InstantiationException, IllegalAccessException
     {
         mainFromParent(args);
-    }
-}
+    } 
+} 

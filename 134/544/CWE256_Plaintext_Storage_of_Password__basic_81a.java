@@ -48,11 +48,11 @@ public class CWE256_Plaintext_Storage_of_Password__basic_81a extends AbstractTes
             properties.load(streamFileInput);
 
             password = properties.getProperty("password");
-        }
+        } 
         catch (IOException exceptIO)
         {
             IO.logger.log(Level.WARNING, "Error with stream reading", exceptIO);
-        }
+        } 
         finally
         {
             /* clean up stream reading objects */
@@ -61,25 +61,25 @@ public class CWE256_Plaintext_Storage_of_Password__basic_81a extends AbstractTes
                 if (streamFileInput != null)
                 {
                     streamFileInput.close();
-                }
-            }
+                } 
+            } 
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error closing FileInputStream", exceptIO);
-            }
-        }
+            } 
+        } 
 
         /* POTENTIAL FLAW: The raw password read from the .properties file is passed on (without being decrypted) */
 
         CWE256_Plaintext_Storage_of_Password__basic_81_base baseObject = new CWE256_Plaintext_Storage_of_Password__basic_81_bad();
         baseObject.action(password );
-    }
+    } 
 
     public void good() throws Throwable
     {
         goodG2B();
         goodB2G();
-    }
+    } 
 
     /* goodG2B() - use GoodSource and BadSink */
     private void goodG2B() throws Throwable
@@ -98,11 +98,11 @@ public class CWE256_Plaintext_Storage_of_Password__basic_81a extends AbstractTes
             properties.load(streamFileInput);
 
             password = properties.getProperty("password");
-        }
+        } 
         catch (IOException exceptIO)
         {
             IO.logger.log(Level.WARNING, "Error with stream reading", exceptIO);
-        }
+        } 
         finally
         {
             /* clean up stream reading objects */
@@ -111,13 +111,13 @@ public class CWE256_Plaintext_Storage_of_Password__basic_81a extends AbstractTes
                 if (streamFileInput != null)
                 {
                     streamFileInput.close();
-                }
-            }
+                } 
+            } 
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error closing FileInputStream", exceptIO);
-            }
-        }
+            } 
+        } 
 
         /* FIX: password is decrypted before being passed on */
         {
@@ -129,11 +129,11 @@ public class CWE256_Plaintext_Storage_of_Password__basic_81a extends AbstractTes
 
             String decryptedPassword = new String(aesCipher.doFinal(password.getBytes("UTF-8")), "UTF-8");
             password = decryptedPassword;
-        }
+        } 
 
         CWE256_Plaintext_Storage_of_Password__basic_81_base baseObject = new CWE256_Plaintext_Storage_of_Password__basic_81_goodG2B();
         baseObject.action(password );
-    }
+    } 
 
     /* goodB2G() - use BadSource and GoodSink */
     private void goodB2G() throws Throwable
@@ -151,11 +151,11 @@ public class CWE256_Plaintext_Storage_of_Password__basic_81a extends AbstractTes
             properties.load(streamFileInput);
 
             password = properties.getProperty("password");
-        }
+        } 
         catch (IOException exceptIO)
         {
             IO.logger.log(Level.WARNING, "Error with stream reading", exceptIO);
-        }
+        } 
         finally
         {
             /* clean up stream reading objects */
@@ -164,19 +164,19 @@ public class CWE256_Plaintext_Storage_of_Password__basic_81a extends AbstractTes
                 if (streamFileInput != null)
                 {
                     streamFileInput.close();
-                }
-            }
+                } 
+            } 
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error closing FileInputStream", exceptIO);
-            }
-        }
+            } 
+        } 
 
         /* POTENTIAL FLAW: The raw password read from the .properties file is passed on (without being decrypted) */
 
         CWE256_Plaintext_Storage_of_Password__basic_81_base baseObject = new CWE256_Plaintext_Storage_of_Password__basic_81_goodB2G();
         baseObject.action(password );
-    }
+    } 
 
     /* Below is the main(). It is only used when building this testcase on
      * its own for testing or for building a binary to use in testing binary
@@ -187,5 +187,5 @@ public class CWE256_Plaintext_Storage_of_Password__basic_81a extends AbstractTes
            InstantiationException, IllegalAccessException
     {
         mainFromParent(args);
-    }
-}
+    } 
+} 

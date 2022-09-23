@@ -42,11 +42,11 @@ public class CWE256_Plaintext_Storage_of_Password__basic_68b
         try
         {
             dBConnection = DriverManager.getConnection("192.168.105.23", "sa", password);
-        }
+        } 
         catch (SQLException exceptSql)
         {
             IO.logger.log(Level.WARNING, "Error getting database connection", exceptSql);
-        }
+        } 
         finally
         {
             try
@@ -54,15 +54,15 @@ public class CWE256_Plaintext_Storage_of_Password__basic_68b
                 if (dBConnection != null)
                 {
                     dBConnection.close();
-                }
-            }
+                } 
+            } 
             catch (SQLException exceptSql)
             {
                 IO.logger.log(Level.WARNING, "Error closing Connection", exceptSql);
-            }
-        }
+            } 
+        } 
 
-    }
+    } 
 
     /* goodG2B() - use goodsource and badsink */
     public void goodG2BSink() throws Throwable
@@ -75,11 +75,11 @@ public class CWE256_Plaintext_Storage_of_Password__basic_68b
         try
         {
             dBConnection = DriverManager.getConnection("192.168.105.23", "sa", password);
-        }
+        } 
         catch (SQLException exceptSql)
         {
             IO.logger.log(Level.WARNING, "Error getting database connection", exceptSql);
-        }
+        } 
         finally
         {
             try
@@ -87,15 +87,15 @@ public class CWE256_Plaintext_Storage_of_Password__basic_68b
                 if (dBConnection != null)
                 {
                     dBConnection.close();
-                }
-            }
+                } 
+            } 
             catch (SQLException exceptSql)
             {
                 IO.logger.log(Level.WARNING, "Error closing Connection", exceptSql);
-            }
-        }
+            } 
+        } 
 
-    }
+    } 
 
     /* goodB2G() - use badsource and goodsink */
     public void goodB2GSink() throws Throwable
@@ -112,17 +112,17 @@ public class CWE256_Plaintext_Storage_of_Password__basic_68b
 
             String decryptedPassword = new String(aesCipher.doFinal(password.getBytes("UTF-8")), "UTF-8");
             password = decryptedPassword;
-        }
+        } 
 
         Connection dBConnection = null;
         try
         {
             dBConnection = DriverManager.getConnection("192.168.105.23", "sa", password);
-        }
+        } 
         catch (SQLException exceptSql)
         {
             IO.logger.log(Level.WARNING, "Error getting database connection", exceptSql);
-        }
+        } 
         finally
         {
             try
@@ -130,13 +130,13 @@ public class CWE256_Plaintext_Storage_of_Password__basic_68b
                 if (dBConnection != null)
                 {
                     dBConnection.close();
-                }
-            }
+                } 
+            } 
             catch (SQLException exceptSql)
             {
                 IO.logger.log(Level.WARNING, "Error closing Connection", exceptSql);
-            }
-        }
+            } 
+        } 
 
-    }
-}
+    } 
+} 

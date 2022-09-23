@@ -33,13 +33,13 @@ public class CWE259_Hard_Coded_Password__kerberosKey_02 extends AbstractTestCase
         {
             /* FLAW: Set data to a hardcoded string */
             data = "7e5tc4s3";
-        }
+        } 
         else
         {
             /* INCIDENTAL: CWE 561 Dead Code, the code below will never run
              * but ensure data is inititialized before the Sink to avoid compiler errors */
             data = null;
-        }
+        } 
 
         if (data != null)
         {
@@ -47,9 +47,9 @@ public class CWE259_Hard_Coded_Password__kerberosKey_02 extends AbstractTestCase
             /* POTENTIAL FLAW: data used as password in KerberosKey() */
             KerberosKey key = new KerberosKey(principal, data.toCharArray(), null);
             IO.writeLine(key.toString());
-        }
+        } 
 
-    }
+    } 
 
     /* goodG2B1() - use goodsource and badsink by changing true to false */
     private void goodG2B1() throws Throwable
@@ -60,7 +60,7 @@ public class CWE259_Hard_Coded_Password__kerberosKey_02 extends AbstractTestCase
             /* INCIDENTAL: CWE 561 Dead Code, the code below will never run
              * but ensure data is inititialized before the Sink to avoid compiler errors */
             data = null;
-        }
+        } 
         else
         {
 
@@ -74,15 +74,15 @@ public class CWE259_Hard_Coded_Password__kerberosKey_02 extends AbstractTestCase
 
                 /* POTENTIAL FLAW: Read data from the console using readLine */
                 data = readerBuffered.readLine();
-            }
+            } 
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error with stream reading", exceptIO);
-            }
+            } 
 
             /* NOTE: Tools may report a flaw here because readerBuffered and readerInputStream are not closed.  Unfortunately, closing those will close System.in, which will cause any future attempts to read from the console to fail and throw an exception */
 
-        }
+        } 
 
         if (data != null)
         {
@@ -90,9 +90,9 @@ public class CWE259_Hard_Coded_Password__kerberosKey_02 extends AbstractTestCase
             /* POTENTIAL FLAW: data used as password in KerberosKey() */
             KerberosKey key = new KerberosKey(principal, data.toCharArray(), null);
             IO.writeLine(key.toString());
-        }
+        } 
 
-    }
+    } 
 
     /* goodG2B2() - use goodsource and badsink by reversing statements in if */
     private void goodG2B2() throws Throwable
@@ -108,19 +108,19 @@ public class CWE259_Hard_Coded_Password__kerberosKey_02 extends AbstractTestCase
                 BufferedReader readerBuffered = new BufferedReader(readerInputStream);
                 /* POTENTIAL FLAW: Read data from the console using readLine */
                 data = readerBuffered.readLine();
-            }
+            } 
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error with stream reading", exceptIO);
-            }
+            } 
             /* NOTE: Tools may report a flaw here because readerBuffered and readerInputStream are not closed.  Unfortunately, closing those will close System.in, which will cause any future attempts to read from the console to fail and throw an exception */
-        }
+        } 
         else
         {
             /* INCIDENTAL: CWE 561 Dead Code, the code below will never run
              * but ensure data is inititialized before the Sink to avoid compiler errors */
             data = null;
-        }
+        } 
 
         if (data != null)
         {
@@ -128,15 +128,15 @@ public class CWE259_Hard_Coded_Password__kerberosKey_02 extends AbstractTestCase
             /* POTENTIAL FLAW: data used as password in KerberosKey() */
             KerberosKey key = new KerberosKey(principal, data.toCharArray(), null);
             IO.writeLine(key.toString());
-        }
+        } 
 
-    }
+    } 
 
     public void good() throws Throwable
     {
         goodG2B1();
         goodG2B2();
-    }
+    } 
 
     /* Below is the main(). It is only used when building this testcase on
      * its own for testing or for building a binary to use in testing binary
@@ -147,5 +147,5 @@ public class CWE259_Hard_Coded_Password__kerberosKey_02 extends AbstractTestCase
            InstantiationException, IllegalAccessException
     {
         mainFromParent(args);
-    }
-}
+    } 
+} 

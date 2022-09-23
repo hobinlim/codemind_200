@@ -32,7 +32,7 @@ public class CWE23_Relative_Path_Traversal__getParameter_Servlet_61b
         data = request.getParameter("name");
 
         return data;
-    }
+    } 
 
     /* goodG2B() - use goodsource and badsink */
     public String goodG2BSource(HttpServletRequest request, HttpServletResponse response) throws Throwable
@@ -43,5 +43,5 @@ public class CWE23_Relative_Path_Traversal__getParameter_Servlet_61b
         data = "foo";
 
         return data;
-    }
-}
+    } 
+} 

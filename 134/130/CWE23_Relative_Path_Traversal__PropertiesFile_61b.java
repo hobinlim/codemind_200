@@ -48,11 +48,11 @@ public class CWE23_Relative_Path_Traversal__PropertiesFile_61b
 
                 /* POTENTIAL FLAW: Read data from a .properties file */
                 data = properties.getProperty("data");
-            }
+            } 
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error with stream reading", exceptIO);
-            }
+            } 
             finally
             {
                 /* Close stream reading object */
@@ -61,17 +61,17 @@ public class CWE23_Relative_Path_Traversal__PropertiesFile_61b
                     if (streamFileInput != null)
                     {
                         streamFileInput.close();
-                    }
-                }
+                    } 
+                } 
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error closing FileInputStream", exceptIO);
-                }
-            }
-        }
+                } 
+            } 
+        } 
 
         return data;
-    }
+    } 
 
     /* goodG2B() - use goodsource and badsink */
     public String goodG2BSource() throws Throwable
@@ -82,5 +82,5 @@ public class CWE23_Relative_Path_Traversal__PropertiesFile_61b
         data = "foo";
 
         return data;
-    }
-}
+    } 
+} 

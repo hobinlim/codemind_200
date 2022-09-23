@@ -55,11 +55,11 @@ public class CWE23_Relative_Path_Traversal__URLConnection_75a extends AbstractTe
                 /* This will be reading the first "line" of the response body,
                  * which could be very long if there are no newlines in the HTML */
                 data = readerBuffered.readLine();
-            }
+            } 
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error with stream reading", exceptIO);
-            }
+            } 
             finally
             {
                 /* clean up stream reading objects */
@@ -68,26 +68,26 @@ public class CWE23_Relative_Path_Traversal__URLConnection_75a extends AbstractTe
                     if (readerBuffered != null)
                     {
                         readerBuffered.close();
-                    }
-                }
+                    } 
+                } 
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error closing BufferedReader", exceptIO);
-                }
+                } 
 
                 try
                 {
                     if (readerInputStream != null)
                     {
                         readerInputStream.close();
-                    }
-                }
+                    } 
+                } 
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error closing InputStreamReader", exceptIO);
-                }
-            }
-        }
+                } 
+            } 
+        } 
 
         /* serialize data to a byte array */
         ByteArrayOutputStream streamByteArrayOutput = null;
@@ -100,11 +100,11 @@ public class CWE23_Relative_Path_Traversal__URLConnection_75a extends AbstractTe
             outputObject.writeObject(data);
             byte[] dataSerialized = streamByteArrayOutput.toByteArray();
             (new CWE23_Relative_Path_Traversal__URLConnection_75b()).badSink(dataSerialized  );
-        }
+        } 
         catch (IOException exceptIO)
         {
             IO.logger.log(Level.WARNING, "IOException in serialization", exceptIO);
-        }
+        } 
         finally
         {
             /* clean up stream writing objects */
@@ -113,31 +113,31 @@ public class CWE23_Relative_Path_Traversal__URLConnection_75a extends AbstractTe
                 if (outputObject != null)
                 {
                     outputObject.close();
-                }
-            }
+                } 
+            } 
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error closing ObjectOutputStream", exceptIO);
-            }
+            } 
 
             try
             {
                 if (streamByteArrayOutput != null)
                 {
                     streamByteArrayOutput.close();
-                }
-            }
+                } 
+            } 
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error closing ByteArrayOutputStream", exceptIO);
-            }
-        }
-    }
+            } 
+        } 
+    } 
 
     public void good() throws Throwable
     {
         goodG2B();
-    }
+    } 
 
     /* goodG2B() - use goodsource and badsink */
     private void goodG2B() throws Throwable
@@ -158,11 +158,11 @@ public class CWE23_Relative_Path_Traversal__URLConnection_75a extends AbstractTe
             outputObject.writeObject(data);
             byte[] dataSerialized = streamByteArrayOutput.toByteArray();
             (new CWE23_Relative_Path_Traversal__URLConnection_75b()).goodG2BSink(dataSerialized  );
-        }
+        } 
         catch (IOException exceptIO)
         {
             IO.logger.log(Level.WARNING, "IOException in serialization", exceptIO);
-        }
+        } 
         finally
         {
             /* clean up stream writing objects */
@@ -171,26 +171,26 @@ public class CWE23_Relative_Path_Traversal__URLConnection_75a extends AbstractTe
                 if (outputObject != null)
                 {
                     outputObject.close();
-                }
-            }
+                } 
+            } 
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error closing ObjectOutputStream", exceptIO);
-            }
+            } 
 
             try
             {
                 if (streamByteArrayOutput != null)
                 {
                     streamByteArrayOutput.close();
-                }
-            }
+                } 
+            } 
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error closing ByteArrayOutputStream", exceptIO);
-            }
-        }
-    }
+            } 
+        } 
+    } 
 
     /* Below is the main(). It is only used when building this testcase on
      * its own for testing or for building a binary to use in testing binary
@@ -201,5 +201,5 @@ public class CWE23_Relative_Path_Traversal__URLConnection_75a extends AbstractTe
            InstantiationException, IllegalAccessException
     {
         mainFromParent(args);
-    }
-}
+    } 
+} 

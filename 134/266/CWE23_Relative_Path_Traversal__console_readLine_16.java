@@ -47,11 +47,11 @@ public class CWE23_Relative_Path_Traversal__console_readLine_16 extends Abstract
                     readerBuffered = new BufferedReader(readerInputStream);
                     /* POTENTIAL FLAW: Read data from the console using readLine */
                     data = readerBuffered.readLine();
-                }
+                } 
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error with stream reading", exceptIO);
-                }
+                } 
                 finally
                 {
                     try
@@ -59,41 +59,41 @@ public class CWE23_Relative_Path_Traversal__console_readLine_16 extends Abstract
                         if (readerBuffered != null)
                         {
                             readerBuffered.close();
-                        }
-                    }
+                        } 
+                    } 
                     catch (IOException exceptIO)
                     {
                         IO.logger.log(Level.WARNING, "Error closing BufferedReader", exceptIO);
-                    }
+                    } 
 
                     try
                     {
                         if (readerInputStream != null)
                         {
                             readerInputStream.close();
-                        }
-                    }
+                        } 
+                    } 
                     catch (IOException exceptIO)
                     {
                         IO.logger.log(Level.WARNING, "Error closing InputStreamReader", exceptIO);
-                    }
-                }
-            }
+                    } 
+                } 
+            } 
             /* NOTE: Tools may report a flaw here because buffread and isr are not closed.  Unfortunately, closing those will close System.in, which will cause any future attempts to read from the console to fail and throw an exception */
             break;
-        }
+        } 
 
         String root;
         if(System.getProperty("os.name").toLowerCase().indexOf("win") >= 0)
         {
             /* running on Windows */
             root = "C:\\uploads\\";
-        }
+        } 
         else
         {
             /* running on non-Windows */
             root = "/home/user/uploads/";
-        }
+        } 
 
         if (data != null)
         {
@@ -110,11 +110,11 @@ public class CWE23_Relative_Path_Traversal__console_readLine_16 extends Abstract
                     readerInputStreamSink = new InputStreamReader(streamFileInputSink, "UTF-8");
                     readerBufferdSink = new BufferedReader(readerInputStreamSink);
                     IO.writeLine(readerBufferdSink.readLine());
-                }
+                } 
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error with stream reading", exceptIO);
-                }
+                } 
                 finally
                 {
                     /* Close stream reading objects */
@@ -123,41 +123,41 @@ public class CWE23_Relative_Path_Traversal__console_readLine_16 extends Abstract
                         if (readerBufferdSink != null)
                         {
                             readerBufferdSink.close();
-                        }
-                    }
+                        } 
+                    } 
                     catch (IOException exceptIO)
                     {
                         IO.logger.log(Level.WARNING, "Error closing BufferedReader", exceptIO);
-                    }
+                    } 
 
                     try
                     {
                         if (readerInputStreamSink != null)
                         {
                             readerInputStreamSink.close();
-                        }
-                    }
+                        } 
+                    } 
                     catch (IOException exceptIO)
                     {
                         IO.logger.log(Level.WARNING, "Error closing InputStreamReader", exceptIO);
-                    }
+                    } 
 
                     try
                     {
                         if (streamFileInputSink != null)
                         {
                             streamFileInputSink.close();
-                        }
-                    }
+                        } 
+                    } 
                     catch (IOException exceptIO)
                     {
                         IO.logger.log(Level.WARNING, "Error closing FileInputStream", exceptIO);
-                    }
-                }
-            }
-        }
+                    } 
+                } 
+            } 
+        } 
 
-    }
+    } 
 
     /* goodG2B() - use goodsource and badsink */
     private void goodG2B() throws Throwable
@@ -169,19 +169,19 @@ public class CWE23_Relative_Path_Traversal__console_readLine_16 extends Abstract
             /* FIX: Use a hardcoded string */
             data = "foo";
             break;
-        }
+        } 
 
         String root;
         if(System.getProperty("os.name").toLowerCase().indexOf("win") >= 0)
         {
             /* running on Windows */
             root = "C:\\uploads\\";
-        }
+        } 
         else
         {
             /* running on non-Windows */
             root = "/home/user/uploads/";
-        }
+        } 
 
         if (data != null)
         {
@@ -198,11 +198,11 @@ public class CWE23_Relative_Path_Traversal__console_readLine_16 extends Abstract
                     readerInputStreamSink = new InputStreamReader(streamFileInputSink, "UTF-8");
                     readerBufferdSink = new BufferedReader(readerInputStreamSink);
                     IO.writeLine(readerBufferdSink.readLine());
-                }
+                } 
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error with stream reading", exceptIO);
-                }
+                } 
                 finally
                 {
                     /* Close stream reading objects */
@@ -211,46 +211,46 @@ public class CWE23_Relative_Path_Traversal__console_readLine_16 extends Abstract
                         if (readerBufferdSink != null)
                         {
                             readerBufferdSink.close();
-                        }
-                    }
+                        } 
+                    } 
                     catch (IOException exceptIO)
                     {
                         IO.logger.log(Level.WARNING, "Error closing BufferedReader", exceptIO);
-                    }
+                    } 
 
                     try
                     {
                         if (readerInputStreamSink != null)
                         {
                             readerInputStreamSink.close();
-                        }
-                    }
+                        } 
+                    } 
                     catch (IOException exceptIO)
                     {
                         IO.logger.log(Level.WARNING, "Error closing InputStreamReader", exceptIO);
-                    }
+                    } 
 
                     try
                     {
                         if (streamFileInputSink != null)
                         {
                             streamFileInputSink.close();
-                        }
-                    }
+                        } 
+                    } 
                     catch (IOException exceptIO)
                     {
                         IO.logger.log(Level.WARNING, "Error closing FileInputStream", exceptIO);
-                    }
-                }
-            }
-        }
+                    } 
+                } 
+            } 
+        } 
 
-    }
+    } 
 
     public void good() throws Throwable
     {
         goodG2B();
-    }
+    } 
 
     /* Below is the main(). It is only used when building this testcase on
      * its own for testing or for building a binary to use in testing binary
@@ -261,5 +261,5 @@ public class CWE23_Relative_Path_Traversal__console_readLine_16 extends Abstract
            InstantiationException, IllegalAccessException
     {
         mainFromParent(args);
-    }
-}
+    } 
+} 

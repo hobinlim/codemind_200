@@ -45,11 +45,11 @@ public class CWE259_Hard_Coded_Password__driverManager_75a extends AbstractTestC
             outputObject.writeObject(data);
             byte[] dataSerialized = streamByteArrayOutput.toByteArray();
             (new CWE259_Hard_Coded_Password__driverManager_75b()).badSink(dataSerialized  );
-        }
+        } 
         catch (IOException exceptIO)
         {
             IO.logger.log(Level.WARNING, "IOException in serialization", exceptIO);
-        }
+        } 
         finally
         {
             /* clean up stream writing objects */
@@ -58,31 +58,31 @@ public class CWE259_Hard_Coded_Password__driverManager_75a extends AbstractTestC
                 if (outputObject != null)
                 {
                     outputObject.close();
-                }
-            }
+                } 
+            } 
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error closing ObjectOutputStream", exceptIO);
-            }
+            } 
 
             try
             {
                 if (streamByteArrayOutput != null)
                 {
                     streamByteArrayOutput.close();
-                }
-            }
+                } 
+            } 
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error closing ByteArrayOutputStream", exceptIO);
-            }
-        }
-    }
+            } 
+        } 
+    } 
 
     public void good() throws Throwable
     {
         goodG2B();
-    }
+    } 
 
     /* goodG2B() - use goodsource and badsink */
     private void goodG2B() throws Throwable
@@ -99,11 +99,11 @@ public class CWE259_Hard_Coded_Password__driverManager_75a extends AbstractTestC
 
             /* POTENTIAL FLAW: Read data from the console using readLine */
             data = readerBuffered.readLine();
-        }
+        } 
         catch (IOException exceptIO)
         {
             IO.logger.log(Level.WARNING, "Error with stream reading", exceptIO);
-        }
+        } 
 
         /* NOTE: Tools may report a flaw here because readerBuffered and readerInputStream are not closed.  Unfortunately, closing those will close System.in, which will cause any future attempts to read from the console to fail and throw an exception */
 
@@ -118,11 +118,11 @@ public class CWE259_Hard_Coded_Password__driverManager_75a extends AbstractTestC
             outputObject.writeObject(data);
             byte[] dataSerialized = streamByteArrayOutput.toByteArray();
             (new CWE259_Hard_Coded_Password__driverManager_75b()).goodG2BSink(dataSerialized  );
-        }
+        } 
         catch (IOException exceptIO)
         {
             IO.logger.log(Level.WARNING, "IOException in serialization", exceptIO);
-        }
+        } 
         finally
         {
             /* clean up stream writing objects */
@@ -131,26 +131,26 @@ public class CWE259_Hard_Coded_Password__driverManager_75a extends AbstractTestC
                 if (outputObject != null)
                 {
                     outputObject.close();
-                }
-            }
+                } 
+            } 
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error closing ObjectOutputStream", exceptIO);
-            }
+            } 
 
             try
             {
                 if (streamByteArrayOutput != null)
                 {
                     streamByteArrayOutput.close();
-                }
-            }
+                } 
+            } 
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error closing ByteArrayOutputStream", exceptIO);
-            }
-        }
-    }
+            } 
+        } 
+    } 
 
     /* Below is the main(). It is only used when building this testcase on
      * its own for testing or for building a binary to use in testing binary
@@ -161,5 +161,5 @@ public class CWE259_Hard_Coded_Password__driverManager_75a extends AbstractTestC
            InstantiationException, IllegalAccessException
     {
         mainFromParent(args);
-    }
-}
+    } 
+} 

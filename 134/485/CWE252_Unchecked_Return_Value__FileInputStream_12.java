@@ -38,15 +38,15 @@ public class CWE252_Unchecked_Return_Value__FileInputStream_12 extends AbstractT
                 streamFileInput.read(byteArray);
                 /* FLAW: Do not check the return value of read() */
                 IO.writeLine(new String(byteArray, "UTF-8"));
-            }
+            } 
             catch(FileNotFoundException exceptFileNotFound)
             {
                 IO.logger.log(Level.WARNING, "FileNotFoundException opening file", exceptFileNotFound);
-            }
+            } 
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "IOException reading file", exceptIO);
-            }
+            } 
             finally
             {
                 try
@@ -54,14 +54,14 @@ public class CWE252_Unchecked_Return_Value__FileInputStream_12 extends AbstractT
                     if(streamFileInput != null)
                     {
                         streamFileInput.close();
-                    }
-                }
+                    } 
+                } 
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "IOException closing FileInputStream", exceptIO);
-                }
-            }
-        }
+                } 
+            } 
+        } 
         else
         {
 
@@ -80,27 +80,27 @@ public class CWE252_Unchecked_Return_Value__FileInputStream_12 extends AbstractT
                 if (numberOfBytesRead == -1)
                 {
                     IO.writeLine("The end of the file has been reached.");
-                }
+                } 
                 else
                 {
                     if (numberOfBytesRead < bytesToRead)
                     {
                         IO.writeLine("Could not read " + bytesToRead + " bytes.");
-                    }
+                    } 
                     else
                     {
                         IO.writeLine(new String(byteArray, "UTF-8"));
-                    }
-                }
-            }
+                    } 
+                } 
+            } 
             catch (FileNotFoundException exceptFileNotFound)
             {
                 IO.logger.log(Level.WARNING, "FileNotFoundException opening file", exceptFileNotFound);
-            }
+            } 
             catch(IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "IOException reading file", exceptIO);
-            }
+            } 
             finally
             {
                 try
@@ -108,16 +108,16 @@ public class CWE252_Unchecked_Return_Value__FileInputStream_12 extends AbstractT
                     if(streamFileInput != null)
                     {
                         streamFileInput.close();
-                    }
-                }
+                    } 
+                } 
                 catch(IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "IOException closing FileInputStream", exceptIO);
-                }
-            }
+                } 
+            } 
 
-        }
-    }
+        } 
+    } 
 
     /* good1() changes the "if" so that both branches use the GoodSink */
     private void good1() throws Throwable
@@ -135,27 +135,27 @@ public class CWE252_Unchecked_Return_Value__FileInputStream_12 extends AbstractT
                 if (numberOfBytesRead == -1)
                 {
                     IO.writeLine("The end of the file has been reached.");
-                }
+                } 
                 else
                 {
                     if (numberOfBytesRead < bytesToRead)
                     {
                         IO.writeLine("Could not read " + bytesToRead + " bytes.");
-                    }
+                    } 
                     else
                     {
                         IO.writeLine(new String(byteArray, "UTF-8"));
-                    }
-                }
-            }
+                    } 
+                } 
+            } 
             catch (FileNotFoundException exceptFileNotFound)
             {
                 IO.logger.log(Level.WARNING, "FileNotFoundException opening file", exceptFileNotFound);
-            }
+            } 
             catch(IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "IOException reading file", exceptIO);
-            }
+            } 
             finally
             {
                 try
@@ -163,14 +163,14 @@ public class CWE252_Unchecked_Return_Value__FileInputStream_12 extends AbstractT
                     if(streamFileInput != null)
                     {
                         streamFileInput.close();
-                    }
-                }
+                    } 
+                } 
                 catch(IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "IOException closing FileInputStream", exceptIO);
-                }
-            }
-        }
+                } 
+            } 
+        } 
         else
         {
 
@@ -189,27 +189,27 @@ public class CWE252_Unchecked_Return_Value__FileInputStream_12 extends AbstractT
                 if (numberOfBytesRead == -1)
                 {
                     IO.writeLine("The end of the file has been reached.");
-                }
+                } 
                 else
                 {
                     if (numberOfBytesRead < bytesToRead)
                     {
                         IO.writeLine("Could not read " + bytesToRead + " bytes.");
-                    }
+                    } 
                     else
                     {
                         IO.writeLine(new String(byteArray, "UTF-8"));
-                    }
-                }
-            }
+                    } 
+                } 
+            } 
             catch (FileNotFoundException exceptFileNotFound)
             {
                 IO.logger.log(Level.WARNING, "FileNotFoundException opening file", exceptFileNotFound);
-            }
+            } 
             catch(IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "IOException reading file", exceptIO);
-            }
+            } 
             finally
             {
                 try
@@ -217,21 +217,21 @@ public class CWE252_Unchecked_Return_Value__FileInputStream_12 extends AbstractT
                     if(streamFileInput != null)
                     {
                         streamFileInput.close();
-                    }
-                }
+                    } 
+                } 
                 catch(IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "IOException closing FileInputStream", exceptIO);
-                }
-            }
+                } 
+            } 
 
-        }
-    }
+        } 
+    } 
 
     public void good() throws Throwable
     {
         good1();
-    }
+    } 
 
     /* Below is the main(). It is only used when building this testcase on
      * its own for testing or for building a binary to use in testing binary
@@ -242,5 +242,5 @@ public class CWE252_Unchecked_Return_Value__FileInputStream_12 extends AbstractT
            InstantiationException, IllegalAccessException
     {
         mainFromParent(args);
-    }
-}
+    } 
+} 

@@ -31,12 +31,12 @@ public class CWE23_Relative_Path_Traversal__Environment_51a extends AbstractTest
         data = System.getenv("ADD");
 
         (new CWE23_Relative_Path_Traversal__Environment_51b()).badSink(data  );
-    }
+    } 
 
     public void good() throws Throwable
     {
         goodG2B();
-    }
+    } 
 
     /* goodG2B() - use goodsource and badsink */
     private void goodG2B() throws Throwable
@@ -47,7 +47,7 @@ public class CWE23_Relative_Path_Traversal__Environment_51a extends AbstractTest
         data = "foo";
 
         (new CWE23_Relative_Path_Traversal__Environment_51b()).goodG2BSink(data  );
-    }
+    } 
 
     /* Below is the main(). It is only used when building this testcase on
      * its own for testing or for building a binary to use in testing binary
@@ -58,6 +58,6 @@ public class CWE23_Relative_Path_Traversal__Environment_51a extends AbstractTest
            InstantiationException, IllegalAccessException
     {
         mainFromParent(args);
-    }
+    } 
 
-}
+} 

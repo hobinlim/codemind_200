@@ -53,11 +53,11 @@ public class CWE256_Plaintext_Storage_of_Password__basic_75b
             try
             {
                 dBConnection = DriverManager.getConnection("192.168.105.23", "sa", password);
-            }
+            } 
             catch (SQLException exceptSql)
             {
                 IO.logger.log(Level.WARNING, "Error getting database connection", exceptSql);
-            }
+            } 
             finally
             {
                 try
@@ -65,23 +65,23 @@ public class CWE256_Plaintext_Storage_of_Password__basic_75b
                     if (dBConnection != null)
                     {
                         dBConnection.close();
-                    }
-                }
+                    } 
+                } 
                 catch (SQLException exceptSql)
                 {
                     IO.logger.log(Level.WARNING, "Error closing Connection", exceptSql);
-                }
-            }
+                } 
+            } 
 
-        }
+        } 
         catch (IOException exceptIO)
         {
             IO.logger.log(Level.WARNING, "IOException in deserialization", exceptIO);
-        }
+        } 
         catch (ClassNotFoundException exceptClassNotFound)
         {
             IO.logger.log(Level.WARNING, "ClassNotFoundException in deserialization", exceptClassNotFound);
-        }
+        } 
         finally
         {
             /* clean up stream reading objects */
@@ -90,26 +90,26 @@ public class CWE256_Plaintext_Storage_of_Password__basic_75b
                 if (streamObjectInput != null)
                 {
                     streamObjectInput.close();
-                }
-            }
+                } 
+            } 
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error closing ObjectInputStream", exceptIO);
-            }
+            } 
 
             try
             {
                 if (streamByteArrayInput != null)
                 {
                     streamByteArrayInput.close();
-                }
-            }
+                } 
+            } 
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error closing ByteArrayInputStream", exceptIO);
-            }
-        }
-    }
+            } 
+        } 
+    } 
 
     /* goodG2B() - use GoodSource and BadSink */
     public void goodG2BSink(byte[] passwordSerialized ) throws Throwable
@@ -129,11 +129,11 @@ public class CWE256_Plaintext_Storage_of_Password__basic_75b
             try
             {
                 dBConnection = DriverManager.getConnection("192.168.105.23", "sa", password);
-            }
+            } 
             catch (SQLException exceptSql)
             {
                 IO.logger.log(Level.WARNING, "Error getting database connection", exceptSql);
-            }
+            } 
             finally
             {
                 try
@@ -141,23 +141,23 @@ public class CWE256_Plaintext_Storage_of_Password__basic_75b
                     if (dBConnection != null)
                     {
                         dBConnection.close();
-                    }
-                }
+                    } 
+                } 
                 catch (SQLException exceptSql)
                 {
                     IO.logger.log(Level.WARNING, "Error closing Connection", exceptSql);
-                }
-            }
+                } 
+            } 
 
-        }
+        } 
         catch (IOException exceptIO)
         {
             IO.logger.log(Level.WARNING, "IOException in deserialization", exceptIO);
-        }
+        } 
         catch (ClassNotFoundException exceptClassNotFound)
         {
             IO.logger.log(Level.WARNING, "ClassNotFoundException in deserialization", exceptClassNotFound);
-        }
+        } 
         finally
         {
             /* clean up stream reading objects */
@@ -166,26 +166,26 @@ public class CWE256_Plaintext_Storage_of_Password__basic_75b
                 if (streamObjectInput != null)
                 {
                     streamObjectInput.close();
-                }
-            }
+                } 
+            } 
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error closing ObjectInputStream", exceptIO);
-            }
+            } 
 
             try
             {
                 if (streamByteArrayInput != null)
                 {
                     streamByteArrayInput.close();
-                }
-            }
+                } 
+            } 
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error closing ByteArrayInputStream", exceptIO);
-            }
-        }
-    }
+            } 
+        } 
+    } 
 
     /* goodB2G() - use BadSource and GoodSink */
     public void goodB2GSink(byte[] passwordSerialized ) throws Throwable
@@ -210,17 +210,17 @@ public class CWE256_Plaintext_Storage_of_Password__basic_75b
 
                 String decryptedPassword = new String(aesCipher.doFinal(password.getBytes("UTF-8")), "UTF-8");
                 password = decryptedPassword;
-            }
+            } 
 
             Connection dBConnection = null;
             try
             {
                 dBConnection = DriverManager.getConnection("192.168.105.23", "sa", password);
-            }
+            } 
             catch (SQLException exceptSql)
             {
                 IO.logger.log(Level.WARNING, "Error getting database connection", exceptSql);
-            }
+            } 
             finally
             {
                 try
@@ -228,23 +228,23 @@ public class CWE256_Plaintext_Storage_of_Password__basic_75b
                     if (dBConnection != null)
                     {
                         dBConnection.close();
-                    }
-                }
+                    } 
+                } 
                 catch (SQLException exceptSql)
                 {
                     IO.logger.log(Level.WARNING, "Error closing Connection", exceptSql);
-                }
-            }
+                } 
+            } 
 
-        }
+        } 
         catch (IOException exceptIO)
         {
             IO.logger.log(Level.WARNING, "IOException in deserialization", exceptIO);
-        }
+        } 
         catch (ClassNotFoundException exceptClassNotFound)
         {
             IO.logger.log(Level.WARNING, "ClassNotFoundException in deserialization", exceptClassNotFound);
-        }
+        } 
         finally
         {
             /* clean up stream reading objects */
@@ -253,24 +253,24 @@ public class CWE256_Plaintext_Storage_of_Password__basic_75b
                 if (streamObjectInput != null)
                 {
                     streamObjectInput.close();
-                }
-            }
+                } 
+            } 
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error closing ObjectInputStream", exceptIO);
-            }
+            } 
 
             try
             {
                 if (streamByteArrayInput != null)
                 {
                     streamByteArrayInput.close();
-                }
-            }
+                } 
+            } 
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error closing ByteArrayInputStream", exceptIO);
-            }
-        }
-    }
-}
+            } 
+        } 
+    } 
+} 

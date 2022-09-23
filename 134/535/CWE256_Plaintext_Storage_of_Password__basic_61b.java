@@ -48,11 +48,11 @@ public class CWE256_Plaintext_Storage_of_Password__basic_61b
             properties.load(streamFileInput);
 
             password = properties.getProperty("password");
-        }
+        } 
         catch (IOException exceptIO)
         {
             IO.logger.log(Level.WARNING, "Error with stream reading", exceptIO);
-        }
+        } 
         finally
         {
             /* clean up stream reading objects */
@@ -61,18 +61,18 @@ public class CWE256_Plaintext_Storage_of_Password__basic_61b
                 if (streamFileInput != null)
                 {
                     streamFileInput.close();
-                }
-            }
+                } 
+            } 
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error closing FileInputStream", exceptIO);
-            }
-        }
+            } 
+        } 
 
         /* POTENTIAL FLAW: The raw password read from the .properties file is passed on (without being decrypted) */
 
         return password;
-    }
+    } 
 
     /* goodG2B() - use goodsource and badsink */
     public String goodG2BSource() throws Throwable
@@ -91,11 +91,11 @@ public class CWE256_Plaintext_Storage_of_Password__basic_61b
             properties.load(streamFileInput);
 
             password = properties.getProperty("password");
-        }
+        } 
         catch (IOException exceptIO)
         {
             IO.logger.log(Level.WARNING, "Error with stream reading", exceptIO);
-        }
+        } 
         finally
         {
             /* clean up stream reading objects */
@@ -104,13 +104,13 @@ public class CWE256_Plaintext_Storage_of_Password__basic_61b
                 if (streamFileInput != null)
                 {
                     streamFileInput.close();
-                }
-            }
+                } 
+            } 
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error closing FileInputStream", exceptIO);
-            }
-        }
+            } 
+        } 
 
         /* FIX: password is decrypted before being passed on */
         {
@@ -122,10 +122,10 @@ public class CWE256_Plaintext_Storage_of_Password__basic_61b
 
             String decryptedPassword = new String(aesCipher.doFinal(password.getBytes("UTF-8")), "UTF-8");
             password = decryptedPassword;
-        }
+        } 
 
         return password;
-    }
+    } 
 
     /* goodB2G() - use badsource and goodsink */
     public String goodB2GSource() throws Throwable
@@ -143,11 +143,11 @@ public class CWE256_Plaintext_Storage_of_Password__basic_61b
             properties.load(streamFileInput);
 
             password = properties.getProperty("password");
-        }
+        } 
         catch (IOException exceptIO)
         {
             IO.logger.log(Level.WARNING, "Error with stream reading", exceptIO);
-        }
+        } 
         finally
         {
             /* clean up stream reading objects */
@@ -156,16 +156,16 @@ public class CWE256_Plaintext_Storage_of_Password__basic_61b
                 if (streamFileInput != null)
                 {
                     streamFileInput.close();
-                }
-            }
+                } 
+            } 
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error closing FileInputStream", exceptIO);
-            }
-        }
+            } 
+        } 
 
         /* POTENTIAL FLAW: The raw password read from the .properties file is passed on (without being decrypted) */
 
         return password;
-    }
-}
+    } 
+} 

@@ -58,11 +58,11 @@ public class CWE23_Relative_Path_Traversal__listen_tcp_17 extends AbstractTestCa
 
                 /* POTENTIAL FLAW: Read data using a listening tcp connection */
                 data = readerBuffered.readLine();
-            }
+            } 
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error with stream reading", exceptIO);
-            }
+            } 
             finally
             {
                 /* Close stream reading objects */
@@ -71,24 +71,24 @@ public class CWE23_Relative_Path_Traversal__listen_tcp_17 extends AbstractTestCa
                     if (readerBuffered != null)
                     {
                         readerBuffered.close();
-                    }
-                }
+                    } 
+                } 
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error closing BufferedReader", exceptIO);
-                }
+                } 
 
                 try
                 {
                     if (readerInputStream != null)
                     {
                         readerInputStream.close();
-                    }
-                }
+                    } 
+                } 
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error closing InputStreamReader", exceptIO);
-                }
+                } 
 
                 /* Close socket objects */
                 try
@@ -96,26 +96,26 @@ public class CWE23_Relative_Path_Traversal__listen_tcp_17 extends AbstractTestCa
                     if (socket != null)
                     {
                         socket.close();
-                    }
-                }
+                    } 
+                } 
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error closing Socket", exceptIO);
-                }
+                } 
 
                 try
                 {
                     if (listener != null)
                     {
                         listener.close();
-                    }
-                }
+                    } 
+                } 
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error closing ServerSocket", exceptIO);
-                }
-            }
-        }
+                } 
+            } 
+        } 
 
         for (int i = 0; i < 1; i++)
         {
@@ -124,12 +124,12 @@ public class CWE23_Relative_Path_Traversal__listen_tcp_17 extends AbstractTestCa
             {
                 /* running on Windows */
                 root = "C:\\uploads\\";
-            }
+            } 
             else
             {
                 /* running on non-Windows */
                 root = "/home/user/uploads/";
-            }
+            } 
             if (data != null)
             {
                 /* POTENTIAL FLAW: no validation of concatenated value */
@@ -145,11 +145,11 @@ public class CWE23_Relative_Path_Traversal__listen_tcp_17 extends AbstractTestCa
                         readerInputStreamSink = new InputStreamReader(streamFileInputSink, "UTF-8");
                         readerBufferdSink = new BufferedReader(readerInputStreamSink);
                         IO.writeLine(readerBufferdSink.readLine());
-                    }
+                    } 
                     catch (IOException exceptIO)
                     {
                         IO.logger.log(Level.WARNING, "Error with stream reading", exceptIO);
-                    }
+                    } 
                     finally
                     {
                         /* Close stream reading objects */
@@ -158,41 +158,41 @@ public class CWE23_Relative_Path_Traversal__listen_tcp_17 extends AbstractTestCa
                             if (readerBufferdSink != null)
                             {
                                 readerBufferdSink.close();
-                            }
-                        }
+                            } 
+                        } 
                         catch (IOException exceptIO)
                         {
                             IO.logger.log(Level.WARNING, "Error closing BufferedReader", exceptIO);
-                        }
+                        } 
 
                         try
                         {
                             if (readerInputStreamSink != null)
                             {
                                 readerInputStreamSink.close();
-                            }
-                        }
+                            } 
+                        } 
                         catch (IOException exceptIO)
                         {
                             IO.logger.log(Level.WARNING, "Error closing InputStreamReader", exceptIO);
-                        }
+                        } 
 
                         try
                         {
                             if (streamFileInputSink != null)
                             {
                                 streamFileInputSink.close();
-                            }
-                        }
+                            } 
+                        } 
                         catch (IOException exceptIO)
                         {
                             IO.logger.log(Level.WARNING, "Error closing FileInputStream", exceptIO);
-                        }
-                    }
-                }
-            }
-        }
-    }
+                        } 
+                    } 
+                } 
+            } 
+        } 
+    } 
 
     /* goodG2B() - use goodsource and badsink by reversing the block outside the
      * for statement with the one in the for statement */
@@ -210,12 +210,12 @@ public class CWE23_Relative_Path_Traversal__listen_tcp_17 extends AbstractTestCa
             {
                 /* running on Windows */
                 root = "C:\\uploads\\";
-            }
+            } 
             else
             {
                 /* running on non-Windows */
                 root = "/home/user/uploads/";
-            }
+            } 
             if (data != null)
             {
                 /* POTENTIAL FLAW: no validation of concatenated value */
@@ -231,11 +231,11 @@ public class CWE23_Relative_Path_Traversal__listen_tcp_17 extends AbstractTestCa
                         readerInputStreamSink = new InputStreamReader(streamFileInputSink, "UTF-8");
                         readerBufferdSink = new BufferedReader(readerInputStreamSink);
                         IO.writeLine(readerBufferdSink.readLine());
-                    }
+                    } 
                     catch (IOException exceptIO)
                     {
                         IO.logger.log(Level.WARNING, "Error with stream reading", exceptIO);
-                    }
+                    } 
                     finally
                     {
                         /* Close stream reading objects */
@@ -244,46 +244,46 @@ public class CWE23_Relative_Path_Traversal__listen_tcp_17 extends AbstractTestCa
                             if (readerBufferdSink != null)
                             {
                                 readerBufferdSink.close();
-                            }
-                        }
+                            } 
+                        } 
                         catch (IOException exceptIO)
                         {
                             IO.logger.log(Level.WARNING, "Error closing BufferedReader", exceptIO);
-                        }
+                        } 
 
                         try
                         {
                             if (readerInputStreamSink != null)
                             {
                                 readerInputStreamSink.close();
-                            }
-                        }
+                            } 
+                        } 
                         catch (IOException exceptIO)
                         {
                             IO.logger.log(Level.WARNING, "Error closing InputStreamReader", exceptIO);
-                        }
+                        } 
 
                         try
                         {
                             if (streamFileInputSink != null)
                             {
                                 streamFileInputSink.close();
-                            }
-                        }
+                            } 
+                        } 
                         catch (IOException exceptIO)
                         {
                             IO.logger.log(Level.WARNING, "Error closing FileInputStream", exceptIO);
-                        }
-                    }
-                }
-            }
-        }
-    }
+                        } 
+                    } 
+                } 
+            } 
+        } 
+    } 
 
     public void good() throws Throwable
     {
         goodG2B();
-    }
+    } 
 
     /* Below is the main(). It is only used when building this testcase on
      * its own for testing or for building a binary to use in testing binary
@@ -294,5 +294,5 @@ public class CWE23_Relative_Path_Traversal__listen_tcp_17 extends AbstractTestCa
            InstantiationException, IllegalAccessException
     {
         mainFromParent(args);
-    }
-}
+    } 
+} 

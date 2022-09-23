@@ -37,7 +37,7 @@ public class CWE23_Relative_Path_Traversal__getParameter_Servlet_31 extends Abst
             data = request.getParameter("name");
 
             dataCopy = data;
-        }
+        } 
         {
             String data = dataCopy;
 
@@ -46,12 +46,12 @@ public class CWE23_Relative_Path_Traversal__getParameter_Servlet_31 extends Abst
             {
                 /* running on Windows */
                 root = "C:\\uploads\\";
-            }
+            } 
             else
             {
                 /* running on non-Windows */
                 root = "/home/user/uploads/";
-            }
+            } 
 
             if (data != null)
             {
@@ -68,11 +68,11 @@ public class CWE23_Relative_Path_Traversal__getParameter_Servlet_31 extends Abst
                         readerInputStreamSink = new InputStreamReader(streamFileInputSink, "UTF-8");
                         readerBufferdSink = new BufferedReader(readerInputStreamSink);
                         IO.writeLine(readerBufferdSink.readLine());
-                    }
+                    } 
                     catch (IOException exceptIO)
                     {
                         IO.logger.log(Level.WARNING, "Error with stream reading", exceptIO);
-                    }
+                    } 
                     finally
                     {
                         /* Close stream reading objects */
@@ -81,47 +81,47 @@ public class CWE23_Relative_Path_Traversal__getParameter_Servlet_31 extends Abst
                             if (readerBufferdSink != null)
                             {
                                 readerBufferdSink.close();
-                            }
-                        }
+                            } 
+                        } 
                         catch (IOException exceptIO)
                         {
                             IO.logger.log(Level.WARNING, "Error closing BufferedReader", exceptIO);
-                        }
+                        } 
 
                         try
                         {
                             if (readerInputStreamSink != null)
                             {
                                 readerInputStreamSink.close();
-                            }
-                        }
+                            } 
+                        } 
                         catch (IOException exceptIO)
                         {
                             IO.logger.log(Level.WARNING, "Error closing InputStreamReader", exceptIO);
-                        }
+                        } 
 
                         try
                         {
                             if (streamFileInputSink != null)
                             {
                                 streamFileInputSink.close();
-                            }
-                        }
+                            } 
+                        } 
                         catch (IOException exceptIO)
                         {
                             IO.logger.log(Level.WARNING, "Error closing FileInputStream", exceptIO);
-                        }
-                    }
-                }
-            }
+                        } 
+                    } 
+                } 
+            } 
 
-        }
-    }
+        } 
+    } 
 
     public void good(HttpServletRequest request, HttpServletResponse response) throws Throwable
     {
         goodG2B(request, response);
-    }
+    } 
 
     /* goodG2B() - use goodsource and badsink */
     private void goodG2B(HttpServletRequest request, HttpServletResponse response) throws Throwable
@@ -134,7 +134,7 @@ public class CWE23_Relative_Path_Traversal__getParameter_Servlet_31 extends Abst
             data = "foo";
 
             dataCopy = data;
-        }
+        } 
         {
             String data = dataCopy;
 
@@ -143,12 +143,12 @@ public class CWE23_Relative_Path_Traversal__getParameter_Servlet_31 extends Abst
             {
                 /* running on Windows */
                 root = "C:\\uploads\\";
-            }
+            } 
             else
             {
                 /* running on non-Windows */
                 root = "/home/user/uploads/";
-            }
+            } 
 
             if (data != null)
             {
@@ -165,11 +165,11 @@ public class CWE23_Relative_Path_Traversal__getParameter_Servlet_31 extends Abst
                         readerInputStreamSink = new InputStreamReader(streamFileInputSink, "UTF-8");
                         readerBufferdSink = new BufferedReader(readerInputStreamSink);
                         IO.writeLine(readerBufferdSink.readLine());
-                    }
+                    } 
                     catch (IOException exceptIO)
                     {
                         IO.logger.log(Level.WARNING, "Error with stream reading", exceptIO);
-                    }
+                    } 
                     finally
                     {
                         /* Close stream reading objects */
@@ -178,42 +178,42 @@ public class CWE23_Relative_Path_Traversal__getParameter_Servlet_31 extends Abst
                             if (readerBufferdSink != null)
                             {
                                 readerBufferdSink.close();
-                            }
-                        }
+                            } 
+                        } 
                         catch (IOException exceptIO)
                         {
                             IO.logger.log(Level.WARNING, "Error closing BufferedReader", exceptIO);
-                        }
+                        } 
 
                         try
                         {
                             if (readerInputStreamSink != null)
                             {
                                 readerInputStreamSink.close();
-                            }
-                        }
+                            } 
+                        } 
                         catch (IOException exceptIO)
                         {
                             IO.logger.log(Level.WARNING, "Error closing InputStreamReader", exceptIO);
-                        }
+                        } 
 
                         try
                         {
                             if (streamFileInputSink != null)
                             {
                                 streamFileInputSink.close();
-                            }
-                        }
+                            } 
+                        } 
                         catch (IOException exceptIO)
                         {
                             IO.logger.log(Level.WARNING, "Error closing FileInputStream", exceptIO);
-                        }
-                    }
-                }
-            }
+                        } 
+                    } 
+                } 
+            } 
 
-        }
-    }
+        } 
+    } 
 
     /* Below is the main(). It is only used when building this testcase on
      * its own for testing or for building a binary to use in testing binary
@@ -224,5 +224,5 @@ public class CWE23_Relative_Path_Traversal__getParameter_Servlet_31 extends Abst
            InstantiationException, IllegalAccessException
     {
         mainFromParent(args);
-    }
-}
+    } 
+} 

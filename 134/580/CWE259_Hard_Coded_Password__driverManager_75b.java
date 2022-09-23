@@ -52,11 +52,11 @@ public class CWE259_Hard_Coded_Password__driverManager_75b
                     connection = DriverManager.getConnection("data-url", "root", data);
                     preparedStatement = connection.prepareStatement("select * from test_table");
                     resultSet = preparedStatement.executeQuery();
-                }
+                } 
                 catch (SQLException exceptSql)
                 {
                     IO.logger.log(Level.WARNING, "Error with database connection", exceptSql);
-                }
+                } 
                 finally
                 {
                     try
@@ -64,48 +64,48 @@ public class CWE259_Hard_Coded_Password__driverManager_75b
                         if (resultSet != null)
                         {
                             resultSet.close();
-                        }
-                    }
+                        } 
+                    } 
                     catch (SQLException exceptSql)
                     {
                         IO.logger.log(Level.WARNING, "Error closing ResultSet", exceptSql);
-                    }
+                    } 
 
                     try
                     {
                         if (preparedStatement != null)
                         {
                             preparedStatement.close();
-                        }
-                    }
+                        } 
+                    } 
                     catch (SQLException exceptSql)
                     {
                         IO.logger.log(Level.WARNING, "Error closing PreparedStatement", exceptSql);
-                    }
+                    } 
 
                     try
                     {
                         if (connection != null)
                         {
                             connection.close();
-                        }
-                    }
+                        } 
+                    } 
                     catch (SQLException exceptSql)
                     {
                         IO.logger.log(Level.WARNING, "Error closing Connection", exceptSql);
-                    }
-                }
-            }
+                    } 
+                } 
+            } 
 
-        }
+        } 
         catch (IOException exceptIO)
         {
             IO.logger.log(Level.WARNING, "IOException in deserialization", exceptIO);
-        }
+        } 
         catch (ClassNotFoundException exceptClassNotFound)
         {
             IO.logger.log(Level.WARNING, "ClassNotFoundException in deserialization", exceptClassNotFound);
-        }
+        } 
         finally
         {
             /* clean up stream reading objects */
@@ -114,26 +114,26 @@ public class CWE259_Hard_Coded_Password__driverManager_75b
                 if (streamObjectInput != null)
                 {
                     streamObjectInput.close();
-                }
-            }
+                } 
+            } 
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error closing ObjectInputStream", exceptIO);
-            }
+            } 
 
             try
             {
                 if (streamByteArrayInput != null)
                 {
                     streamByteArrayInput.close();
-                }
-            }
+                } 
+            } 
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error closing ByteArrayInputStream", exceptIO);
-            }
-        }
-    }
+            } 
+        } 
+    } 
 
     /* goodG2B() - use goodsource and badsink */
     public void goodG2BSink(byte[] dataSerialized ) throws Throwable
@@ -160,11 +160,11 @@ public class CWE259_Hard_Coded_Password__driverManager_75b
                     connection = DriverManager.getConnection("data-url", "root", data);
                     preparedStatement = connection.prepareStatement("select * from test_table");
                     resultSet = preparedStatement.executeQuery();
-                }
+                } 
                 catch (SQLException exceptSql)
                 {
                     IO.logger.log(Level.WARNING, "Error with database connection", exceptSql);
-                }
+                } 
                 finally
                 {
                     try
@@ -172,48 +172,48 @@ public class CWE259_Hard_Coded_Password__driverManager_75b
                         if (resultSet != null)
                         {
                             resultSet.close();
-                        }
-                    }
+                        } 
+                    } 
                     catch (SQLException exceptSql)
                     {
                         IO.logger.log(Level.WARNING, "Error closing ResultSet", exceptSql);
-                    }
+                    } 
 
                     try
                     {
                         if (preparedStatement != null)
                         {
                             preparedStatement.close();
-                        }
-                    }
+                        } 
+                    } 
                     catch (SQLException exceptSql)
                     {
                         IO.logger.log(Level.WARNING, "Error closing PreparedStatement", exceptSql);
-                    }
+                    } 
 
                     try
                     {
                         if (connection != null)
                         {
                             connection.close();
-                        }
-                    }
+                        } 
+                    } 
                     catch (SQLException exceptSql)
                     {
                         IO.logger.log(Level.WARNING, "Error closing Connection", exceptSql);
-                    }
-                }
-            }
+                    } 
+                } 
+            } 
 
-        }
+        } 
         catch (IOException exceptIO)
         {
             IO.logger.log(Level.WARNING, "IOException in deserialization", exceptIO);
-        }
+        } 
         catch (ClassNotFoundException exceptClassNotFound)
         {
             IO.logger.log(Level.WARNING, "ClassNotFoundException in deserialization", exceptClassNotFound);
-        }
+        } 
         finally
         {
             /* clean up stream reading objects */
@@ -222,24 +222,24 @@ public class CWE259_Hard_Coded_Password__driverManager_75b
                 if (streamObjectInput != null)
                 {
                     streamObjectInput.close();
-                }
-            }
+                } 
+            } 
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error closing ObjectInputStream", exceptIO);
-            }
+            } 
 
             try
             {
                 if (streamByteArrayInput != null)
                 {
                     streamByteArrayInput.close();
-                }
-            }
+                } 
+            } 
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error closing ByteArrayInputStream", exceptIO);
-            }
-        }
-    }
-}
+            } 
+        } 
+    } 
+} 

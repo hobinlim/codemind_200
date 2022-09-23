@@ -48,11 +48,11 @@ public class CWE23_Relative_Path_Traversal__PropertiesFile_81a extends AbstractT
 
                 /* POTENTIAL FLAW: Read data from a .properties file */
                 data = properties.getProperty("data");
-            }
+            } 
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error with stream reading", exceptIO);
-            }
+            } 
             finally
             {
                 /* Close stream reading object */
@@ -61,23 +61,23 @@ public class CWE23_Relative_Path_Traversal__PropertiesFile_81a extends AbstractT
                     if (streamFileInput != null)
                     {
                         streamFileInput.close();
-                    }
-                }
+                    } 
+                } 
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error closing FileInputStream", exceptIO);
-                }
-            }
-        }
+                } 
+            } 
+        } 
 
         CWE23_Relative_Path_Traversal__PropertiesFile_81_base baseObject = new CWE23_Relative_Path_Traversal__PropertiesFile_81_bad();
         baseObject.action(data );
-    }
+    } 
 
     public void good() throws Throwable
     {
         goodG2B();
-    }
+    } 
 
     /* goodG2B() - use goodsource and badsink */
     private void goodG2B() throws Throwable
@@ -89,7 +89,7 @@ public class CWE23_Relative_Path_Traversal__PropertiesFile_81a extends AbstractT
 
         CWE23_Relative_Path_Traversal__PropertiesFile_81_base baseObject = new CWE23_Relative_Path_Traversal__PropertiesFile_81_goodG2B();
         baseObject.action(data );
-    }
+    } 
 
     /* Below is the main(). It is only used when building this testcase on
      * its own for testing or for building a binary to use in testing binary
@@ -100,6 +100,6 @@ public class CWE23_Relative_Path_Traversal__PropertiesFile_81a extends AbstractT
            InstantiationException, IllegalAccessException
     {
         mainFromParent(args);
-    }
+    } 
 
-}
+} 

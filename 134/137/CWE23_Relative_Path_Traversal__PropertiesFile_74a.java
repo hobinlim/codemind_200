@@ -49,11 +49,11 @@ public class CWE23_Relative_Path_Traversal__PropertiesFile_74a extends AbstractT
 
                 /* POTENTIAL FLAW: Read data from a .properties file */
                 data = properties.getProperty("data");
-            }
+            } 
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error with stream reading", exceptIO);
-            }
+            } 
             finally
             {
                 /* Close stream reading object */
@@ -62,26 +62,26 @@ public class CWE23_Relative_Path_Traversal__PropertiesFile_74a extends AbstractT
                     if (streamFileInput != null)
                     {
                         streamFileInput.close();
-                    }
-                }
+                    } 
+                } 
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error closing FileInputStream", exceptIO);
-                }
-            }
-        }
+                } 
+            } 
+        } 
 
         HashMap<Integer,String> dataHashMap = new HashMap<Integer,String>();
         dataHashMap.put(0, data);
         dataHashMap.put(1, data);
         dataHashMap.put(2, data);
         (new CWE23_Relative_Path_Traversal__PropertiesFile_74b()).badSink(dataHashMap  );
-    }
+    } 
 
     public void good() throws Throwable
     {
         goodG2B();
-    }
+    } 
 
     /* goodG2B() - use goodsource and badsink */
     private void goodG2B() throws Throwable
@@ -96,7 +96,7 @@ public class CWE23_Relative_Path_Traversal__PropertiesFile_74a extends AbstractT
         dataHashMap.put(1, data);
         dataHashMap.put(2, data);
         (new CWE23_Relative_Path_Traversal__PropertiesFile_74b()).goodG2BSink(dataHashMap  );
-    }
+    } 
 
     /* Below is the main(). It is only used when building this testcase on
      * its own for testing or for building a binary to use in testing binary
@@ -107,5 +107,5 @@ public class CWE23_Relative_Path_Traversal__PropertiesFile_74a extends AbstractT
            InstantiationException, IllegalAccessException
     {
         mainFromParent(args);
-    }
-}
+    } 
+} 

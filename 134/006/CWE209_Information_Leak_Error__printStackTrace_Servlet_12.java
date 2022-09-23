@@ -28,26 +28,26 @@ public class CWE209_Information_Leak_Error__printStackTrace_Servlet_12 extends A
             try
             {
                 throw new UnsupportedOperationException();
-            }
+            } 
             catch (UnsupportedOperationException exceptUnsupportedOperation)
             {
                 exceptUnsupportedOperation.printStackTrace(response.getWriter()); /* FLAW: Print stack trace in response on error */
-            }
-        }
+            } 
+        } 
         else
         {
 
             try
             {
                 throw new UnsupportedOperationException();
-            }
+            } 
             catch (UnsupportedOperationException exceptUnsupportedOperation)
             {
                 response.getWriter().println("There was an unsupported operation error"); /* FIX: print a generic error message to response */
-            }
+            } 
 
-        }
-    }
+        } 
+    } 
 
     /* good1() changes the "if" so that both branches use the GoodSink */
     private void good1(HttpServletRequest request, HttpServletResponse response) throws Throwable
@@ -57,31 +57,31 @@ public class CWE209_Information_Leak_Error__printStackTrace_Servlet_12 extends A
             try
             {
                 throw new UnsupportedOperationException();
-            }
+            } 
             catch (UnsupportedOperationException exceptUnsupportedOperation)
             {
                 response.getWriter().println("There was an unsupported operation error"); /* FIX: print a generic error message to response */
-            }
-        }
+            } 
+        } 
         else
         {
 
             try
             {
                 throw new UnsupportedOperationException();
-            }
+            } 
             catch (UnsupportedOperationException exceptUnsupportedOperation)
             {
                 response.getWriter().println("There was an unsupported operation error"); /* FIX: print a generic error message to response */
-            }
+            } 
 
-        }
-    }
+        } 
+    } 
 
     public void good(HttpServletRequest request, HttpServletResponse response) throws Throwable
     {
         good1(request, response);
-    }
+    } 
 
     /* Below is the main(). It is only used when building this testcase on
      * its own for testing or for building a binary to use in testing binary
@@ -92,5 +92,5 @@ public class CWE209_Information_Leak_Error__printStackTrace_Servlet_12 extends A
            InstantiationException, IllegalAccessException
     {
         mainFromParent(args);
-    }
-}
+    } 
+} 

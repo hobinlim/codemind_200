@@ -41,12 +41,12 @@ public class CWE23_Relative_Path_Traversal__getQueryString_Servlet_61b
                 {
                     data = token.substring(3); /* set data to "foo" */
                     break; /* exit while loop */
-                }
-            }
-        }
+                } 
+            } 
+        } 
 
         return data;
-    }
+    } 
 
     /* goodG2B() - use goodsource and badsink */
     public String goodG2BSource(HttpServletRequest request, HttpServletResponse response) throws Throwable
@@ -57,5 +57,5 @@ public class CWE23_Relative_Path_Traversal__getQueryString_Servlet_61b
         data = "foo";
 
         return data;
-    }
-}
+    } 
+} 

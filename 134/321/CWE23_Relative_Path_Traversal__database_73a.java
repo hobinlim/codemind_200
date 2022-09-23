@@ -54,11 +54,11 @@ public class CWE23_Relative_Path_Traversal__database_73a extends AbstractTestCas
 
                 /* POTENTIAL FLAW: Read data from a database query resultset */
                 data = resultSet.getString(1);
-            }
+            } 
             catch (SQLException exceptSql)
             {
                 IO.logger.log(Level.WARNING, "Error with SQL statement", exceptSql);
-            }
+            } 
             finally
             {
                 /* Close database objects */
@@ -67,50 +67,50 @@ public class CWE23_Relative_Path_Traversal__database_73a extends AbstractTestCas
                     if (resultSet != null)
                     {
                         resultSet.close();
-                    }
-                }
+                    } 
+                } 
                 catch (SQLException exceptSql)
                 {
                     IO.logger.log(Level.WARNING, "Error closing ResultSet", exceptSql);
-                }
+                } 
 
                 try
                 {
                     if (preparedStatement != null)
                     {
                         preparedStatement.close();
-                    }
-                }
+                    } 
+                } 
                 catch (SQLException exceptSql)
                 {
                     IO.logger.log(Level.WARNING, "Error closing PreparedStatement", exceptSql);
-                }
+                } 
 
                 try
                 {
                     if (connection != null)
                     {
                         connection.close();
-                    }
-                }
+                    } 
+                } 
                 catch (SQLException exceptSql)
                 {
                     IO.logger.log(Level.WARNING, "Error closing Connection", exceptSql);
-                }
-            }
-        }
+                } 
+            } 
+        } 
 
         LinkedList<String> dataLinkedList = new LinkedList<String>();
         dataLinkedList.add(0, data);
         dataLinkedList.add(1, data);
         dataLinkedList.add(2, data);
         (new CWE23_Relative_Path_Traversal__database_73b()).badSink(dataLinkedList  );
-    }
+    } 
 
     public void good() throws Throwable
     {
         goodG2B();
-    }
+    } 
 
     /* goodG2B() - use goodsource and badsink */
     private void goodG2B() throws Throwable
@@ -125,7 +125,7 @@ public class CWE23_Relative_Path_Traversal__database_73a extends AbstractTestCas
         dataLinkedList.add(1, data);
         dataLinkedList.add(2, data);
         (new CWE23_Relative_Path_Traversal__database_73b()).goodG2BSink(dataLinkedList  );
-    }
+    } 
 
     /* Below is the main(). It is only used when building this testcase on
      * its own for testing or for building a binary to use in testing binary
@@ -136,6 +136,6 @@ public class CWE23_Relative_Path_Traversal__database_73a extends AbstractTestCas
            InstantiationException, IllegalAccessException
     {
         mainFromParent(args);
-    }
+    } 
 
-}
+} 

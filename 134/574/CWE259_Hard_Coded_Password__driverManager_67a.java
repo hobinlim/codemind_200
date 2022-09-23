@@ -26,7 +26,7 @@ public class CWE259_Hard_Coded_Password__driverManager_67a extends AbstractTestC
     static class Container
     {
         public String containerOne;
-    }
+    } 
 
     public void bad() throws Throwable
     {
@@ -38,12 +38,12 @@ public class CWE259_Hard_Coded_Password__driverManager_67a extends AbstractTestC
         Container dataContainer = new Container();
         dataContainer.containerOne = data;
         (new CWE259_Hard_Coded_Password__driverManager_67b()).badSink(dataContainer  );
-    }
+    } 
 
     public void good() throws Throwable
     {
         goodG2B();
-    }
+    } 
 
     /* goodG2B() - use goodsource and badsink */
     private void goodG2B() throws Throwable
@@ -60,18 +60,18 @@ public class CWE259_Hard_Coded_Password__driverManager_67a extends AbstractTestC
 
             /* POTENTIAL FLAW: Read data from the console using readLine */
             data = readerBuffered.readLine();
-        }
+        } 
         catch (IOException exceptIO)
         {
             IO.logger.log(Level.WARNING, "Error with stream reading", exceptIO);
-        }
+        } 
 
         /* NOTE: Tools may report a flaw here because readerBuffered and readerInputStream are not closed.  Unfortunately, closing those will close System.in, which will cause any future attempts to read from the console to fail and throw an exception */
 
         Container dataContainer = new Container();
         dataContainer.containerOne = data;
         (new CWE259_Hard_Coded_Password__driverManager_67b()).goodG2BSink(dataContainer  );
-    }
+    } 
 
     /* Below is the main(). It is only used when building this testcase on
      * its own for testing or for building a binary to use in testing binary
@@ -82,5 +82,5 @@ public class CWE259_Hard_Coded_Password__driverManager_67a extends AbstractTestC
            InstantiationException, IllegalAccessException
     {
         mainFromParent(args);
-    }
-}
+    } 
+} 

@@ -45,12 +45,12 @@ public class CWE23_Relative_Path_Traversal__Property_75b
             {
                 /* running on Windows */
                 root = "C:\\uploads\\";
-            }
+            } 
             else
             {
                 /* running on non-Windows */
                 root = "/home/user/uploads/";
-            }
+            } 
 
             if (data != null)
             {
@@ -67,11 +67,11 @@ public class CWE23_Relative_Path_Traversal__Property_75b
                         readerInputStreamSink = new InputStreamReader(streamFileInputSink, "UTF-8");
                         readerBufferdSink = new BufferedReader(readerInputStreamSink);
                         IO.writeLine(readerBufferdSink.readLine());
-                    }
+                    } 
                     catch (IOException exceptIO)
                     {
                         IO.logger.log(Level.WARNING, "Error with stream reading", exceptIO);
-                    }
+                    } 
                     finally
                     {
                         /* Close stream reading objects */
@@ -80,49 +80,49 @@ public class CWE23_Relative_Path_Traversal__Property_75b
                             if (readerBufferdSink != null)
                             {
                                 readerBufferdSink.close();
-                            }
-                        }
+                            } 
+                        } 
                         catch (IOException exceptIO)
                         {
                             IO.logger.log(Level.WARNING, "Error closing BufferedReader", exceptIO);
-                        }
+                        } 
 
                         try
                         {
                             if (readerInputStreamSink != null)
                             {
                                 readerInputStreamSink.close();
-                            }
-                        }
+                            } 
+                        } 
                         catch (IOException exceptIO)
                         {
                             IO.logger.log(Level.WARNING, "Error closing InputStreamReader", exceptIO);
-                        }
+                        } 
 
                         try
                         {
                             if (streamFileInputSink != null)
                             {
                                 streamFileInputSink.close();
-                            }
-                        }
+                            } 
+                        } 
                         catch (IOException exceptIO)
                         {
                             IO.logger.log(Level.WARNING, "Error closing FileInputStream", exceptIO);
-                        }
-                    }
-                }
-            }
+                        } 
+                    } 
+                } 
+            } 
 
-        }
+        } 
         catch (IOException exceptIO)
         {
             IO.logger.log(Level.WARNING, "IOException in deserialization", exceptIO);
-        }
+        } 
         catch (ClassNotFoundException exceptClassNotFound)
         {
             IO.logger.log(Level.WARNING, "ClassNotFoundException in deserialization", exceptClassNotFound);
-        }
+        } 
         finally
         {
             /* clean up stream reading objects */
@@ -131,26 +131,26 @@ public class CWE23_Relative_Path_Traversal__Property_75b
                 if (streamObjectInput != null)
                 {
                     streamObjectInput.close();
-                }
-            }
+                } 
+            } 
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error closing ObjectInputStream", exceptIO);
-            }
+            } 
 
             try
             {
                 if (streamByteArrayInput != null)
                 {
                     streamByteArrayInput.close();
-                }
-            }
+                } 
+            } 
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error closing ByteArrayInputStream", exceptIO);
-            }
-        }
-    }
+            } 
+        } 
+    } 
 
     /* goodG2B() - use goodsource and badsink */
     public void goodG2BSink(byte[] dataSerialized ) throws Throwable
@@ -170,12 +170,12 @@ public class CWE23_Relative_Path_Traversal__Property_75b
             {
                 /* running on Windows */
                 root = "C:\\uploads\\";
-            }
+            } 
             else
             {
                 /* running on non-Windows */
                 root = "/home/user/uploads/";
-            }
+            } 
 
             if (data != null)
             {
@@ -192,11 +192,11 @@ public class CWE23_Relative_Path_Traversal__Property_75b
                         readerInputStreamSink = new InputStreamReader(streamFileInputSink, "UTF-8");
                         readerBufferdSink = new BufferedReader(readerInputStreamSink);
                         IO.writeLine(readerBufferdSink.readLine());
-                    }
+                    } 
                     catch (IOException exceptIO)
                     {
                         IO.logger.log(Level.WARNING, "Error with stream reading", exceptIO);
-                    }
+                    } 
                     finally
                     {
                         /* Close stream reading objects */
@@ -205,49 +205,49 @@ public class CWE23_Relative_Path_Traversal__Property_75b
                             if (readerBufferdSink != null)
                             {
                                 readerBufferdSink.close();
-                            }
-                        }
+                            } 
+                        } 
                         catch (IOException exceptIO)
                         {
                             IO.logger.log(Level.WARNING, "Error closing BufferedReader", exceptIO);
-                        }
+                        } 
 
                         try
                         {
                             if (readerInputStreamSink != null)
                             {
                                 readerInputStreamSink.close();
-                            }
-                        }
+                            } 
+                        } 
                         catch (IOException exceptIO)
                         {
                             IO.logger.log(Level.WARNING, "Error closing InputStreamReader", exceptIO);
-                        }
+                        } 
 
                         try
                         {
                             if (streamFileInputSink != null)
                             {
                                 streamFileInputSink.close();
-                            }
-                        }
+                            } 
+                        } 
                         catch (IOException exceptIO)
                         {
                             IO.logger.log(Level.WARNING, "Error closing FileInputStream", exceptIO);
-                        }
-                    }
-                }
-            }
+                        } 
+                    } 
+                } 
+            } 
 
-        }
+        } 
         catch (IOException exceptIO)
         {
             IO.logger.log(Level.WARNING, "IOException in deserialization", exceptIO);
-        }
+        } 
         catch (ClassNotFoundException exceptClassNotFound)
         {
             IO.logger.log(Level.WARNING, "ClassNotFoundException in deserialization", exceptClassNotFound);
-        }
+        } 
         finally
         {
             /* clean up stream reading objects */
@@ -256,24 +256,24 @@ public class CWE23_Relative_Path_Traversal__Property_75b
                 if (streamObjectInput != null)
                 {
                     streamObjectInput.close();
-                }
-            }
+                } 
+            } 
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error closing ObjectInputStream", exceptIO);
-            }
+            } 
 
             try
             {
                 if (streamByteArrayInput != null)
                 {
                     streamByteArrayInput.close();
-                }
-            }
+                } 
+            } 
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error closing ByteArrayInputStream", exceptIO);
-            }
-        }
-    }
-}
+            } 
+        } 
+    } 
+} 

@@ -41,27 +41,27 @@ public class CWE23_Relative_Path_Traversal__getCookies_Servlet_15 extends Abstra
                 {
                     /* POTENTIAL FLAW: Read data from the first cookie value */
                     data = cookieSources[0].getValue();
-                }
-            }
+                } 
+            } 
             break;
         default:
             /* INCIDENTAL: CWE 561 Dead Code, the code below will never run
              * but ensure data is inititialized before the Sink to avoid compiler errors */
             data = null;
             break;
-        }
+        } 
 
         String root;
         if(System.getProperty("os.name").toLowerCase().indexOf("win") >= 0)
         {
             /* running on Windows */
             root = "C:\\uploads\\";
-        }
+        } 
         else
         {
             /* running on non-Windows */
             root = "/home/user/uploads/";
-        }
+        } 
 
         if (data != null)
         {
@@ -78,11 +78,11 @@ public class CWE23_Relative_Path_Traversal__getCookies_Servlet_15 extends Abstra
                     readerInputStreamSink = new InputStreamReader(streamFileInputSink, "UTF-8");
                     readerBufferdSink = new BufferedReader(readerInputStreamSink);
                     IO.writeLine(readerBufferdSink.readLine());
-                }
+                } 
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error with stream reading", exceptIO);
-                }
+                } 
                 finally
                 {
                     /* Close stream reading objects */
@@ -91,41 +91,41 @@ public class CWE23_Relative_Path_Traversal__getCookies_Servlet_15 extends Abstra
                         if (readerBufferdSink != null)
                         {
                             readerBufferdSink.close();
-                        }
-                    }
+                        } 
+                    } 
                     catch (IOException exceptIO)
                     {
                         IO.logger.log(Level.WARNING, "Error closing BufferedReader", exceptIO);
-                    }
+                    } 
 
                     try
                     {
                         if (readerInputStreamSink != null)
                         {
                             readerInputStreamSink.close();
-                        }
-                    }
+                        } 
+                    } 
                     catch (IOException exceptIO)
                     {
                         IO.logger.log(Level.WARNING, "Error closing InputStreamReader", exceptIO);
-                    }
+                    } 
 
                     try
                     {
                         if (streamFileInputSink != null)
                         {
                             streamFileInputSink.close();
-                        }
-                    }
+                        } 
+                    } 
                     catch (IOException exceptIO)
                     {
                         IO.logger.log(Level.WARNING, "Error closing FileInputStream", exceptIO);
-                    }
-                }
-            }
-        }
+                    } 
+                } 
+            } 
+        } 
 
-    }
+    } 
 
     /* goodG2B1() - use goodsource and badsink by changing the  switch to switch(5) */
     private void goodG2B1(HttpServletRequest request, HttpServletResponse response) throws Throwable
@@ -143,19 +143,19 @@ public class CWE23_Relative_Path_Traversal__getCookies_Servlet_15 extends Abstra
             /* FIX: Use a hardcoded string */
             data = "foo";
             break;
-        }
+        } 
 
         String root;
         if(System.getProperty("os.name").toLowerCase().indexOf("win") >= 0)
         {
             /* running on Windows */
             root = "C:\\uploads\\";
-        }
+        } 
         else
         {
             /* running on non-Windows */
             root = "/home/user/uploads/";
-        }
+        } 
 
         if (data != null)
         {
@@ -172,11 +172,11 @@ public class CWE23_Relative_Path_Traversal__getCookies_Servlet_15 extends Abstra
                     readerInputStreamSink = new InputStreamReader(streamFileInputSink, "UTF-8");
                     readerBufferdSink = new BufferedReader(readerInputStreamSink);
                     IO.writeLine(readerBufferdSink.readLine());
-                }
+                } 
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error with stream reading", exceptIO);
-                }
+                } 
                 finally
                 {
                     /* Close stream reading objects */
@@ -185,41 +185,41 @@ public class CWE23_Relative_Path_Traversal__getCookies_Servlet_15 extends Abstra
                         if (readerBufferdSink != null)
                         {
                             readerBufferdSink.close();
-                        }
-                    }
+                        } 
+                    } 
                     catch (IOException exceptIO)
                     {
                         IO.logger.log(Level.WARNING, "Error closing BufferedReader", exceptIO);
-                    }
+                    } 
 
                     try
                     {
                         if (readerInputStreamSink != null)
                         {
                             readerInputStreamSink.close();
-                        }
-                    }
+                        } 
+                    } 
                     catch (IOException exceptIO)
                     {
                         IO.logger.log(Level.WARNING, "Error closing InputStreamReader", exceptIO);
-                    }
+                    } 
 
                     try
                     {
                         if (streamFileInputSink != null)
                         {
                             streamFileInputSink.close();
-                        }
-                    }
+                        } 
+                    } 
                     catch (IOException exceptIO)
                     {
                         IO.logger.log(Level.WARNING, "Error closing FileInputStream", exceptIO);
-                    }
-                }
-            }
-        }
+                    } 
+                } 
+            } 
+        } 
 
-    }
+    } 
 
     /* goodG2B2() - use goodsource and badsink by reversing the blocks in the switch  */
     private void goodG2B2(HttpServletRequest request, HttpServletResponse response) throws Throwable
@@ -237,19 +237,19 @@ public class CWE23_Relative_Path_Traversal__getCookies_Servlet_15 extends Abstra
              * but ensure data is inititialized before the Sink to avoid compiler errors */
             data = null;
             break;
-        }
+        } 
 
         String root;
         if(System.getProperty("os.name").toLowerCase().indexOf("win") >= 0)
         {
             /* running on Windows */
             root = "C:\\uploads\\";
-        }
+        } 
         else
         {
             /* running on non-Windows */
             root = "/home/user/uploads/";
-        }
+        } 
 
         if (data != null)
         {
@@ -266,11 +266,11 @@ public class CWE23_Relative_Path_Traversal__getCookies_Servlet_15 extends Abstra
                     readerInputStreamSink = new InputStreamReader(streamFileInputSink, "UTF-8");
                     readerBufferdSink = new BufferedReader(readerInputStreamSink);
                     IO.writeLine(readerBufferdSink.readLine());
-                }
+                } 
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error with stream reading", exceptIO);
-                }
+                } 
                 finally
                 {
                     /* Close stream reading objects */
@@ -279,47 +279,47 @@ public class CWE23_Relative_Path_Traversal__getCookies_Servlet_15 extends Abstra
                         if (readerBufferdSink != null)
                         {
                             readerBufferdSink.close();
-                        }
-                    }
+                        } 
+                    } 
                     catch (IOException exceptIO)
                     {
                         IO.logger.log(Level.WARNING, "Error closing BufferedReader", exceptIO);
-                    }
+                    } 
 
                     try
                     {
                         if (readerInputStreamSink != null)
                         {
                             readerInputStreamSink.close();
-                        }
-                    }
+                        } 
+                    } 
                     catch (IOException exceptIO)
                     {
                         IO.logger.log(Level.WARNING, "Error closing InputStreamReader", exceptIO);
-                    }
+                    } 
 
                     try
                     {
                         if (streamFileInputSink != null)
                         {
                             streamFileInputSink.close();
-                        }
-                    }
+                        } 
+                    } 
                     catch (IOException exceptIO)
                     {
                         IO.logger.log(Level.WARNING, "Error closing FileInputStream", exceptIO);
-                    }
-                }
-            }
-        }
+                    } 
+                } 
+            } 
+        } 
 
-    }
+    } 
 
     public void good(HttpServletRequest request, HttpServletResponse response) throws Throwable
     {
         goodG2B1(request, response);
         goodG2B2(request, response);
-    }
+    } 
 
     /* Below is the main(). It is only used when building this testcase on
      * its own for testing or for building a binary to use in testing binary
@@ -330,5 +330,5 @@ public class CWE23_Relative_Path_Traversal__getCookies_Servlet_15 extends Abstra
            InstantiationException, IllegalAccessException
     {
         mainFromParent(args);
-    }
-}
+    } 
+} 

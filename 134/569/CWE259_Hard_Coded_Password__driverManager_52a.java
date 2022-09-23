@@ -31,12 +31,12 @@ public class CWE259_Hard_Coded_Password__driverManager_52a extends AbstractTestC
         data = "7e5tc4s3";
 
         (new CWE259_Hard_Coded_Password__driverManager_52b()).badSink(data );
-    }
+    } 
 
     public void good() throws Throwable
     {
         goodG2B();
-    }
+    } 
 
     /* goodG2B() - use goodsource and badsink */
     private void goodG2B() throws Throwable
@@ -53,16 +53,16 @@ public class CWE259_Hard_Coded_Password__driverManager_52a extends AbstractTestC
 
             /* POTENTIAL FLAW: Read data from the console using readLine */
             data = readerBuffered.readLine();
-        }
+        } 
         catch (IOException exceptIO)
         {
             IO.logger.log(Level.WARNING, "Error with stream reading", exceptIO);
-        }
+        } 
 
         /* NOTE: Tools may report a flaw here because readerBuffered and readerInputStream are not closed.  Unfortunately, closing those will close System.in, which will cause any future attempts to read from the console to fail and throw an exception */
 
         (new CWE259_Hard_Coded_Password__driverManager_52b()).goodG2BSink(data );
-    }
+    } 
 
     /* Below is the main(). It is only used when building this testcase on
      * its own for testing or for building a binary to use in testing binary
@@ -73,5 +73,5 @@ public class CWE259_Hard_Coded_Password__driverManager_52a extends AbstractTestC
            InstantiationException, IllegalAccessException
     {
         mainFromParent(args);
-    }
-}
+    } 
+} 

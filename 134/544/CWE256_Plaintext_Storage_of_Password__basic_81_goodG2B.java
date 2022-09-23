@@ -41,11 +41,11 @@ public class CWE256_Plaintext_Storage_of_Password__basic_81_goodG2B extends CWE2
         try
         {
             dBConnection = DriverManager.getConnection("192.168.105.23", "sa", password);
-        }
+        } 
         catch (SQLException exceptSql)
         {
             IO.logger.log(Level.WARNING, "Error getting database connection", exceptSql);
-        }
+        } 
         finally
         {
             try
@@ -53,13 +53,13 @@ public class CWE256_Plaintext_Storage_of_Password__basic_81_goodG2B extends CWE2
                 if (dBConnection != null)
                 {
                     dBConnection.close();
-                }
-            }
+                } 
+            } 
             catch (SQLException exceptSql)
             {
                 IO.logger.log(Level.WARNING, "Error closing Connection", exceptSql);
-            }
-        }
+            } 
+        } 
 
-    }
-}
+    } 
+} 

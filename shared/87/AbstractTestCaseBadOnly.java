@@ -23,21 +23,6 @@ public abstract class AbstractTestCaseBadOnly extends AbstractTestCaseBase {
         try 
         {
             bad();
-      try 
-        {
-            bad();
-      try 
-        {
-            bad();
-      try 
-        {
-            bad();
-      try 
-        {
-            bad();
-      try 
-        {
-            bad();
 
             
             IO.writeLine("Completed bad() for Class " + className);
