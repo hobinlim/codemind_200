@@ -19,6 +19,11 @@ public class IO
     private static final String dbUsername = "";
     private static final String dbPassword = "";
 
+
+    /* fill in these parameters if you want to be able to actually connect
+    * to a database
+    */
+
     public static final Logger logger = Logger.getLogger("testcases");
 
     public static void writeString(String str) 

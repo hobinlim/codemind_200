@@ -21,6 +21,22 @@ public abstract class AbstractTestCaseClassIssueBad extends AbstractTestCaseBase
         try 
         {
             bad();
+      try 
+        {
+            bad();
+      try 
+        {
+            bad();
+      try 
+        {
+            bad();
+      try 
+        {
+            bad();
+      try 
+        {
+            bad();
+
             
             IO.writeLine("Completed bad() for Class " + className);
         }  

@@ -5,8 +5,17 @@
 
 public abstract class AbstractTestCaseBadOnly extends AbstractTestCaseBase {
 
+
+
+
     public abstract void bad() throws Throwable;
      
+
+
+
+
+
+
     public void runTest(String className) 
     {
         IO.writeLine("Starting tests for Class " + className);
@@ -14,6 +23,22 @@ public abstract class AbstractTestCaseBadOnly extends AbstractTestCaseBase {
         try 
         {
             bad();
+      try 
+        {
+            bad();
+      try 
+        {
+            bad();
+      try 
+        {
+            bad();
+      try 
+        {
+            bad();
+      try 
+        {
+            bad();
+
             
             IO.writeLine("Completed bad() for Class " + className);
         } 

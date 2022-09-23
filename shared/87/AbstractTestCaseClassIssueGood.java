@@ -16,6 +16,25 @@ public abstract class AbstractTestCaseClassIssueGood extends AbstractTestCaseBas
         try 
         {
             good();
+ try 
+        {
+            good();
+ try 
+        {
+            good();
+ try 
+        {
+            good();
+ try 
+        {
+            good();
+ try 
+        {
+            good();
+ try 
+        {
+            good();
+
     
             IO.writeLine("Completed good() for Class " + className);  
         }

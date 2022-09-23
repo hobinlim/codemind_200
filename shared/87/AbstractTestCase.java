@@ -9,11 +9,20 @@ a "bad" and "good" function.
     	 *	This is just a temp-small modification to make servlets compile and run
     	 */
 public abstract class AbstractTestCase extends AbstractTestCaseBase 
-{
+{           
     public abstract void bad() throws Throwable;
+
+
+
 
     public abstract void good() throws Throwable;
     
+
+
+
+
+
+
     public void runTest(String className) 
     { 
         IO.writeLine("Starting tests for Class " + className);
@@ -39,6 +48,16 @@ public abstract class AbstractTestCase extends AbstractTestCaseBase
                 IO.writeLine(stackTraceElement.toString());
             } 
         } 
+
+
+
+
+
+
+
+
+
+
 
         try 
         {
